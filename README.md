@@ -1,4 +1,4 @@
-# NgCms_SSH
+### 山东农村信用社信贷管理
 
-使用标准SSH搭建,数据库使用MySql
+使用标准SSH搭建,数据库使用MySql,
 开发工具IDEA
