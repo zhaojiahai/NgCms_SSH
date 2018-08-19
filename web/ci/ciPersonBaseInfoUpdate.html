@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+</head>
+<body>
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="ciPersonBaseInfo.html">对私客户基本维护</a></li>
+    <li><a href="ciPersonBaseInfoUpdate.html">修改</a></li>
+    </ul>
+    </div>
+
+    <form action="" method="post">
+    <div class="formbody">
+    <div class="formtitle"><span>对私客户基本信息</span></div>
+    
+    <ul class="forminfo">
+    <li><label>客户编号</label><input name="" type="text" class="dfinput" value="02201010"/> </li>
+    <li><label>客户名称</label><input name="" type="text" class="dfinput" value="张利新"/> </li>
+    <li><label>客户类型</label>
+         <cite><select class="dfselect1">
+            <option value="00">农户</option>		 
+                  <option value="01" selected="selected">个体工商户</option>
+                  <option value="02">城镇居民</option>
+                  <option value="03">学生</option>
+                  <option value="04">军官</option>
+                  <option value="06">港澳台同胞</option>
+                  <option value="05">外籍人士</option>
+         </select></cite>
+   <cite></li>
+ <li><label>性别</label><cite><select class="dfselect"><option value="1" selected="selected">男</option><option value="2">女</option></select></cite></li>
+    <li><label>证件类型</label><input name="" type="text" class="dfinput" value="身份证"/> </li>
+    <li><label>证件号码</label><input name="" type="text" class="dfinput" value="37090321212344880926"/></li>
+    <li><label>民族</label><input name="" type="text" class="dfinput" value="汉"/></li>
+    <li><label>出生日期</label><input name="" type="text" class="dfinput" value="1980-09-09"/></li>
+    <li><label>住址</label><input name="" type="text" class="dfinput" value="山东济南"/></li>
+    <li><label>客户性质</label> <cite><select class="dfselect1">
+            <option value="0">种植户</option>
+            	<option value="1" selected="selected">养殖户</option>
+            	<option value="2">个体经营</option>
+            	<option value="3">打工</option>
+         </select></cite></li>
+    <li><label>婚姻状况* </label><cite><select class="dfselect1">
+             <option value="0">未婚</option>
+              <option value="1" selected="selected">>已婚</option>
+                <option value="2">丧偶</option>
+              <option value="3">离婚</option>
+         </select></cite></li>
+    <li><label>联系方式（手机）</label><input name="" type="text" class="dfinput"  value="13234321234"/></li>
+    <li><label>注册地址</label><input name="" type="text" class="dfinput"  value="济南长清"/></li>
+		           
+     <li><label>现住址</label><input name="" type="text" class="dfinput"  value="长清大学城"/></li>
+    <li><label>最高学位</label><cite><select class="dfselect1">
+             <option value="0">名誉博士</option>
+              <option value="1">博士</option>
+                <option value="2">硕士</option>
+              <option value="3" selected="selected">学士</option>
+         </select></cite></li>
+    <li><label>家庭总资产（元）</label><input name="" type="text" class="dfinput"  value="209000.00"/></li>
+    <li><label>家庭总负债（元）</label><input name="" type="text" class="dfinput"  value="10000.00"/></li>
+
+   <li><label>家庭年收入（元）*</label><input name="" type="text" class="dfinput"  value="100000.00"/></li>
+    <li><label>家庭年支出（元）*</label><input name="" type="text" class="dfinput"  value="80000.00"/></li>
+    <li><label>备注</label><input name="" type="text" class="dfinput"  value="刷单山东所"/></li>
+    <li><label>主办客户经理 </label><input name="" type="text" class="dfinput"  value="徐徐"/></li>
+    <li><label>所属机构</label><input name="" type="text" class="dfinput"  value="业务部"/></li>
+    <li><label>建户日期 </label><input name="" type="text" class="dfinput"  value="2014-09-07"/></li>
+    <li><label>最近修改日期</label><input name="" type="text" class="dfinput"  value="2014-09-07"/></li>
+
+
+    <li>&nbsp;&nbsp;<input name="" type="submit" class="btn" value="添加"/>&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="reset" class="btn" value="重置"/></li>
+    </ul>
+    
+    </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- 导入资源文件 -->
+    <context:property-placeholder location="classpath:db.properties"/>
+
+    <!-- 使用 annotation -->
+    <context:annotation-config />
+
+    <!-- 使用 annotation 自动注册bean,并检查@Controller, @Service, @Repository注解已被注入 -->
+    <context:component-scan base-package="com.inspur"></context:component-scan>
+
+    <!-- 配置 C3P0 数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="user" value="${jdbc.user}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+        <property name="driverClass" value="${jdbc.driverClass}"></property>
+        <property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+
+        <property name="initialPoolSize" value="${jdbc.initPoolSize}"></property>
+        <property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
+    </bean>
+
+
+    <!-- 配置 SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/popular_bank_dev</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="current_session_context_class">thread</prop>
+            </props>
+        </property>
+
+        <property name="mappingLocations" value="classpath:com/inspur/cmis/entity/*.hbm.xml"></property>
+    </bean>
+
+    <!--template-->
+    <!--<bean name="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">-->
+        <!--<property name="sessionFactory" ref="sessionFactory"></property>-->
+    <!--</bean>-->
+
+    <!--事务管理-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <!-- 2. 配置事务属性 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="save*" propagation="REQUIRED" />
+            <tx:method name="add*" propagation="REQUIRED" />
+            <tx:method name="do*" propagation="REQUIRED" />
+            <tx:method name="update*" propagation="REQUIRED" />
+            <tx:method name="delete*" propagation="REQUIRED" />
+            <tx:method name="select*" propagation="REQUIRED" />
+            <tx:method name="*" propagation="SUPPORTS" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+
+    <!-- 3. 配置事务切入点, 再把事务属性和事务切入点关联起来 -->
+    <aop:config>
+        <aop:pointcut expression="execution(* com.inspur.cmis.service.impl.*.*(..))" id="txPointcut"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+
+
+</beans>

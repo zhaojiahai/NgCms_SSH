@@ -1,0 +1,36 @@
+a{color: #2E2E2E; TEXT-DECORATION: none
+;}
+A:HOVER{
+color:#BB4200; TEXT-DECORATION: underline
+;}
+.favMenu {CURSOR: hand; FONT: menu
+;}
+img{border="0"}
+input.black{color:#FFB900;
+  background-color :  #eeeeee;
+  	border:  1 solid #919191;
+}
+
+td{
+	FONT-SIZE: 10pt; }
+	
+.font{  color: #2E2E2E;}
+
+BODY{
+  color: #2E2E2E;
+	text-align: center;
+  font:11pt ËÎÌו, MS Song;
+background-image: url("../images/dl_line.gif");
+  background-repeat : repeat;
+  background-attachment : fixed;
+borderlight-color:#ffffff;
+scrollbar-darkShadow-color:#ACACAC;
+scrollbar-3d-light-color:#8E8E8E;
+scrollbar-arrow-color:#4D779D;
+scrollbar-base-color:#E2F3FA;
+scrollbar-face-color:#EBF3F8;
+scrollbar-highlight-color:#DDE0E1;
+scrollbar-shadow-color:#F2FAFB;
+scrollbar-track-color:#EBEFF1
+}
+	

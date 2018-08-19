@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Hibernate 5.2.9-5.2.9" type="hibernate">
+    <properties version="5.2.9" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/antlr-2.7.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

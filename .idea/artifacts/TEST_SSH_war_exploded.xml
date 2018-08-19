@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TEST_SSH:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/TEST_SSH_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="TEST_SSH/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TEST_SSH" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.2.9-5.2.9" />
+          <element id="library" level="project" name="Spring-4.3.7.RELEASE" />
+          <element id="library" level="project" name="Struts 2-2.3.20.1" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:5.1.26" />
+          <element id="library" level="project" name="org.apache.commons:commons-dbcp2:2.1" />
+          <element id="library" level="project" name="spring-web-3.0.5.RELEASE" />
+          <element id="library" level="project" name="struts2-spring-plugin-2.3.24" />
+          <element id="library" level="project" name="log4j:log4j:1.2.14" />
+          <element id="library" level="project" name="c3p0-0.9.1.2" />
+          <element id="library" level="project" name="freemarker-2.3.19" />
+          <element id="library" level="project" name="asm-3.3" />
+          <element id="library" level="project" name="lombok-1.0" />
+          <element id="library" level="project" name="struts2-convention-plugin-2.3.15.1" />
+          <element id="library" level="project" name="gson-2.8.2" />
+          <element id="library" level="project" name="hibernate-commons-annotations-5.0.1.Final" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

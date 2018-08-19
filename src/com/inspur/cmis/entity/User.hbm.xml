@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <!--实体类和表映射-->
+    <class name="com.inspur.cmis.entity.User" table="pop_user">
+        <id name="id" >
+            <column name="id"  sql-type="int(11)"/>
+            <generator class="native">
+
+            </generator>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(40)" length="40"/>
+        </property>
+
+        <property name="loginName">
+            <column name="loginName" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="passWord">
+            <column name="passWord" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="groupId">
+            <column name="groupId" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="valid">
+            <column name="valid" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="locked">
+            <column name="locked" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="modifiedTime">
+            <column name="modifiedTime" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="createdTime">
+            <column name="createdTime" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="createduserid">
+            <column name="createduserid" sql-type="int" length="20"/>
+        </property>
+        <property name="roleid">
+            <column name="roleid" sql-type="int" length="20"/>
+        </property>
+    </class>
+
+
+</hibernate-mapping>

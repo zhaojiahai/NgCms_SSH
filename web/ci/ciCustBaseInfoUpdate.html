@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+</head>
+<body>
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="ciCustBaseInfo.html">对公客户基本维护</a></li>
+    <li><a href="ciCustBaseInfoUpdate.html">修改</a></li>
+    </ul>
+    </div>
+
+    <form action="" method="post">
+    <div class="formbody">
+    <div class="formtitle"><span>对公客户基本信息</span></div>
+    
+    <ul class="forminfo">
+    <li><label>客户编号</label><input name="" type="text" class="dfinput" value="1000002080"/> </li>
+    <li><label>客户名称</label><input name="" type="text" class="dfinput" value="xx桃城二厂"/> </li>
+    <li><label>客户类型</label>
+         <cite><select class="dfselect1">
+           <option value="0">请选择</option>
+           <option value="00" selected="selected">企业类客户</option>
+                      <option value="01">事业类客户</option>
+                      <option value="02">其他经济组织</option>
+         </select></cite>
+   <cite></li>
+    <li><label>组织机构代码证号</label><input name="" type="text" class="dfinput" value="370101000001"/> </li>
+    <li><label>是否年审</label><cite><select class="dfselect"><option value="0">请选择</option><option value="1" selected="selected" >是</option><option value="2">否</option></select></cite></li>
+    <li><label>贷款卡编号</label><input name="" type="text" class="dfinput" value="3701010000077388"/></li>
+    <li><label>营业执照注册号</label><input name="" type="text" class="dfinput" value="456"/></li>
+    <li><label>法定代表人</label><input name="" type="text" class="dfinput" value="王霞"/></li>
+    <li><label>主营业务</label><input name="" type="text" class="dfinput" value="旅游业"/></li>
+    <li><label>营业执照注册登记日期</label><input name="" type="text" class="dfinput" value="2015-09-01"/></li>
+    <li><label>营业执照到期日 </label><input name="" type="text" class="dfinput"  value="2019-09-08"/></li>
+    <li><label>注册资本金额</label><input name="" type="text" class="dfinput"  value="20000.00"/></li>
+    <li><label>注册地址</label><input name="" type="text" class="dfinput"  value="山东济南"/></li>
+	           
+     <li><label>税务登记证号码</label><input name="" type="text" class="dfinput"  value="2345644444"/></li>
+    <li><label>联系人</label><input name="" type="text" class="dfinput"  value="小王"/></li>
+    <li><label>联系电话</label><input name="" type="text" class="dfinput"  value="13243234321"/></li>
+    <li><label>通讯地址</label><input name="" type="text" class="dfinput"  value="济南长清"/></li>
+
+   
+    <li><label>备注</label><input name="" type="text" class="dfinput"  value="舒服舒服"/></li>
+    <li><label>主办客户经理 </label><input name="" type="text" class="dfinput"  value="徐经理"/></li>
+    <li><label>所属机构</label><input name="" type="text" class="dfinput"  value="业务部"/></li>
+    <li><label>建户日期 </label><input name="" type="text" class="dfinput"  value="2016-02-09"/></li>
+    <li><label>最近修改日期</label><input name="" type="text" class="dfinput"  value="2017-09-09"/></li>
+
+
+    <li>&nbsp;&nbsp;<input name="" type="submit" class="btn" value="添加"/>&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="reset" class="btn" value="重置"/></li>
+    </ul>
+    
+    </div>
+    </form>
+</body>
+
+</html>

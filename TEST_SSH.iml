@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src" />
+        </sourceRoots>
+      </configuration>
+      <facet type="Struts2" name="Struts 2">
+        <configuration>
+          <fileset id="s2fileset" name="Default File Set " removed="false">
+            <file>file://$MODULE_DIR$/conf/struts.xml</file>
+            <file>jar://$MODULE_DIR$/lib/struts2-core.jar!/struts-default.xml</file>
+            <file>file://$MODULE_DIR$/conf/struts-frame.xml</file>
+          </fileset>
+          <propertiesKeys disabled="false" />
+        </configuration>
+      </facet>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="sessionFactory" value="8c1a6048-056c-45e7-8a79-b54816a158c6" />
+        </datasource-map>
+        <naming-strategy-map />
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/spring-config.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/applicationContext.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/conf" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Hibernate 5.2.9-5.2.9" level="project" />
+    <orderEntry type="library" name="Spring-4.3.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Struts 2-2.3.20.1" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:5.1.26" level="project" />
+    <orderEntry type="library" name="org.apache.commons:commons-dbcp2:2.1" level="project" />
+    <orderEntry type="library" name="spring-web-3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="struts2-spring-plugin-2.3.24" level="project" />
+    <orderEntry type="library" name="log4j:log4j:1.2.14" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.15" level="application_server_libraries" />
+    <orderEntry type="library" name="c3p0-0.9.1.2" level="project" />
+    <orderEntry type="library" name="freemarker-2.3.19" level="project" />
+    <orderEntry type="library" name="asm-3.3" level="project" />
+    <orderEntry type="library" name="org.apache.struts:struts2-spring-plugin:2.3.24" level="project" />
+    <orderEntry type="library" name="lombok-1.0" level="project" />
+    <orderEntry type="library" name="struts2-convention-plugin-2.3.15.1" level="project" />
+    <orderEntry type="library" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" name="hibernate-commons-annotations-5.0.1.Final" level="project" />
+  </component>
+</module>
