@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.CifixedassetsEntity" table="CIFIXEDASSETS" schema="SYS">
+        <composite-id mapped="true" class="com.inspur.cmis.entity.CifixedassetsEntityPK">
+            <key-property name="id" column="ID"/>
+            <key-property name="custid" column="CUSTID"/>
+        </composite-id>
+        <property name="assetstype" column="ASSETSTYPE"/>
+        <property name="actualarea" column="ACTUALAREA"/>
+        <property name="permitarea" column="PERMITAREA"/>
+        <property name="amount" column="AMOUNT"/>
+        <property name="origvalue" column="ORIGVALUE"/>
+        <property name="life" column="LIFE"/>
+        <property name="netamount" column="NETAMOUNT"/>
+        <property name="assessedvalue" column="ASSESSEDVALUE"/>
+        <property name="ismortgage" column="ISMORTGAGE"/>
+        <property name="remark" column="REMARK"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+    </class>
+</hibernate-mapping>

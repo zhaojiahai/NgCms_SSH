@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.CimarketinfoEntity" table="CIMARKETINFO" schema="SYS">
+        <composite-id mapped="true" class="com.inspur.cmis.entity.CimarketinfoEntityPK">
+            <key-property name="id" column="ID"/>
+            <key-property name="custid" column="CUSTID"/>
+        </composite-id>
+        <property name="shareid" column="SHAREID"/>
+        <property name="marketplace" column="MARKETPLACE"/>
+        <property name="capitalamount" column="CAPITALAMOUNT"/>
+        <property name="sharename" column="SHARENAME"/>
+        <property name="sharetype" column="SHARETYPE"/>
+        <property name="createuser" column="CREATEUSER"/>
+        <property name="createdate" column="CREATEDATE"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="instcitycode" column="INSTCITYCODE"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+    </class>
+</hibernate-mapping>

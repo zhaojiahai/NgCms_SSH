@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.CipersonfamilyEntity" table="CIPERSONFAMILY" schema="SYS">
+        <id name="id" column="ID"/>
+        <property name="partyid" column="PARTYID"/>
+        <property name="custid" column="CUSTID"/>
+        <property name="typeid" column="TYPEID"/>
+        <property name="name" column="NAME"/>
+        <property name="sex" column="SEX"/>
+        <property name="familymbercction" column="FAMILYMBERCCTION"/>
+        <property name="papertype" column="PAPERTYPE"/>
+        <property name="papercode" column="PAPERCODE"/>
+        <property name="movephone" column="MOVEPHONE"/>
+        <property name="fixationphone" column="FIXATIONPHONE"/>
+        <property name="jobunit" column="JOBUNIT"/>
+        <property name="createduser" column="CREATEDUSER"/>
+        <property name="createdtime" column="CREATEDTIME"/>
+        <property name="groupid" column="GROUPID"/>
+        <property name="instcitycode" column="INSTCITYCODE"/>
+        <property name="deletereason" column="DELETEREASON"/>
+        <property name="status" column="STATUS"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+    </class>
+</hibernate-mapping>

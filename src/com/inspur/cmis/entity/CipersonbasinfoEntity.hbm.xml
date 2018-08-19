@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.CipersonbasinfoEntity" table="CIPERSONBASINFO" schema="SYS">
+        <id name="id" column="ID"/>
+        <property name="custid" column="CUSTID"/>
+        <property name="typeid" column="TYPEID"/>
+        <property name="custtype" column="CUSTTYPE"/>
+        <property name="cname" column="CNAME"/>
+        <property name="sex" column="SEX"/>
+        <property name="cardtype" column="CARDTYPE"/>
+        <property name="cardnum" column="CARDNUM"/>
+        <property name="ethical" column="ETHICAL"/>
+        <property name="country" column="COUNTRY"/>
+        <property name="birthday" column="BIRTHDAY"/>
+        <property name="syaddr" column="SYADDR"/>
+        <property name="usefullife" column="USEFULLIFE"/>
+        <property name="signorg" column="SIGNORG"/>
+        <property name="custproperty" column="CUSTPROPERTY"/>
+        <property name="employer" column="EMPLOYER"/>
+        <property name="employeraddr" column="EMPLOYERADDR"/>
+        <property name="employerpostcode" column="EMPLOYERPOSTCODE"/>
+        <property name="title" column="TITLE"/>
+        <property name="vocation" column="VOCATION"/>
+        <property name="duty" column="DUTY"/>
+        <property name="marrige" column="MARRIGE"/>
+        <property name="isreferagricultural" column="ISREFERAGRICULTURAL"/>
+        <property name="contactmobiletel" column="CONTACTMOBILETEL"/>
+        <property name="address" column="ADDRESS"/>
+        <property name="postcode" column="POSTCODE"/>
+        <property name="messageaddr" column="MESSAGEADDR"/>
+        <property name="commpostcode" column="COMMPOSTCODE"/>
+        <property name="educationlevel" column="EDUCATIONLEVEL"/>
+        <property name="degree" column="DEGREE"/>
+        <property name="reside" column="RESIDE"/>
+        <property name="famasset" column="FAMASSET"/>
+        <property name="famdebt" column="FAMDEBT"/>
+        <property name="famannuincome" column="FAMANNUINCOME"/>
+        <property name="famannupayout" column="FAMANNUPAYOUT"/>
+        <property name="relaman" column="RELAMAN"/>
+        <property name="email" column="EMAIL"/>
+        <property name="incomeaccount" column="INCOMEACCOUNT"/>
+        <property name="incomebank" column="INCOMEBANK"/>
+        <property name="busimanager" column="BUSIMANAGER"/>
+        <property name="instcode" column="INSTCODE"/>
+        <property name="istmp" column="ISTMP"/>
+        <property name="status" column="STATUS"/>
+        <property name="remark" column="REMARK"/>
+        <property name="inputman" column="INPUTMAN"/>
+        <property name="inputdate" column="INPUTDATE"/>
+        <property name="groupid" column="GROUPID"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+        <property name="custstatus" column="CUSTSTATUS"/>
+        <property name="assistbusimanage" column="ASSISTBUSIMANAGE"/>
+    </class>
+</hibernate-mapping>

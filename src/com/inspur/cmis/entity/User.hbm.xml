@@ -35,10 +35,10 @@
             <column name="locked" sql-type="varchar(40)" length="20"/>
         </property>
         <property name="modifiedTime">
-            <column name="modifiedTime" sql-type="varchar(40)" length="20"/>
+            <column name="modifiedTime" sql-type="datetime" />
         </property>
         <property name="createdTime">
-            <column name="createdTime" sql-type="varchar(40)" length="20"/>
+            <column name="createdTime" sql-type="datetime"/>
         </property>
         <property name="createduserid">
             <column name="createduserid" sql-type="int" length="20"/>

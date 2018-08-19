@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.CiexternalinvestmentEntity" table="CIEXTERNALINVESTMENT" schema="SYS">
+        <composite-id mapped="true" class="com.inspur.cmis.entity.CiexternalinvestmentEntityPK">
+            <key-property name="id" column="ID"/>
+            <key-property name="custid" column="CUSTID"/>
+        </composite-id>
+        <property name="entername" column="ENTERNAME"/>
+        <property name="extinvestamount" column="EXTINVESTAMOUNT"/>
+        <property name="holdingscale" column="HOLDINGSCALE"/>
+        <property name="investrelationship" column="INVESTRELATIONSHIP"/>
+        <property name="currecytype" column="CURRECYTYPE"/>
+        <property name="remark" column="REMARK"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+        <property name="column11" column="COLUMN_11"/>
+    </class>
+</hibernate-mapping>

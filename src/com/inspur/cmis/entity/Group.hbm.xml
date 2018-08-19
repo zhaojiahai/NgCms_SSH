@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <!--实体类和表映射-->
+    <class name="com.inspur.cmis.entity.Group" table="pop_group">
+        <id name="id" >
+            <column name="id"  sql-type="int(11)"/>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property name="name">
+            <column name="name" sql-type="varchar(40)" length="40"/>
+        </property>
+
+        <property name="code">
+            <column name="code" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="parentid">
+            <column name="parentid" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="parentName">
+            <column name="parentName" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="valid">
+            <column name="valid" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="briefname">
+            <column name="briefname" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="modifieduserid">
+            <column name="modifieduserid" sql-type="int(11)"/>
+        </property>
+        <property name="createduserid">
+            <column name="createduserid" sql-type="int(11)"/>
+        </property>
+        <property name="createdtime">
+            <column name="createdtime" sql-type="datetime" />
+        </property>
+        <property name="modifiedtime">
+            <column name="modifiedtime" sql-type="datetime" />
+        </property>
+        <property name="validName">
+            <column name="validName" sql-type="int" length="20"/>
+        </property>
+    </class>
+
+
+</hibernate-mapping>

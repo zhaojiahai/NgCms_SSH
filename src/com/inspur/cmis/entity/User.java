@@ -2,6 +2,7 @@ package com.inspur.cmis.entity;
 
 
 import javax.persistence.Entity;
+import java.util.Date;
 
 
 /**
@@ -18,12 +19,27 @@ public class User {
 	private String description;// 描述
 	private String valid;//是否有效
 	private String locked;//是否锁定
-	private String modifiedTime;// 修改时间
-	private String createdTime;//建立日期
+	private Date modifiedTime;// 修改时间
+	private Date createdTime;//建立日期
 	private Integer createduserid;// 建立者
 	private Integer modifieduserid;//修改者
 	private String roleid;//角色 1 管理员 2 客户经理
 
+	public Date getModifiedTime() {
+		return modifiedTime;
+	}
+
+	public void setModifiedTime(Date modifiedTime) {
+		this.modifiedTime = modifiedTime;
+	}
+
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
 
 	public User() {
 	}
@@ -98,21 +114,6 @@ public class User {
 		this.locked = locked;
 	}
 
-	public String getModifiedTime() {
-		return modifiedTime;
-	}
-
-	public void setModifiedTime(String modifiedTime) {
-		this.modifiedTime = modifiedTime;
-	}
-
-	public String getCreatedTime() {
-		return createdTime;
-	}
-
-	public void setCreatedTime(String createdTime) {
-		this.createdTime = createdTime;
-	}
 
 	public Integer getCreateduserid() {
 		return createduserid;
