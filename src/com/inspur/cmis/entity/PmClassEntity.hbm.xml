@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.PmClassEntity" table="PM_CLASS" schema="C##SUNJIE">
+        <id name="id" column="ID"/>
+        <property name="name" column="NAME"/>
+        <property name="display" column="DISPLAY"/>
+        <property name="type" column="TYPE"/>
+        <property name="tree" column="TREE"/>
+        <property name="description" column="DESCRIPTION"/>
+    </class>
+</hibernate-mapping>

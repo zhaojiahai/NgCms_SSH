@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.GcassuremainEntity" table="GCASSUREMAIN" schema="C##SUNJIE">
+        <id name="keycode" column="KEYCODE"/>
+        <property name="keytype" column="KEYTYPE"/>
+        <property name="extendkeycode" column="EXTENDKEYCODE"/>
+        <property name="upkeycode" column="UPKEYCODE"/>
+        <property name="upkeytype" column="UPKEYTYPE"/>
+        <property name="money" column="MONEY"/>
+        <property name="currency" column="CURRENCY"/>
+        <property name="startdate" column="STARTDATE"/>
+        <property name="enddate" column="ENDDATE"/>
+        <property name="lastdate" column="LASTDATE"/>
+        <property name="limit" column="LIMIT"/>
+        <property name="limitunit" column="LIMITUNIT"/>
+        <property name="keyeffectedstate" column="KEYEFFECTEDSTATE"/>
+        <property name="keydatestate" column="KEYDATESTATE"/>
+        <property name="debtorcustid" column="DEBTORCUSTID"/>
+        <property name="wealthcoowner" column="WEALTHCOOWNER"/>
+        <property name="guarmod" column="GUARMOD"/>
+        <property name="guarbalance" column="GUARBALANCE"/>
+        <property name="guarbasprice" column="GUARBASPRICE"/>
+        <property name="guarbasepricecur" column="GUARBASEPRICECUR"/>
+        <property name="guarmaxprice" column="GUARMAXPRICE"/>
+        <property name="guarmaxpricecur" column="GUARMAXPRICECUR"/>
+        <property name="guarbusitype" column="GUARBUSITYPE"/>
+        <property name="otherguarbusitype" column="OTHERGUARBUSITYPE"/>
+        <property name="accessorystate" column="ACCESSORYSTATE"/>
+        <property name="intrstrate" column="INTRSTRATE"/>
+        <property name="intrstrateunit" column="INTRSTRATEUNIT"/>
+        <property name="espacc" column="ESPACC"/>
+        <property name="trnasinsuterm" column="TRNASINSUTERM"/>
+        <property name="counterclaimcond" column="COUNTERCLAIMCOND"/>
+        <property name="disputedsolve" column="DISPUTEDSOLVE"/>
+        <property name="arbitratedept" column="ARBITRATEDEPT"/>
+        <property name="contnum" column="CONTNUM"/>
+        <property name="otherpromise" column="OTHERPROMISE"/>
+        <property name="comments" column="COMMENTS"/>
+        <property name="evaluationorgcode" column="EVALUATIONORGCODE"/>
+        <property name="evaluateddate" column="EVALUATEDDATE"/>
+        <property name="evaluationorgname" column="EVALUATIONORGNAME"/>
+        <property name="busimanager" column="BUSIMANAGER"/>
+        <property name="avoidassuredutycond" column="AVOIDASSUREDUTYCOND"/>
+        <property name="elseduticond" column="ELSEDUTICOND"/>
+        <property name="assureduty" column="ASSUREDUTY"/>
+        <property name="passeddate" column="PASSEDDATE"/>
+        <property name="estatehandovertype" column="ESTATEHANDOVERTYPE"/>
+        <property name="otherpeoplename" column="OTHERPEOPLENAME"/>
+        <property name="deptcode" column="DEPTCODE"/>
+        <property name="instcode" column="INSTCODE"/>
+        <property name="instcitycode" column="INSTCITYCODE"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+    </class>
+</hibernate-mapping>

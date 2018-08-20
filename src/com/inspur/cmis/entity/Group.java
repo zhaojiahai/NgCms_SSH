@@ -1,6 +1,5 @@
 package com.inspur.cmis.entity;
 
-import javax.persistence.Entity;
 import java.util.Date;
 
 /**
@@ -8,7 +7,6 @@ import java.util.Date;
  * 描述：
  * 作者： LiuLiHao
  */
-@Entity
 public class Group {
 
     private Integer id;
@@ -25,48 +23,20 @@ public class Group {
     private Date modifiedtime;
     private String validName;
 
+    public Integer getId() {
+        return id;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public void setModifieduserid(Integer modifieduserid) {
-        this.modifieduserid = modifieduserid;
+    public String getName() {
+        return name;
     }
 
-    public void setCreateduserid(Integer createduserid) {
-        this.createduserid = createduserid;
-    }
-
-    public Date getCreatedtime() {
-        return createdtime;
-    }
-
-    public void setCreatedtime(Date createdtime) {
-        this.createdtime = createdtime;
-    }
-
-    public Date getModifiedtime() {
-        return modifiedtime;
-    }
-
-    public void setModifiedtime(Date modifiedtime) {
-        this.modifiedtime = modifiedtime;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getParentid() {
-        return parentid;
-    }
-
-    public void setParentid(String parentid) {
-        this.parentid = parentid;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCode() {
@@ -77,12 +47,12 @@ public class Group {
         this.code = code;
     }
 
-    public String getName() {
-        return name;
+    public String getParentid() {
+        return parentid;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setParentid(String parentid) {
+        this.parentid = parentid;
     }
 
     public String getParentName() {
@@ -117,22 +87,37 @@ public class Group {
         this.valid = valid;
     }
 
-    public int getModifieduserid() {
+    public Integer getModifieduserid() {
         return modifieduserid;
     }
 
-    public void setModifieduserid(int modifieduserid) {
+    public void setModifieduserid(Integer modifieduserid) {
         this.modifieduserid = modifieduserid;
     }
 
-    public int getCreateduserid() {
+    public Integer getCreateduserid() {
         return createduserid;
     }
 
-    public void setCreateduserid(int createduserid) {
+    public void setCreateduserid(Integer createduserid) {
         this.createduserid = createduserid;
     }
 
+    public Date getCreatedtime() {
+        return createdtime;
+    }
+
+    public void setCreatedtime(Date createdtime) {
+        this.createdtime = createdtime;
+    }
+
+    public Date getModifiedtime() {
+        return modifiedtime;
+    }
+
+    public void setModifiedtime(Date modifiedtime) {
+        this.modifiedtime = modifiedtime;
+    }
 
     public String getValidName() {
         return validName;

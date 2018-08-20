@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.GccontractmainEntity" table="GCCONTRACTMAIN" schema="C##SUNJIE">
+        <id name="keycode" column="KEYCODE"/>
+        <property name="keytype" column="KEYTYPE"/>
+        <property name="extendkeycode" column="EXTENDKEYCODE"/>
+        <property name="appcode" column="APPCODE"/>
+        <property name="money" column="MONEY"/>
+        <property name="currency" column="CURRENCY"/>
+        <property name="startdate" column="STARTDATE"/>
+        <property name="enddate" column="ENDDATE"/>
+        <property name="lastdate" column="LASTDATE"/>
+        <property name="limit" column="LIMIT"/>
+        <property name="limitunit" column="LIMITUNIT"/>
+        <property name="keyeffectedstate" column="KEYEFFECTEDSTATE"/>
+        <property name="keydatestate" column="KEYDATESTATE"/>
+        <property name="squarestate" column="SQUARESTATE"/>
+        <property name="bailacc" column="BAILACC"/>
+        <property name="assuremoney" column="ASSUREMONEY"/>
+        <property name="assurecur" column="ASSURECUR"/>
+        <property name="assurerate" column="ASSURERATE"/>
+        <property name="interest" column="INTEREST"/>
+        <property name="interestunit" column="INTERESTUNIT"/>
+        <property name="squareinterestmode" column="SQUAREINTERESTMODE"/>
+        <property name="ratetype" column="RATETYPE"/>
+        <property name="floattype" column="FLOATTYPE"/>
+        <property name="baserate" column="BASERATE"/>
+        <property name="baseratetype" column="BASERATETYPE"/>
+        <property name="floatrate" column="FLOATRATE"/>
+        <property name="intrstratefdot" column="INTRSTRATEFDOT"/>
+        <property name="loanpurpose" column="LOANPURPOSE"/>
+        <property name="contractcount" column="CONTRACTCOUNT"/>
+        <property name="solutionmode" column="SOLUTIONMODE"/>
+        <property name="usetype" column="USETYPE"/>
+        <property name="terminaldate" column="TERMINALDATE"/>
+        <property name="aribtrateorganization" column="ARIBTRATEORGANIZATION"/>
+        <property name="busimanager" column="BUSIMANAGER"/>
+        <property name="createdate" column="CREATEDATE"/>
+        <property name="passeddate" column="PASSEDDATE"/>
+        <property name="assistbusimanager" column="ASSISTBUSIMANAGER"/>
+        <property name="loantype" column="LOANTYPE"/>
+        <property name="busistate" column="BUSISTATE"/>
+        <property name="lowriskflag" column="LOWRISKFLAG"/>
+        <property name="mainassure" column="MAINASSURE"/>
+        <property name="subassure" column="SUBASSURE"/>
+        <property name="accounttype" column="ACCOUNTTYPE"/>
+        <property name="repaytype" column="REPAYTYPE"/>
+        <property name="repaymethod" column="REPAYMETHOD"/>
+        <property name="repaycycle" column="REPAYCYCLE"/>
+        <property name="repaymoney" column="REPAYMONEY"/>
+        <property name="loanpurposeremark" column="LOANPURPOSEREMARK"/>
+        <property name="instcode" column="INSTCODE"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+        <property name="operator" column="OPERATOR"/>
+    </class>
+</hibernate-mapping>

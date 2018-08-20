@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.GcassurecorrespondEntity" table="GCASSURECORRESPOND" schema="C##SUNJIE">
+        <composite-id mapped="true" class="com.inspur.cmis.entity.GcassurecorrespondEntityPK">
+            <key-property name="keycode" column="KEYCODE"/>
+            <key-property name="sequenceno" column="SEQUENCENO"/>
+        </composite-id>
+        <property name="keytype" column="KEYTYPE"/>
+        <property name="upkeycode" column="UPKEYCODE"/>
+        <property name="upkeytype" column="UPKEYTYPE"/>
+        <property name="acontkeycode" column="ACONTKEYCODE"/>
+        <property name="acontkeytype" column="ACONTKEYTYPE"/>
+        <property name="confirmmethod" column="CONFIRMMETHOD"/>
+        <property name="useassuremoney" column="USEASSUREMONEY"/>
+        <property name="useassuremoneycur" column="USEASSUREMONEYCUR"/>
+        <property name="keyeffectedstate" column="KEYEFFECTEDSTATE"/>
+        <property name="keydatestate" column="KEYDATESTATE"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.PmUserEntity" table="PM_USER" schema="C##SUNJIE">
+        <id name="id" column="ID"/>
+        <property name="loginname" column="LOGINNAME"/>
+        <property name="password" column="PASSWORD"/>
+        <property name="name" column="NAME"/>
+        <property name="groupid" column="GROUPID"/>
+        <property name="description" column="DESCRIPTION"/>
+        <property name="valid" column="VALID"/>
+        <property name="locked" column="LOCKED"/>
+        <property name="modifiedtime" column="MODIFIEDTIME"/>
+        <property name="createdtime" column="CREATEDTIME"/>
+        <property name="createduserid" column="CREATEDUSERID"/>
+        <property name="modifieduserid" column="MODIFIEDUSERID"/>
+        <property name="roleid" column="ROLEID"/>
+    </class>
+</hibernate-mapping>
