@@ -7,6 +7,8 @@ import com.inspur.common.util.DateUtil;
 import com.inspur.common.util.IsNullUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 /**
  * 登录 注销操作
  */
@@ -55,6 +57,8 @@ public class UserAction extends BaseAction {
 	 * @return
 	 */
 	public String userInfo(){
+		List<User> list = userService.findAll();
+		request.setAttribute("users",list);
 		return "userInfo";
 	}
 
@@ -64,6 +68,23 @@ public class UserAction extends BaseAction {
 	 */
 	public String resetPwd(){
 		return "resetPwd";
+	}
+	/**
+	 * 用户添加页面跳转
+	 * @return
+	 */
+	public String userAddHtml(){
+		return "userInfoAddHtml";
+	}
+
+	/**
+	 * 用户添加
+	 * @return
+	 */
+	public String userAdd(){
+
+		//用户列表
+		return "userList";
 	}
 
 	/**

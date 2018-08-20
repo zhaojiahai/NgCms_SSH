@@ -1,6 +1,7 @@
 package com.inspur.cmis.dao.impl;
 
 import com.inspur.cmis.dao.BaseDao;
+import com.inspur.common.util.IsNullUtils;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,9 +55,12 @@ public class BaseDaoImpl<T>  implements BaseDao<T> {
     @Override
     public List<T> list(String hql, Object[] args) {
         Query query=sessionFactory.getCurrentSession().createQuery(hql);
-        for (int i = 0; i < args.length; i++) {
-            query.setParameter(i, args[i]);
+        if (IsNullUtils.arrayIsNotNull(args)){
+            for (int i = 0; i < args.length; i++) {
+                query.setParameter(i, args[i]);
+            }
         }
+
         List<T> list=query.list();
         return list;
     }

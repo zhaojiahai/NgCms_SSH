@@ -35,7 +35,6 @@
             var newPass = $("#newPass").val();
             var confirmPass = $("#confirmPass").val();
 
-            debugger
             if (objIsNull(loginName) || objIsNull(oldPass) ||
                 objIsNull(newPass) || objIsNull(confirmPass)) {
                 alert("内容填写不完整!");

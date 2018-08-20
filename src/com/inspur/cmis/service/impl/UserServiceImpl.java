@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by LiuLiHao on 2018/8/16 21:59.
@@ -30,6 +31,13 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     @Transactional(readOnly = true)
     public User login(String loginName, String password) {
         return userDao.login(loginName,password);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<User> findAll() {
+        List<User> list = userDao.list("FROM User u ", null);
+        return list;
     }
 
 }

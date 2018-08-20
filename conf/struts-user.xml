@@ -11,6 +11,10 @@
 			<result name="input">/login.jsp</result>
 			<result name="userInfo">/WEB-INF/page/user/userInfo.jsp</result>
 			<result name="resetPwd">/WEB-INF/page/user/resetPwd.jsp</result>
+			<!--用户添加跳转-->
+			<result name="userInfoAddHtml">/WEB-INF/page/user/userInfoAdd.jsp</result>
+			<!--用户列表-->
+			<result name="userList" type="redirect">/loginAction_userList.action</result>
 		</action>
 	</package>
 </struts>

@@ -1,0 +1,3645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="C##SUNJIE">
+      <ObjectId>107</ObjectId>
+      <IntrospectionTimestamp>2018-08-20.13:10:19</IntrospectionTimestamp>
+      <CreatedTimestamp>2018-08-20.09:45:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <CommentsHash>1423528275934300</CommentsHash>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="AUDSYS">
+      <ObjectId>8</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="SYSTEM">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="OUTLN">
+      <ObjectId>13</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="GSMADMIN_INTERNAL">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="GSMUSER">
+      <ObjectId>22</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="DIP">
+      <ObjectId>23</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="REMOTE_SCHEDULER_AGENT">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="DBSFWUSER">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="ORACLE_OCM">
+      <ObjectId>39</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="SYS$UMF">
+      <ObjectId>46</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="DBSNMP">
+      <ObjectId>54</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="APPQOSSYS">
+      <ObjectId>55</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="GSMCATUSER">
+      <ObjectId>59</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="GGSYS">
+      <ObjectId>60</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="XDB">
+      <ObjectId>62</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="ANONYMOUS">
+      <ObjectId>63</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="WMSYS">
+      <ObjectId>72</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="OJVMSYS">
+      <ObjectId>81</ObjectId>
+    </schema>
+    <schema id="23" parent="1" name="CTXSYS">
+      <ObjectId>84</ObjectId>
+    </schema>
+    <schema id="24" parent="1" name="ORDSYS">
+      <ObjectId>86</ObjectId>
+    </schema>
+    <schema id="25" parent="1" name="ORDDATA">
+      <ObjectId>87</ObjectId>
+    </schema>
+    <schema id="26" parent="1" name="ORDPLUGINS">
+      <ObjectId>88</ObjectId>
+    </schema>
+    <schema id="27" parent="1" name="SI_INFORMTN_SCHEMA">
+      <ObjectId>89</ObjectId>
+    </schema>
+    <schema id="28" parent="1" name="MDSYS">
+      <ObjectId>90</ObjectId>
+    </schema>
+    <schema id="29" parent="1" name="OLAPSYS">
+      <ObjectId>93</ObjectId>
+    </schema>
+    <schema id="30" parent="1" name="MDDATA">
+      <ObjectId>96</ObjectId>
+    </schema>
+    <schema id="31" parent="1" name="SPATIAL_CSW_ADMIN_USR">
+      <ObjectId>98</ObjectId>
+    </schema>
+    <schema id="32" parent="1" name="LBACSYS">
+      <ObjectId>101</ObjectId>
+    </schema>
+    <schema id="33" parent="1" name="DVF">
+      <ObjectId>103</ObjectId>
+    </schema>
+    <schema id="34" parent="1" name="C##WANHAO">
+      <ObjectId>106</ObjectId>
+    </schema>
+    <schema id="35" parent="1" name="DVSYS">
+      <ObjectId>1279990</ObjectId>
+    </schema>
+    <schema id="36" parent="1" name="SYSBACKUP">
+      <ObjectId>2147483617</ObjectId>
+    </schema>
+    <schema id="37" parent="1" name="SYSDG">
+      <ObjectId>2147483618</ObjectId>
+    </schema>
+    <schema id="38" parent="1" name="SYSKM">
+      <ObjectId>2147483619</ObjectId>
+    </schema>
+    <schema id="39" parent="1" name="SYSRAC">
+      <ObjectId>2147483620</ObjectId>
+    </schema>
+    <schema id="40" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <table id="41" parent="2" name="CCFLOWOPINIONHIS">
+      <ObjectId>73540</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="42" parent="2" name="CCFLOWOPINIONPROC">
+      <ObjectId>73542</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="43" parent="2" name="CCLMTAPPLYPRJINFO">
+      <ObjectId>73531</ObjectId>
+      <Comment>记录流程中所有维护岗位的授信方案信息（流程结束时，会拷贝到历史表中，并清空过程表）
+</Comment>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="44" parent="2" name="CCLMTAPPLYPRJINFOPROC">
+      <ObjectId>73544</ObjectId>
+      <Comment>记录流程中所有维护岗位的授信方案信息（流程结束时，会拷贝到历史表中，并清空过程表）
+</Comment>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+    </table>
+    <table id="45" parent="2" name="CICUSTBASINFO">
+      <ObjectId>73496</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="46" parent="2" name="CICUSTMODIFIDINFO">
+      <ObjectId>73500</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="47" parent="2" name="CIEXTERNALINVESTMENT">
+      <ObjectId>73503</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="48" parent="2" name="CIFIXEDASSETS">
+      <ObjectId>73505</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="49" parent="2" name="CILICENSECERTIFICATE">
+      <ObjectId>73507</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="50" parent="2" name="CIMANAGEMENTINFO">
+      <ObjectId>73509</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="51" parent="2" name="CIMARKETINFO">
+      <ObjectId>73511</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="52" parent="2" name="CIOWNERSHIPSTRUCTURE">
+      <ObjectId>73513</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="53" parent="2" name="CIPERSONBADRECORD">
+      <ObjectId>73515</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="54" parent="2" name="CIPERSONBASINFO">
+      <ObjectId>73517</ObjectId>
+      <Comment>对私客户基本信息</Comment>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="55" parent="2" name="CIPERSONFAMILY">
+      <ObjectId>73521</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="56" parent="2" name="CIPERSONMEMO">
+      <ObjectId>73523</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="57" parent="2" name="CIPERSONMODIFIEDINFO">
+      <ObjectId>73525</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="58" parent="2" name="CIPUBBADRECORD">
+      <ObjectId>73528</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="59" parent="2" name="GCASSURECORRESPOND">
+      <ObjectId>73549</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+    </table>
+    <table id="60" parent="2" name="GCASSUREMAIN">
+      <ObjectId>73553</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+    </table>
+    <table id="61" parent="2" name="GCCONTRACTMAIN">
+      <ObjectId>73533</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="62" parent="2" name="GCGUARANTYMAIN">
+      <ObjectId>73546</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+    </table>
+    <table id="63" parent="2" name="GCLOANCREDIT">
+      <ObjectId>73536</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+    </table>
+    <table id="64" parent="2" name="PM_CLASS">
+      <ObjectId>73492</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:30</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:30</ModifiedTimestamp>
+    </table>
+    <table id="65" parent="2" name="PM_GROUP">
+      <ObjectId>73488</ObjectId>
+      <Comment>为业务处理过程中具有一定资源访问权力或业务处理义务的用户团体，如公司可以作为一个组，部门可以作为一个组，项目组也可以作为一个组，跨部门或跨公司的用户群体也可以作为一个组。组内可以再次划分为零个或多个子组。</Comment>
+      <CreatedTimestamp>2018-08-20.09:45:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:45:06</ModifiedTimestamp>
+    </table>
+    <table id="66" parent="2" name="PM_PARAM">
+      <ObjectId>73494</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+    </table>
+    <table id="67" parent="2" name="PM_USER">
+      <ObjectId>73490</ObjectId>
+      <Comment>该表定义了访问系统资源的用户信息，用是一个可以独立访问计算机系统中的数据或者用数据表示的其它资源的主体。用户在一般情况下是指人，也可以为外部系统。</Comment>
+      <CreatedTimestamp>2018-08-20.09:45:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:45:06</ModifiedTimestamp>
+    </table>
+    <column id="68" parent="41" name="PROCESSID">
+      <Position>1</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="41" name="WORKITEMID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="41" name="STATE">
+      <Position>3</Position>
+      <Comment>F不同意
+T同意
+</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="71" parent="41" name="OPINION">
+      <Position>4</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="72" parent="41" name="OPERSTATION">
+      <Position>5</Position>
+      <DataType>VARCHAR2(150)|0</DataType>
+    </column>
+    <column id="73" parent="41" name="INSTCODE">
+      <Position>6</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="74" parent="41" name="DEPTCODE">
+      <Position>7</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="75" parent="41" name="OPERDATETIME">
+      <Position>8</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <column id="76" parent="41" name="OPERATOR">
+      <Position>9</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <index id="77" parent="41" name="P_KEY_OPINION">
+      <ObjectId>73541</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>PROCESSID
+WORKITEMID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="78" parent="41" name="P_KEY_OPINION">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>PROCESSID
+WORKITEMID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_OPINION</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="79" parent="42" name="PROCESSID">
+      <Position>1</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="42" name="WORKITEMID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="42" name="STATE">
+      <Position>3</Position>
+      <Comment>F不同意
+T 同意
+</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="82" parent="42" name="OPINION">
+      <Position>4</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="83" parent="42" name="OPERSTATION">
+      <Position>5</Position>
+      <DataType>VARCHAR2(150)|0</DataType>
+    </column>
+    <column id="84" parent="42" name="INSTCODE">
+      <Position>6</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="85" parent="42" name="DEPTCODE">
+      <Position>7</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="86" parent="42" name="OPERDATETIME">
+      <Position>8</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <column id="87" parent="42" name="OPERATOR">
+      <Position>9</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <index id="88" parent="42" name="P_KEY_OPIN">
+      <ObjectId>73543</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>PROCESSID
+WORKITEMID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="42" name="P_KEY_OPIN">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>PROCESSID
+WORKITEMID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_OPIN</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="90" parent="43" name="APPCODE">
+      <Position>1</Position>
+      <Comment>自动生成</Comment>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="43" name="LMTTYPE">
+      <Position>2</Position>
+      <Comment>中心0；综合1；单项2；</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="92" parent="43" name="CUSTID">
+      <Position>3</Position>
+      <Comment>借款人</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="43" name="BUSITYPE">
+      <Position>4</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="94" parent="43" name="REQLMT">
+      <Position>5</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="95" parent="43" name="CURRENCY">
+      <Position>6</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="96" parent="43" name="LIMIT">
+      <Position>7</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="97" parent="43" name="LMTPERIODREMARK">
+      <Position>8</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="98" parent="43" name="STARTDATE">
+      <Position>9</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="99" parent="43" name="ENDDATE">
+      <Position>10</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="100" parent="43" name="USECURRENCY">
+      <Position>11</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="101" parent="43" name="USEMODE">
+      <Position>12</Position>
+      <Comment>0001	非循环
+0002	循环
+</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="102" parent="43" name="MAINASSURE">
+      <Position>13</Position>
+      <Comment>保证、抵押、质押、信用</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="103" parent="43" name="INTEREST">
+      <Position>14</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="104" parent="43" name="INTERESTUNIT">
+      <Position>15</Position>
+      <Comment>1-年利率百分位；2-月利率-千分位；3-日利率-万分位</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="105" parent="43" name="RATETYPE">
+      <Position>16</Position>
+      <Comment>1固定利率
+2浮动利率
+3其他
+</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="106" parent="43" name="BASERATETYPE">
+      <Position>17</Position>
+      <Comment>01	六个月以内（含）
+02	六个月至一年（含）
+03	一年至三年（含）
+04	三年至五年（含）
+05	五年以上
+</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="107" parent="43" name="BASERATE">
+      <Position>18</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="108" parent="43" name="BASERATECODE">
+      <Position>19</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="109" parent="43" name="FLOATRATE">
+      <Position>20</Position>
+      <Comment>+表示上浮；-表示下浮</Comment>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="110" parent="43" name="FLOATTYPE">
+      <Position>21</Position>
+      <Comment>1	上浮
+2	下浮
+3	不浮动
+</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="111" parent="43" name="LOWRISKFLAG">
+      <Position>22</Position>
+      <Comment>T 是 F 否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="112" parent="43" name="ASSURERATE">
+      <Position>23</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="113" parent="43" name="RATEADJUSTPERIOD">
+      <Position>24</Position>
+      <Comment>1	日
+2	月
+3	季
+4	半年
+5	年
+</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="114" parent="43" name="LOANPURPOSE">
+      <Position>25</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="115" parent="43" name="REPAYTYPE">
+      <Position>26</Position>
+      <Comment>1.期初付息、到期还本；
+2.期末本息一次付清；
+3.按固定周期付息，到期还本；
+4.按固定周期付息，按计划表还本；
+5.等额本息；
+6.、等额本金</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="116" parent="43" name="REMARK">
+      <Position>27</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="117" parent="43" name="LMTSTATE">
+      <Position>28</Position>
+      <Comment>0：新增
+1：已生效
+2：（将已生效的）置为删除状态</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="118" parent="43" name="APPDATE">
+      <Position>29</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="119" parent="43" name="AUDITDAY">
+      <Position>30</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="120" parent="43" name="BUSIMANAGER">
+      <Position>31</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="121" parent="43" name="INSTCODE">
+      <Position>32</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="122" parent="43" name="OPERATOR">
+      <Position>33</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="123" parent="43" name="OPERDATETIME">
+      <Position>34</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="124" parent="43" name="P_KEY_APPLY">
+      <ObjectId>73532</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>APPCODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="125" parent="43" name="P_KEY_APPLY">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>APPCODE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_APPLY</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="126" parent="44" name="PROCESSID">
+      <Position>1</Position>
+      <Comment>工作流的processid</Comment>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="44" name="APPCODE">
+      <Position>2</Position>
+      <Comment>自动生成</Comment>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="44" name="LMTTYPE">
+      <Position>3</Position>
+      <Comment>中心0；综合1；单项2；</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="129" parent="44" name="CUSTID">
+      <Position>4</Position>
+      <Comment>借款人</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="130" parent="44" name="BUSITYPE">
+      <Position>5</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="131" parent="44" name="REQLMT">
+      <Position>6</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="132" parent="44" name="CURRENCY">
+      <Position>7</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="133" parent="44" name="LIMIT">
+      <Position>8</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="134" parent="44" name="LMTPERIODREMARK">
+      <Position>9</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="135" parent="44" name="STARTDATE">
+      <Position>10</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="136" parent="44" name="ENDDATE">
+      <Position>11</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="137" parent="44" name="USECURRENCY">
+      <Position>12</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="138" parent="44" name="USEMODE">
+      <Position>13</Position>
+      <Comment>0001	非循环
+0002	循环
+</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="139" parent="44" name="MAINASSURE">
+      <Position>14</Position>
+      <Comment>保证、抵押、质押、信用</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="140" parent="44" name="INTEREST">
+      <Position>15</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="141" parent="44" name="INTERESTUNIT">
+      <Position>16</Position>
+      <Comment>1-年利率百分位；2-月利率-千分位；3-日利率-万分位</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="142" parent="44" name="RATETYPE">
+      <Position>17</Position>
+      <Comment>1固定利率
+2浮动利率
+3其他
+</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="143" parent="44" name="BASERATETYPE">
+      <Position>18</Position>
+      <Comment>01	六个月以内（含）
+02	六个月至一年（含）
+03	一年至三年（含）
+04	三年至五年（含）
+05	五年以上
+</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="144" parent="44" name="BASERATE">
+      <Position>19</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="145" parent="44" name="BASERATECODE">
+      <Position>20</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="146" parent="44" name="FLOATRATE">
+      <Position>21</Position>
+      <Comment>+表示上浮；-表示下浮</Comment>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="147" parent="44" name="FLOATTYPE">
+      <Position>22</Position>
+      <Comment>1	上浮
+2	下浮
+3	不浮动
+</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="148" parent="44" name="LOWRISKFLAG">
+      <Position>23</Position>
+      <Comment>T 是 F 否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="149" parent="44" name="ASSURERATE">
+      <Position>24</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="150" parent="44" name="RATEADJUSTPERIOD">
+      <Position>25</Position>
+      <Comment>1	日
+2	月
+3	季
+4	半年
+5	年
+</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="151" parent="44" name="LOANPURPOSE">
+      <Position>26</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="152" parent="44" name="REPAYTYPE">
+      <Position>27</Position>
+      <Comment>1.期初付息、到期还本；
+2.期末本息一次付清；
+3.按固定周期付息，到期还本；
+4.按固定周期付息，按计划表还本；
+5.等额本息；
+6.、等额本金</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="153" parent="44" name="REMARK">
+      <Position>28</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="154" parent="44" name="LMTSTATE">
+      <Position>29</Position>
+      <Comment>0：新增
+1：已生效
+2：（将已生效的）置为删除状态</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="155" parent="44" name="APPDATE">
+      <Position>30</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="156" parent="44" name="AUDITDAY">
+      <Position>31</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="157" parent="44" name="BUSIMANAGER">
+      <Position>32</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="158" parent="44" name="INSTCODE">
+      <Position>33</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="159" parent="44" name="OPERATOR">
+      <Position>34</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="160" parent="44" name="OPERDATETIME">
+      <Position>35</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="161" parent="44" name="P_KEY_APPLYPROC">
+      <ObjectId>73545</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>PROCESSID
+APPCODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="162" parent="44" name="P_KEY_APPLYPROC">
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <ColNames>PROCESSID
+APPCODE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_APPLYPROC</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="163" parent="45" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="164" parent="45" name="CUSTID">
+      <Position>2</Position>
+      <Comment>分行号，客户保存成功后 ，系统自动生成客户编号</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="165" parent="45" name="TYPEID">
+      <Position>3</Position>
+      <Comment>系统自动显示“对公客户”</Comment>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="166" parent="45" name="CUSTTYPE">
+      <Position>4</Position>
+      <Comment>10-企业类客户
+20-事业类客户
+30-其他经济组织</Comment>
+      <DataType>CHAR(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="167" parent="45" name="CNAME">
+      <Position>5</Position>
+      <Comment>M选择证件类型后，根据录入的证件号码自动检索，返显客户名称</Comment>
+      <DataType>VARCHAR2(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="168" parent="45" name="ORGCERTCODE">
+      <Position>6</Position>
+      <Comment>由客户经理录入，系统自动校验证件的准确性。客户资料保存后，组织机构代码证号不允许再修改。</Comment>
+      <DataType>VARCHAR2(18)|0</DataType>
+    </column>
+    <column id="169" parent="45" name="ECOATTR">
+      <Position>7</Position>
+      <DataType>VARCHAR2(3)|0</DataType>
+    </column>
+    <column id="170" parent="45" name="CONTROLMODE">
+      <Position>8</Position>
+      <Comment>00-国有控股：001国有相对控股、002国有绝对控股 ；
+10-集体控股：101集体相对控股、102集体绝对控股；
+20-私人控股：201私人相对控股、202私人绝对控股；
+30-港澳台控股：301港澳台相对控股、302港澳台绝对控股；
+40-外商控股：401外商相对控股、402外商绝对控股</Comment>
+      <DataType>VARCHAR2(3)|0</DataType>
+    </column>
+    <column id="171" parent="45" name="ENTERPRISESTATUS">
+      <Position>9</Position>
+      <Comment>00-正常
+01-关停
+02-破产
+03-倒闭</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="172" parent="45" name="IFQUOTEDCOMPANY">
+      <Position>10</Position>
+      <Comment>T：是
+F：否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="173" parent="45" name="PRINCIPAL">
+      <Position>11</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="174" parent="45" name="OUTLAYSOURCE">
+      <Position>12</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="175" parent="45" name="LAUNCHCAPITAL">
+      <Position>13</Position>
+      <Comment>单位为“万元”</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="176" parent="45" name="ENROLMANAGEORG">
+      <Position>14</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="177" parent="45" name="SYADDR">
+      <Position>15</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="178" parent="45" name="BUSISPHERE">
+      <Position>16</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="179" parent="45" name="CUSTPROPERTY">
+      <Position>17</Position>
+      <Comment>针对农信
+00-企业法人
+01-企业非法人
+02-事业单位
+03-其他
+</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="180" parent="45" name="IFNXPARTNER">
+      <Position>18</Position>
+      <Comment>T：是
+F：否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="181" parent="45" name="CUSTSCALE">
+      <Position>19</Position>
+      <DataType>VARCHAR2(4)|0</DataType>
+    </column>
+    <column id="182" parent="45" name="LNCARDNO">
+      <Position>20</Position>
+      <Comment>系统自动校验证件的准确性。</Comment>
+      <DataType>VARCHAR2(18)|0</DataType>
+    </column>
+    <column id="183" parent="45" name="IFLNCARDCHECK">
+      <Position>21</Position>
+      <Comment>T--是
+F--否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="184" parent="45" name="LNCARDCHECKDATE">
+      <Position>22</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="185" parent="45" name="NXPARTNERMONEY">
+      <Position>23</Position>
+      <Comment>单位“元”
+</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="186" parent="45" name="ISTMP">
+      <Position>24</Position>
+      <Comment>T：是
+F：否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="187" parent="45" name="LICENCECODE">
+      <Position>25</Position>
+      <DataType>CHAR(15)|0</DataType>
+    </column>
+    <column id="188" parent="45" name="REGSTTYPE">
+      <Position>26</Position>
+      <Comment>00内资企业
+001国有企业
+002集体企业
+003股份合作企业
+004联营企业
+005有限责任公司
+006股份有限公司
+007私营企业
+01三资企业（港、澳、台投资企业）
+02外商投资企业
+03个体经营
+04其他
+</Comment>
+      <DataType>VARCHAR2(3)|0</DataType>
+    </column>
+    <column id="189" parent="45" name="MAINBUSINESS">
+      <Position>27</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="190" parent="45" name="CERTIFYFLAG">
+      <Position>28</Position>
+      <Comment>T：是
+F：否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="191" parent="45" name="BEGINDATE">
+      <Position>29</Position>
+      <Comment>开业日期 营业执照/批准证书上标明。</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="192" parent="45" name="FINISHDATE">
+      <Position>30</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="193" parent="45" name="REGSTAMT">
+      <Position>31</Position>
+      <Comment>万元  注册资金金额 营业执照/批准证书上标明。币种＋金额。币种来源DE-PUB001</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="194" parent="45" name="REGSTCURTYPE">
+      <Position>32</Position>
+      <Comment>人民币|美元|欧元|港币|德国马克|奥地利先令|澳大利亚元|比利时法郎|加拿大元|瑞士法郎|丹麦克朗|芬兰马克|法国法郎|英镑|意大利里拉|日本元|澳门元|马来西亚林|荷兰盾|挪威克朗|新西兰元|瑞典克朗|新加坡元</Comment>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="195" parent="45" name="REALCAPTAMT">
+      <Position>33</Position>
+      <Comment>万元   注册资金金额 营业执照/批准证书上标明。币种＋金额。币种来源DE-PUB001</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="196" parent="45" name="REALCAPTCURTYPE">
+      <Position>34</Position>
+      <Comment>人民币|美元|欧元|港币|德国马克|奥地利先令|澳大利亚元|比利时法郎|加拿大元|瑞士法郎|丹麦克朗|芬兰马克|法国法郎|英镑|意大利里拉|日本元|澳门元|马来西亚林|荷兰盾|挪威克朗|新西兰元|瑞典克朗|新加坡元</Comment>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="197" parent="45" name="CERTIFYDATE">
+      <Position>35</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="198" parent="45" name="SETDATE">
+      <Position>36</Position>
+      <Comment>1－是
+0－否</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="199" parent="45" name="REGSTADDR">
+      <Position>37</Position>
+      <Comment>注册地址 营业执照/批准证书上所列的法定注册地址，长度60位。</Comment>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="200" parent="45" name="BUSIRANGE">
+      <Position>38</Position>
+      <Comment>经营范围 营业执照/批准证书上标明的经营范围，长度100位。</Comment>
+      <DataType>VARCHAR2(200)|0</DataType>
+    </column>
+    <column id="201" parent="45" name="TAXLICENSENO">
+      <Position>39</Position>
+      <Comment>税务登记证 税务登记证号码。
+上报征信包括国税、地税</Comment>
+      <DataType>CHAR(15)|0</DataType>
+    </column>
+    <column id="202" parent="45" name="IFTAXLICENSEORG">
+      <Position>40</Position>
+      <Comment>T：是
+F：否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="203" parent="45" name="LINKMAN">
+      <Position>41</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="204" parent="45" name="TELEPHONE">
+      <Position>42</Position>
+      <Comment>总部地址电话 客户的总部地址的联系电话，国别号+区号+电话号码/总机+分机号码</Comment>
+      <DataType>VARCHAR2(15)|0</DataType>
+    </column>
+    <column id="205" parent="45" name="POSTALCODE">
+      <Position>43</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="206" parent="45" name="MESSAGEADDR">
+      <Position>44</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="207" parent="45" name="RELAMAN">
+      <Position>45</Position>
+      <Comment>0-信用社外部董事
+1-信用社外部监事
+2-以上人员投资或担任高管的企事业单位
+3-否</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="208" parent="45" name="EMPLOYEENUM">
+      <Position>46</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="209" parent="45" name="REMARK">
+      <Position>47</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="210" parent="45" name="BUSIMANAGER">
+      <Position>48</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="211" parent="45" name="INSTCODE">
+      <Position>49</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="212" parent="45" name="DEPTCODE">
+      <Position>50</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="213" parent="45" name="INSTCITYCODE">
+      <Position>51</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="214" parent="45" name="STATUS">
+      <Position>52</Position>
+      <Comment>状态: 0--预客户,1--生效,2--无效；</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="215" parent="45" name="INPUTMAN">
+      <Position>53</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="216" parent="45" name="INPUTDATE">
+      <Position>54</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="217" parent="45" name="GROUPID">
+      <Position>55</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="218" parent="45" name="OPERATOR">
+      <Position>56</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="219" parent="45" name="OPERDATETIME">
+      <Position>57</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <column id="220" parent="45" name="CUSTSTATUS">
+      <Position>58</Position>
+      <Comment>是否黑名单：
+F：否
+T：是</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="221" parent="45" name="ASSISTBUSIMANAGE">
+      <Position>59</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <index id="222" parent="45" name="P_KEY_CUST">
+      <ObjectId>73497</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="223" parent="45" name="IDX_CICUST_CUSTID2">
+      <ObjectId>73498</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>CUSTID</ColNames>
+    </index>
+    <index id="224" parent="45" name="IDX_CICUST_DEPT2">
+      <ObjectId>73499</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>DEPTCODE</ColNames>
+    </index>
+    <key id="225" parent="45" name="P_KEY_CUST">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_CUST</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="226" parent="46" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="227" parent="46" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="228" parent="46" name="COLUMNNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <column id="229" parent="46" name="OPERATOR">
+      <Position>4</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="230" parent="46" name="MODIFIEDTIME">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <column id="231" parent="46" name="FORMERLYINFODATA">
+      <Position>6</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="232" parent="46" name="MODIFIEDINFODATA">
+      <Position>7</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <index id="233" parent="46" name="P_KEY_CUSTMODY">
+      <ObjectId>73501</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="234" parent="46" name="IDX_CICUSTM_INITID">
+      <ObjectId>73502</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>CUSTID</ColNames>
+    </index>
+    <key id="235" parent="46" name="P_KEY_CUSTMODY">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_CUSTMODY</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="236" parent="47" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="237" parent="47" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="238" parent="47" name="ENTERNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="239" parent="47" name="EXTINVESTAMOUNT">
+      <Position>4</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="240" parent="47" name="HOLDINGSCALE">
+      <Position>5</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="241" parent="47" name="INVESTRELATIONSHIP">
+      <Position>6</Position>
+      <Comment>01控制
+02共同控制
+03重大影响</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="242" parent="47" name="CURRECYTYPE">
+      <Position>7</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="243" parent="47" name="REMARK">
+      <Position>8</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="244" parent="47" name="OPERATOR">
+      <Position>9</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="245" parent="47" name="OPERDATETIME">
+      <Position>10</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="246" parent="47" name="COLUMN_11">
+      <Position>11</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <index id="247" parent="47" name="P_KEY_EXTERNAL">
+      <ObjectId>73504</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="248" parent="47" name="P_KEY_EXTERNAL">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_EXTERNAL</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="249" parent="48" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="250" parent="48" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="251" parent="48" name="ASSETSTYPE">
+      <Position>3</Position>
+      <Comment>01房屋建筑物
+02土地使用权
+03机器设备
+04运输工具
+05其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="252" parent="48" name="ACTUALAREA">
+      <Position>4</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="253" parent="48" name="PERMITAREA">
+      <Position>5</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="254" parent="48" name="AMOUNT">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="255" parent="48" name="ORIGVALUE">
+      <Position>7</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="256" parent="48" name="LIFE">
+      <Position>8</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="257" parent="48" name="NETAMOUNT">
+      <Position>9</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="258" parent="48" name="ASSESSEDVALUE">
+      <Position>10</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="259" parent="48" name="ISMORTGAGE">
+      <Position>11</Position>
+      <Comment>T是|F否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="260" parent="48" name="REMARK">
+      <Position>12</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="261" parent="48" name="OPERATOR">
+      <Position>13</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="262" parent="48" name="OPERDATETIME">
+      <Position>14</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <index id="263" parent="48" name="P_KEY_FIXED">
+      <ObjectId>73506</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="264" parent="48" name="P_KEY_FIXED">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_FIXED</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="265" parent="49" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="266" parent="49" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="267" parent="49" name="CERTTYPE">
+      <Position>3</Position>
+      <Comment>01许可类
+02资质类
+03其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="268" parent="49" name="CERTNAME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(40)|0</DataType>
+    </column>
+    <column id="269" parent="49" name="CERTID">
+      <Position>5</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="270" parent="49" name="ISSUINGAGENCY">
+      <Position>6</Position>
+      <DataType>VARCHAR2(60)|0</DataType>
+    </column>
+    <column id="271" parent="49" name="CERTLEVEL">
+      <Position>7</Position>
+      <Comment>01特级
+02一级
+03二级
+04三级
+05四级
+06五级
+07六级
+08七级
+09其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="272" parent="49" name="STARTDATE">
+      <Position>8</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="273" parent="49" name="ENDDATE">
+      <Position>9</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="274" parent="49" name="SUMMARY">
+      <Position>10</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="275" parent="49" name="OPERATOR">
+      <Position>11</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="276" parent="49" name="INSTCITYCODE">
+      <Position>12</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="277" parent="49" name="OPERDATETIME">
+      <Position>13</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="278" parent="49" name="P_KEY_1">
+      <ObjectId>73508</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="279" parent="49" name="P_KEY_1">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="280" parent="50" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="281" parent="50" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="282" parent="50" name="MANCUSTID">
+      <Position>3</Position>
+      <Comment>对私客户编号反显</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+    </column>
+    <column id="283" parent="50" name="MANCUSTNAME">
+      <Position>4</Position>
+      <Comment>对私客户名称反显</Comment>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="284" parent="50" name="GENDER">
+      <Position>5</Position>
+      <Comment>1：男
+2：女
+对私客户反显</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="285" parent="50" name="CERTTYPE">
+      <Position>6</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="286" parent="50" name="CERTID">
+      <Position>7</Position>
+      <Comment>对私客户反显</Comment>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="287" parent="50" name="DEGREE">
+      <Position>8</Position>
+      <Comment>1——研究生
+2——大学本科
+3——大学专科或专科学校
+4——中等专业或技术学校
+5——高中
+6——初中
+7——小学
+8——文盲或半文盲
+9——未知
+对私客户反显</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="288" parent="50" name="TELEPHONE">
+      <Position>9</Position>
+      <Comment>对私联系方式(手机)反显</Comment>
+      <DataType>VARCHAR2(15)|0</DataType>
+    </column>
+    <column id="289" parent="50" name="EXPERICENCE">
+      <Position>10</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="290" parent="50" name="MANTYPE">
+      <Position>11</Position>
+      <Comment>01法定代表人
+02董事长
+03总经理
+04财务主管
+05其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="291" parent="50" name="ISENTERSHAREHOLDER">
+      <Position>12</Position>
+      <Comment>T是|F否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="292" parent="50" name="BACKGROUND">
+      <Position>13</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="293" parent="50" name="RESUME">
+      <Position>14</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="294" parent="50" name="CREATEUSER">
+      <Position>15</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="295" parent="50" name="CREATEDATE">
+      <Position>16</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="296" parent="50" name="OPERATOR">
+      <Position>17</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="297" parent="50" name="INSTCITYCODE">
+      <Position>18</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="298" parent="50" name="OPERDATETIME">
+      <Position>19</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="299" parent="50" name="P_KEY_MANAGER">
+      <ObjectId>73510</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="300" parent="50" name="P_KEY_MANAGER">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_MANAGER</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="301" parent="51" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="302" parent="51" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="303" parent="51" name="SHAREID">
+      <Position>3</Position>
+      <DataType>VARCHAR2(6)|0</DataType>
+    </column>
+    <column id="304" parent="51" name="MARKETPLACE">
+      <Position>4</Position>
+      <Comment>01上海
+02深圳
+03香港
+04新加坡
+05伦敦
+06纽约
+07东京
+08其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="305" parent="51" name="CAPITALAMOUNT">
+      <Position>5</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="306" parent="51" name="SHARENAME">
+      <Position>6</Position>
+      <DataType>VARCHAR2(50)|0</DataType>
+    </column>
+    <column id="307" parent="51" name="SHARETYPE">
+      <Position>7</Position>
+      <Comment>01A股
+02B股
+03H股
+04创业板
+05其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="308" parent="51" name="CREATEUSER">
+      <Position>8</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="309" parent="51" name="CREATEDATE">
+      <Position>9</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="310" parent="51" name="OPERATOR">
+      <Position>10</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="311" parent="51" name="INSTCITYCODE">
+      <Position>11</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="312" parent="51" name="OPERDATETIME">
+      <Position>12</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="313" parent="51" name="P_KEY_MARKET">
+      <ObjectId>73512</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="314" parent="51" name="P_KEY_MARKET">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_MARKET</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="315" parent="52" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="316" parent="52" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="317" parent="52" name="SHAREHOLDERTYPE">
+      <Position>3</Position>
+      <Comment>01国家股|02国家法人股|03自然人股|04社会法人股|05社会公共股</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="318" parent="52" name="SHAREHOLDERID">
+      <Position>4</Position>
+      <Comment>对私客户反显</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+    </column>
+    <column id="319" parent="52" name="SHAREHOLDERTYPEID">
+      <Position>5</Position>
+      <DataType>CHAR(12)|0</DataType>
+    </column>
+    <column id="320" parent="52" name="SHAREHOLDERNAME">
+      <Position>6</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="321" parent="52" name="DOCTTYPE">
+      <Position>7</Position>
+      <Comment>0身份证
+1护照
+2|军官证
+3香港身份证
+4澳门身份证
+5台湾身份证
+6组织机构代码证</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="322" parent="52" name="DOCTID">
+      <Position>8</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="323" parent="52" name="CURRENCYTYPE">
+      <Position>9</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="324" parent="52" name="OUTAOMUNT">
+      <Position>10</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="325" parent="52" name="ACTUALOUTAOMUNT">
+      <Position>11</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="326" parent="52" name="HOLDINGSCALE">
+      <Position>12</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="327" parent="52" name="FUNDINGWAY">
+      <Position>13</Position>
+      <Comment>01现金
+02股票
+03股份
+04债权
+05债权证、股权证
+06无形资产（专利权、特许权、其他）
+07固定资产（设备、房产、车辆、其他）</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="328" parent="52" name="REMARK">
+      <Position>14</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="329" parent="52" name="OPERATOR">
+      <Position>15</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="330" parent="52" name="OPERDATETIME">
+      <Position>16</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <index id="331" parent="52" name="P_KEY_OWNERSHP">
+      <ObjectId>73514</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="332" parent="52" name="P_KEY_OWNERSHP">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_OWNERSHP</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="333" parent="53" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="334" parent="53" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="335" parent="53" name="SUBJECT">
+      <Position>3</Position>
+      <Comment>01借款人被起诉
+02企业逃废债务
+03借款人提供虚假资料
+04贷款逾期欠息
+05不良对外担保记录
+06用途违约
+07其他情况</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="336" parent="53" name="RECORDDATE">
+      <Position>4</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="337" parent="53" name="BADDESCRIPTION">
+      <Position>5</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="338" parent="53" name="OPERATOR">
+      <Position>6</Position>
+      <Comment>创建人</Comment>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="339" parent="53" name="INSTCITYCODE">
+      <Position>7</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="340" parent="53" name="OPERDATETIME">
+      <Position>8</Position>
+      <Comment>创建时间</Comment>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="341" parent="53" name="P_KEY_BADP">
+      <ObjectId>73516</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="342" parent="53" name="P_KEY_BADP">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_BADP</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="343" parent="54" name="ID">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="344" parent="54" name="CUSTID">
+      <Position>2</Position>
+      <Comment>客户编号</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="345" parent="54" name="TYPEID">
+      <Position>3</Position>
+      <Comment>客户类型</Comment>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="346" parent="54" name="CUSTTYPE">
+      <Position>4</Position>
+      <Comment>01农户
+02个体工商户
+03城镇居民
+04学生
+05军官
+06港澳台同胞
+07外籍人士</Comment>
+      <DataType>CHAR(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="347" parent="54" name="CNAME">
+      <Position>5</Position>
+      <Comment>客户名称</Comment>
+      <DataType>VARCHAR2(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="348" parent="54" name="SEX">
+      <Position>6</Position>
+      <Comment>1：男
+2：女</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="349" parent="54" name="CARDTYPE">
+      <Position>7</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="350" parent="54" name="CARDNUM">
+      <Position>8</Position>
+      <Comment>证件号码</Comment>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="351" parent="54" name="ETHICAL">
+      <Position>9</Position>
+      <Comment>民族</Comment>
+      <DataType>VARCHAR2(2)|0</DataType>
+    </column>
+    <column id="352" parent="54" name="COUNTRY">
+      <Position>10</Position>
+      <Comment>国籍：参数字典中获取</Comment>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="353" parent="54" name="BIRTHDAY">
+      <Position>11</Position>
+      <Comment>由二代身份证识别仪器自动读入并显示该字段信息</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="354" parent="54" name="SYADDR">
+      <Position>12</Position>
+      <Comment>由二代身份证识别仪器自动读入并显示该字段信息。此处信息为征信中的户籍地址。</Comment>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="355" parent="54" name="USEFULLIFE">
+      <Position>13</Position>
+      <Comment>有效期限</Comment>
+      <DataType>VARCHAR2(60)|0</DataType>
+    </column>
+    <column id="356" parent="54" name="SIGNORG">
+      <Position>14</Position>
+      <Comment>签发机关</Comment>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="357" parent="54" name="CUSTPROPERTY">
+      <Position>15</Position>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="358" parent="54" name="EMPLOYER">
+      <Position>16</Position>
+      <Comment>工作单位名称</Comment>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="359" parent="54" name="EMPLOYERADDR">
+      <Position>17</Position>
+      <Comment>工作单位地址</Comment>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="360" parent="54" name="EMPLOYERPOSTCODE">
+      <Position>18</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="361" parent="54" name="TITLE">
+      <Position>19</Position>
+      <Comment>1——高级
+2——中级
+3——初级
+4——无
+5——未知</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="362" parent="54" name="VOCATION">
+      <Position>20</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="363" parent="54" name="DUTY">
+      <Position>21</Position>
+      <Comment>1——高级领导（行政级别局级及局级以上领导或大公司高级管理人员）
+2——中级领导（行政级别局级以下领导或大公司中级管理人员）
+3——般员工
+4——其他
+5——未知</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="364" parent="54" name="MARRIGE">
+      <Position>22</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="365" parent="54" name="ISREFERAGRICULTURAL">
+      <Position>23</Position>
+      <Comment>T：是
+F：否
+</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="366" parent="54" name="CONTACTMOBILETEL">
+      <Position>24</Position>
+      <Comment>没有手机则填“0”</Comment>
+      <DataType>VARCHAR2(15)|0</DataType>
+    </column>
+    <column id="367" parent="54" name="ADDRESS">
+      <Position>25</Position>
+      <Comment>居住地址</Comment>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="368" parent="54" name="POSTCODE">
+      <Position>26</Position>
+      <Comment>居住地邮编</Comment>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="369" parent="54" name="MESSAGEADDR">
+      <Position>27</Position>
+      <Comment>通讯地址</Comment>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="370" parent="54" name="COMMPOSTCODE">
+      <Position>28</Position>
+      <Comment>通讯邮编</Comment>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="371" parent="54" name="EDUCATIONLEVEL">
+      <Position>29</Position>
+      <Comment>0——博士
+1——名誉博士
+2——硕士
+3——学士
+4——其他
+5——无
+6——未知</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="372" parent="54" name="DEGREE">
+      <Position>30</Position>
+      <Comment>1——研究生
+2——大学本科
+3——大学专科或专科学校
+4——中等专业或技术学校
+5——高中
+6——初中
+7——小学
+8——文盲或半文盲
+9——未知</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="373" parent="54" name="RESIDE">
+      <Position>31</Position>
+      <Comment>0——自置
+1——按揭
+2——租房
+3——集体宿舍
+4——亲属楼宇
+5——共有住宅
+6——其他
+7——未知</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="374" parent="54" name="FAMASSET">
+      <Position>32</Position>
+      <Comment>家庭总资产</Comment>
+      <DataType>NUMBER(19,2)|0</DataType>
+    </column>
+    <column id="375" parent="54" name="FAMDEBT">
+      <Position>33</Position>
+      <Comment>家庭总负债</Comment>
+      <DataType>NUMBER(19,2)|0</DataType>
+    </column>
+    <column id="376" parent="54" name="FAMANNUINCOME">
+      <Position>34</Position>
+      <Comment>家庭年收入</Comment>
+      <DataType>NUMBER(19,2)|0</DataType>
+    </column>
+    <column id="377" parent="54" name="FAMANNUPAYOUT">
+      <Position>35</Position>
+      <Comment>家庭年支出</Comment>
+      <DataType>NUMBER(19,2)|0</DataType>
+    </column>
+    <column id="378" parent="54" name="RELAMAN">
+      <Position>36</Position>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="379" parent="54" name="EMAIL">
+      <Position>37</Position>
+      <DataType>VARCHAR2(60)|0</DataType>
+    </column>
+    <column id="380" parent="54" name="INCOMEACCOUNT">
+      <Position>38</Position>
+      <DataType>VARCHAR2(60)|0</DataType>
+    </column>
+    <column id="381" parent="54" name="INCOMEBANK">
+      <Position>39</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="382" parent="54" name="BUSIMANAGER">
+      <Position>40</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="383" parent="54" name="INSTCODE">
+      <Position>41</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="384" parent="54" name="ISTMP">
+      <Position>42</Position>
+      <Comment>T：是
+F：否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="385" parent="54" name="STATUS">
+      <Position>43</Position>
+      <Comment>状态: 0--预客户,1--生效,2--无效；</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="386" parent="54" name="REMARK">
+      <Position>44</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="387" parent="54" name="INPUTMAN">
+      <Position>45</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="388" parent="54" name="INPUTDATE">
+      <Position>46</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="389" parent="54" name="GROUPID">
+      <Position>47</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="390" parent="54" name="OPERATOR">
+      <Position>48</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="391" parent="54" name="OPERDATETIME">
+      <Position>49</Position>
+      <Comment>修改时间</Comment>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <column id="392" parent="54" name="CUSTSTATUS">
+      <Position>50</Position>
+      <Comment>是否黑名单：
+F：否
+T：是</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="393" parent="54" name="ASSISTBUSIMANAGE">
+      <Position>51</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <index id="394" parent="54" name="P_KEY_PERSON">
+      <ObjectId>73518</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="395" parent="54" name="IDX_CIPERSN_CUSTID">
+      <ObjectId>73519</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>CUSTID</ColNames>
+    </index>
+    <index id="396" parent="54" name="IDX_CIPERSN_NAME">
+      <ObjectId>73520</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>CNAME</ColNames>
+    </index>
+    <key id="397" parent="54" name="P_KEY_PERSON">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_PERSON</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="398" parent="55" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="399" parent="55" name="PARTYID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="400" parent="55" name="CUSTID">
+      <Position>3</Position>
+      <Comment>客户编号</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="401" parent="55" name="TYPEID">
+      <Position>4</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="402" parent="55" name="NAME">
+      <Position>5</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="403" parent="55" name="SEX">
+      <Position>6</Position>
+      <Comment>1|男
+2|女</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="404" parent="55" name="FAMILYMBERCCTION">
+      <Position>7</Position>
+      <Comment>0	配偶
+1	父母
+2	子女
+3	兄弟姐妹
+4	其他
+</Comment>
+      <DataType>VARCHAR2(10)|0</DataType>
+    </column>
+    <column id="405" parent="55" name="PAPERTYPE">
+      <Position>8</Position>
+      <Comment>0|身份证
+1|军官证
+2|护照
+3|香港身份证
+4|澳门身份证
+5|台湾身份证</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="406" parent="55" name="PAPERCODE">
+      <Position>9</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="407" parent="55" name="MOVEPHONE">
+      <Position>10</Position>
+      <DataType>VARCHAR2(15)|0</DataType>
+    </column>
+    <column id="408" parent="55" name="FIXATIONPHONE">
+      <Position>11</Position>
+      <DataType>VARCHAR2(15)|0</DataType>
+    </column>
+    <column id="409" parent="55" name="JOBUNIT">
+      <Position>12</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="410" parent="55" name="CREATEDUSER">
+      <Position>13</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="411" parent="55" name="CREATEDTIME">
+      <Position>14</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="412" parent="55" name="GROUPID">
+      <Position>15</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="413" parent="55" name="INSTCITYCODE">
+      <Position>16</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="414" parent="55" name="DELETEREASON">
+      <Position>17</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="415" parent="55" name="STATUS">
+      <Position>18</Position>
+      <Comment>状态: 0--正常,1--待删除</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="416" parent="55" name="OPERATOR">
+      <Position>19</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="417" parent="55" name="OPERDATETIME">
+      <Position>20</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="418" parent="55" name="P_KEY_FAMY">
+      <ObjectId>73522</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="419" parent="55" name="P_KEY_FAMY">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_FAMY</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="420" parent="56" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="421" parent="56" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="422" parent="56" name="RELEASEDEPT">
+      <Position>3</Position>
+      <DataType>VARCHAR2(60)|0</DataType>
+    </column>
+    <column id="423" parent="56" name="EVENTCLASS">
+      <Position>4</Position>
+      <Comment>01生日
+02结婚纪念日
+03投诉情况
+04客户满意度
+05信仰
+06价值观
+07主营业务或工作变动情况
+08应诉及结果
+09起诉及结果
+10重大投资活动
+11重大融资活动
+12信贷方面重大事件
+13经营过程中的重大事
+14其它</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="424" parent="56" name="ISWARNING">
+      <Position>5</Position>
+      <Comment>T是|F否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="425" parent="56" name="INFOSOURCE">
+      <Position>6</Position>
+      <Comment>01公文
+02报刊杂志
+03电台电视
+04网站
+05其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="426" parent="56" name="EVENTINFO">
+      <Position>7</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="427" parent="56" name="OPERATOR">
+      <Position>8</Position>
+      <Comment>创建人</Comment>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="428" parent="56" name="INSTCITYCODE">
+      <Position>9</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="429" parent="56" name="OPERDATETIME">
+      <Position>10</Position>
+      <Comment>创建时间</Comment>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="430" parent="56" name="P_KEY_MEMOP">
+      <ObjectId>73524</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="431" parent="56" name="P_KEY_MEMOP">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_MEMOP</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="432" parent="57" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="433" parent="57" name="INITID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="434" parent="57" name="COLUMNNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <column id="435" parent="57" name="OPERATOR">
+      <Position>4</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="436" parent="57" name="MODIFIEDTIME">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <column id="437" parent="57" name="INSTCITYCODE">
+      <Position>6</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="438" parent="57" name="FORMERLYINFODATA">
+      <Position>7</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <column id="439" parent="57" name="MODIFIEDINFODATA">
+      <Position>8</Position>
+      <DataType>VARCHAR2(500)|0</DataType>
+    </column>
+    <index id="440" parent="57" name="P_KEY_PERSMODY">
+      <ObjectId>73526</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="441" parent="57" name="IDX_CIPERSN_INITID">
+      <ObjectId>73527</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>INITID</ColNames>
+    </index>
+    <key id="442" parent="57" name="P_KEY_PERSMODY">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_PERSMODY</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="443" parent="58" name="ID">
+      <Position>1</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="444" parent="58" name="CUSTID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="445" parent="58" name="SUBJECT">
+      <Position>3</Position>
+      <Comment>01借款人被起诉
+02企业逃废债务
+03借款人提供虚假资料
+04贷款逾期欠息
+05不良对外担保记录
+06用途违约
+07其他情况</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="446" parent="58" name="BADRECORDDATE">
+      <Position>4</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="447" parent="58" name="SUMMARY">
+      <Position>5</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="448" parent="58" name="OPERATOR">
+      <Position>6</Position>
+      <Comment>创建人</Comment>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="449" parent="58" name="OPERDATETIME">
+      <Position>7</Position>
+      <Comment>创建时间</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <index id="450" parent="58" name="P_KEY_BADRECORD">
+      <ObjectId>73529</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID
+CUSTID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="451" parent="58" name="P_KEY_BADRECORD">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>ID
+CUSTID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_BADRECORD</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="452" parent="59" name="KEYCODE">
+      <Position>1</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="453" parent="59" name="KEYTYPE">
+      <Position>2</Position>
+      <DataType>CHAR(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="454" parent="59" name="UPKEYCODE">
+      <Position>3</Position>
+      <Comment>记录向上的唯一标示</Comment>
+      <DataType>CHAR(20)|0</DataType>
+    </column>
+    <column id="455" parent="59" name="UPKEYTYPE">
+      <Position>4</Position>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="456" parent="59" name="SEQUENCENO">
+      <Position>5</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="457" parent="59" name="ACONTKEYCODE">
+      <Position>6</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="458" parent="59" name="ACONTKEYTYPE">
+      <Position>7</Position>
+      <Comment>从合同类型</Comment>
+      <DataType>CHAR(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="459" parent="59" name="CONFIRMMETHOD">
+      <Position>8</Position>
+      <Comment>1-直接签订 2-间接签订</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="460" parent="59" name="USEASSUREMONEY">
+      <Position>9</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="461" parent="59" name="USEASSUREMONEYCUR">
+      <Position>10</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="462" parent="59" name="KEYEFFECTEDSTATE">
+      <Position>11</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="463" parent="59" name="KEYDATESTATE">
+      <Position>12</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <index id="464" parent="59" name="P_KEY_ASSURECRP">
+      <ObjectId>73550</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>KEYCODE
+SEQUENCENO</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="465" parent="59" name="IDX_GCASCOR_CONT">
+      <ObjectId>73551</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>KEYCODE</ColNames>
+    </index>
+    <index id="466" parent="59" name="IDX_GCASCOR_ACONT">
+      <ObjectId>73552</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ACONTKEYCODE</ColNames>
+    </index>
+    <key id="467" parent="59" name="P_KEY_ASSURECRP">
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <ColNames>KEYCODE
+SEQUENCENO</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_ASSURECRP</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="468" parent="60" name="KEYCODE">
+      <Position>1</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="469" parent="60" name="KEYTYPE">
+      <Position>2</Position>
+      <Comment>从合同类型</Comment>
+      <DataType>CHAR(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="470" parent="60" name="EXTENDKEYCODE">
+      <Position>3</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="471" parent="60" name="UPKEYCODE">
+      <Position>4</Position>
+      <Comment>记录向上的唯一标示</Comment>
+      <DataType>CHAR(20)|0</DataType>
+    </column>
+    <column id="472" parent="60" name="UPKEYTYPE">
+      <Position>5</Position>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="473" parent="60" name="MONEY">
+      <Position>6</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="474" parent="60" name="CURRENCY">
+      <Position>7</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="475" parent="60" name="STARTDATE">
+      <Position>8</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="476" parent="60" name="ENDDATE">
+      <Position>9</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="477" parent="60" name="LASTDATE">
+      <Position>10</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="478" parent="60" name="LIMIT">
+      <Position>11</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="479" parent="60" name="LIMITUNIT">
+      <Position>12</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="480" parent="60" name="KEYEFFECTEDSTATE">
+      <Position>13</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="481" parent="60" name="KEYDATESTATE">
+      <Position>14</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="482" parent="60" name="DEBTORCUSTID">
+      <Position>15</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+    </column>
+    <column id="483" parent="60" name="WEALTHCOOWNER">
+      <Position>16</Position>
+      <Comment>财产共有人</Comment>
+      <DataType>VARCHAR2(60)|0</DataType>
+    </column>
+    <column id="484" parent="60" name="GUARMOD">
+      <Position>17</Position>
+      <Comment>0单一分保 1联保</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="485" parent="60" name="GUARBALANCE">
+      <Position>18</Position>
+      <Comment>担保余额（没有使用）</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="486" parent="60" name="GUARBASPRICE">
+      <Position>19</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="487" parent="60" name="GUARBASEPRICECUR">
+      <Position>20</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="488" parent="60" name="GUARMAXPRICE">
+      <Position>21</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="489" parent="60" name="GUARMAXPRICECUR">
+      <Position>22</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="490" parent="60" name="GUARBUSITYPE">
+      <Position>23</Position>
+      <Comment>01人民币贷款02银行／商业承兑汇票贴现03银行承兑汇票承兑04银行保函05其他 </Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="491" parent="60" name="OTHERGUARBUSITYPE">
+      <Position>24</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="492" parent="60" name="ACCESSORYSTATE">
+      <Position>25</Position>
+      <Comment>1可占用0不可占用</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="493" parent="60" name="INTRSTRATE">
+      <Position>26</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="494" parent="60" name="INTRSTRATEUNIT">
+      <Position>27</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="495" parent="60" name="ESPACC">
+      <Position>28</Position>
+      <Comment>公路收费专用账户账号</Comment>
+      <DataType>CHAR(21)|0</DataType>
+    </column>
+    <column id="496" parent="60" name="TRNASINSUTERM">
+      <Position>29</Position>
+      <Comment>竣工验收后办理保险的期限</Comment>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="497" parent="60" name="COUNTERCLAIMCOND">
+      <Position>30</Position>
+      <Comment>索赔条件及文件</Comment>
+      <DataType>VARCHAR2(256)|0</DataType>
+    </column>
+    <column id="498" parent="60" name="DISPUTEDSOLVE">
+      <Position>31</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="499" parent="60" name="ARBITRATEDEPT">
+      <Position>32</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="500" parent="60" name="CONTNUM">
+      <Position>33</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="501" parent="60" name="OTHERPROMISE">
+      <Position>34</Position>
+      <DataType>VARCHAR2(256)|0</DataType>
+    </column>
+    <column id="502" parent="60" name="COMMENTS">
+      <Position>35</Position>
+      <DataType>VARCHAR2(600)|0</DataType>
+    </column>
+    <column id="503" parent="60" name="EVALUATIONORGCODE">
+      <Position>36</Position>
+      <DataType>VARCHAR2(9)|0</DataType>
+    </column>
+    <column id="504" parent="60" name="EVALUATEDDATE">
+      <Position>37</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="505" parent="60" name="EVALUATIONORGNAME">
+      <Position>38</Position>
+      <DataType>VARCHAR2(60)|0</DataType>
+    </column>
+    <column id="506" parent="60" name="BUSIMANAGER">
+      <Position>39</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="507" parent="60" name="AVOIDASSUREDUTYCOND">
+      <Position>40</Position>
+      <Comment>1-A、正式抵押登记手续已办理完毕，且贷款人收到记载有上述正式抵押登记信息的房屋他项权证书;2-B、抵押权预告登记手续已办理完毕，且贷款人收到记载有上述抵押权预告登记信息的证明文件3-C、其他</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="508" parent="60" name="ELSEDUTICOND">
+      <Position>41</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="509" parent="60" name="ASSUREDUTY">
+      <Position>42</Position>
+      <Comment>0全程连带责任；1阶段性连带责任</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="510" parent="60" name="PASSEDDATE">
+      <Position>43</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="511" parent="60" name="ESTATEHANDOVERTYPE">
+      <Position>44</Position>
+      <Comment>1质权人2质权人指定的第三人</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="512" parent="60" name="OTHERPEOPLENAME">
+      <Position>45</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="513" parent="60" name="DEPTCODE">
+      <Position>46</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="514" parent="60" name="INSTCODE">
+      <Position>47</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="515" parent="60" name="INSTCITYCODE">
+      <Position>48</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="516" parent="60" name="OPERATOR">
+      <Position>49</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="517" parent="60" name="OPERDATETIME">
+      <Position>50</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="518" parent="60" name="P_KEY_ASSUREMAIN">
+      <ObjectId>73554</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>KEYCODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="519" parent="60" name="P_KEY_ASSUREMAIN">
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <ColNames>KEYCODE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_ASSUREMAIN</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="520" parent="61" name="KEYCODE">
+      <Position>1</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="521" parent="61" name="KEYTYPE">
+      <Position>2</Position>
+      <DataType>CHAR(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="522" parent="61" name="EXTENDKEYCODE">
+      <Position>3</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="523" parent="61" name="APPCODE">
+      <Position>4</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="524" parent="61" name="MONEY">
+      <Position>5</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="525" parent="61" name="CURRENCY">
+      <Position>6</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="526" parent="61" name="STARTDATE">
+      <Position>7</Position>
+      <Comment>承兑汇票买断合同时保存转贴现日</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="527" parent="61" name="ENDDATE">
+      <Position>8</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="528" parent="61" name="LASTDATE">
+      <Position>9</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="529" parent="61" name="LIMIT">
+      <Position>10</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="530" parent="61" name="LIMITUNIT">
+      <Position>11</Position>
+      <Comment>1年2月3日默认为月</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="531" parent="61" name="KEYEFFECTEDSTATE">
+      <Position>12</Position>
+      <Comment>  0-初始值 1-生效 2-正常到期  3强制到期 4-发生终止 5-生效后删除</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="532" parent="61" name="KEYDATESTATE">
+      <Position>13</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="533" parent="61" name="SQUARESTATE">
+      <Position>14</Position>
+      <Comment>1结清</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="534" parent="61" name="BAILACC">
+      <Position>15</Position>
+      <DataType>VARCHAR2(23)|0</DataType>
+    </column>
+    <column id="535" parent="61" name="ASSUREMONEY">
+      <Position>16</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="536" parent="61" name="ASSURECUR">
+      <Position>17</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="537" parent="61" name="ASSURERATE">
+      <Position>18</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="538" parent="61" name="INTEREST">
+      <Position>19</Position>
+      <Comment>外币时存储固定利率，人民币时执行利率</Comment>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="539" parent="61" name="INTERESTUNIT">
+      <Position>20</Position>
+      <Comment>1年利率(百分位)2月利率(千分位)3日利率(万分位)</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="540" parent="61" name="SQUAREINTERESTMODE">
+      <Position>21</Position>
+      <Comment>对公:1月2季3半年;个人:1月2季</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="541" parent="61" name="RATETYPE">
+      <Position>22</Position>
+      <Comment>1固定2浮动3其他</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="542" parent="61" name="FLOATTYPE">
+      <Position>23</Position>
+      <Comment>1上浮2下浮3不浮动</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="543" parent="61" name="BASERATE">
+      <Position>24</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="544" parent="61" name="BASERATETYPE">
+      <Position>25</Position>
+      <Comment>01六个月以内（含）02六个月至一年（含）03一年至三年（含）04三年至五年（含）05五年以上</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="545" parent="61" name="FLOATRATE">
+      <Position>26</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="546" parent="61" name="INTRSTRATEFDOT">
+      <Position>27</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="547" parent="61" name="LOANPURPOSE">
+      <Position>28</Position>
+      <Comment>参见 贷款投向字典，个人购房借款合同时存储“借款种类”</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="548" parent="61" name="CONTRACTCOUNT">
+      <Position>29</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="549" parent="61" name="SOLUTIONMODE">
+      <Position>30</Position>
+      <Comment>1诉讼2仲裁</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="550" parent="61" name="USETYPE">
+      <Position>31</Position>
+      <Comment>0002循环；0001非循环</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="551" parent="61" name="TERMINALDATE">
+      <Position>32</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="552" parent="61" name="ARIBTRATEORGANIZATION">
+      <Position>33</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="553" parent="61" name="BUSIMANAGER">
+      <Position>34</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="554" parent="61" name="CREATEDATE">
+      <Position>35</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="555" parent="61" name="PASSEDDATE">
+      <Position>36</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="556" parent="61" name="ASSISTBUSIMANAGER">
+      <Position>37</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="557" parent="61" name="LOANTYPE">
+      <Position>38</Position>
+      <Comment>1新增;2收回再贷;3借新还旧;4资产重组;5转入</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="558" parent="61" name="BUSISTATE">
+      <Position>39</Position>
+      <Comment>1新增,2展期,3重组4借新还旧</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="559" parent="61" name="LOWRISKFLAG">
+      <Position>40</Position>
+      <Comment>T是；F否；默认为否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="560" parent="61" name="MAINASSURE">
+      <Position>41</Position>
+      <Comment>C000信用C101保证C102抵押C103质押</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="561" parent="61" name="SUBASSURE">
+      <Position>42</Position>
+      <Comment>默认为0000，从左向右分别表示信用，保证；抵押；质押；即1000代表信用，0100表示保证，0010表示抵押，0001标识质押，0110标识保证和抵押等等</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="562" parent="61" name="ACCOUNTTYPE">
+      <Position>43</Position>
+      <Comment>0基本存款帐户；1一般存款帐户</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="563" parent="61" name="REPAYTYPE">
+      <Position>44</Position>
+      <Comment>0委托扣款1自主还款</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="564" parent="61" name="REPAYMETHOD">
+      <Position>45</Position>
+      <Comment>对公:01一次性还本02分期还本;个人:01定期结息，到期日利随本清02定期结息，按合同约定分期还本03等额本息04等额本金05利随本清06其他还款方法</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="565" parent="61" name="REPAYCYCLE">
+      <Position>46</Position>
+      <Comment>1月，2季，3其他</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="566" parent="61" name="REPAYMONEY">
+      <Position>47</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="567" parent="61" name="LOANPURPOSEREMARK">
+      <Position>48</Position>
+      <Comment>个人购房借款合同时，若借款种类选择“其他”时，该字段存储“其他”字段的内容</Comment>
+      <DataType>VARCHAR2(200)|0</DataType>
+    </column>
+    <column id="568" parent="61" name="INSTCODE">
+      <Position>49</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="569" parent="61" name="OPERDATETIME">
+      <Position>50</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="570" parent="61" name="OPERATOR">
+      <Position>51</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <index id="571" parent="61" name="P_KEY_CONTRACT">
+      <ObjectId>73534</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>KEYCODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="572" parent="61" name="IDX_GCCM_GROUP">
+      <ObjectId>73535</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>INSTCODE
+BUSIMANAGER</ColNames>
+    </index>
+    <key id="573" parent="61" name="P_KEY_CONTRACT">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>KEYCODE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_CONTRACT</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="574" parent="62" name="KEYCODE">
+      <Position>1</Position>
+      <DataType>CHAR(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="575" parent="62" name="KEYTYPE">
+      <Position>2</Position>
+      <Comment>如WZ9001见押品类型字典</Comment>
+      <DataType>CHAR(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="576" parent="62" name="UPKEYCODE">
+      <Position>3</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="577" parent="62" name="UPKEYTYPE">
+      <Position>4</Position>
+      <Comment>从合同类型</Comment>
+      <DataType>CHAR(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="578" parent="62" name="BIGGUARANTYTYPE">
+      <Position>5</Position>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="579" parent="62" name="CUSTID">
+      <Position>6</Position>
+      <Comment>所有人</Comment>
+      <DataType>VARCHAR2(14)|0</DataType>
+    </column>
+    <column id="580" parent="62" name="USERNAME">
+      <Position>7</Position>
+      <Comment>动产抵押时存土地使用权人,或存单质押时存户名</Comment>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="581" parent="62" name="KEYEFFECTEDSTATE">
+      <Position>8</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="582" parent="62" name="KEYDATESTATE">
+      <Position>9</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="583" parent="62" name="GUARANTYSTATE">
+      <Position>10</Position>
+      <Comment>0未入库；1已入库</Comment>
+      <DataType>CHAR(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="584" parent="62" name="GUARANTYNAME">
+      <Position>11</Position>
+      <DataType>VARCHAR2(80)|0</DataType>
+    </column>
+    <column id="585" parent="62" name="MONEY">
+      <Position>12</Position>
+      <Comment>抵押值</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="586" parent="62" name="MONEYCUR">
+      <Position>13</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="587" parent="62" name="REGULATELINE">
+      <Position>14</Position>
+      <DataType>NUMBER(6,2)|0</DataType>
+    </column>
+    <column id="588" parent="62" name="GUARRATE">
+      <Position>15</Position>
+      <DataType>NUMBER(6,2)|0</DataType>
+    </column>
+    <column id="589" parent="62" name="GUARANTYPURPOSE">
+      <Position>16</Position>
+      <Comment>房产用途时01住宅02商用楼商铺03工业楼04厂房05车间06其它类型/土地用途时01住宅02商业03工业04农业05商住06其他07综合</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="590" parent="62" name="PURPOSEREMARK">
+      <Position>17</Position>
+      <Comment>存01	住宅
+02	商业
+03	工业
+04	农业
+05	商住
+06	其他
+07	综合
+存在建工程用途</Comment>
+      <DataType>VARCHAR2(200)|0</DataType>
+    </column>
+    <column id="591" parent="62" name="EVALUATINGUNITPRICE">
+      <Position>18</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="592" parent="62" name="EVALUATINGVALUE">
+      <Position>19</Position>
+      <Comment>评估总价</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="593" parent="62" name="EVALUATINGCURRENCY">
+      <Position>20</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="594" parent="62" name="EVALUATINGDATE">
+      <Position>21</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="595" parent="62" name="EVALUATINGGROUP">
+      <Position>22</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="596" parent="62" name="STARTDATE">
+      <Position>23</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="597" parent="62" name="ENDDATE">
+      <Position>24</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="598" parent="62" name="GUARANTYVALUE">
+      <Position>25</Position>
+      <Comment>押品原值,或存单金额</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="599" parent="62" name="GUARCOUNT">
+      <Position>26</Position>
+      <Comment>或株数</Comment>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="600" parent="62" name="UNIT">
+      <Position>27</Position>
+      <DataType>VARCHAR2(10)|0</DataType>
+    </column>
+    <column id="601" parent="62" name="IMPORTDATE">
+      <Position>28</Position>
+      <Comment>押品入库的日期</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="602" parent="62" name="EXPORTDATE">
+      <Position>29</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="603" parent="62" name="TERMINALDATE">
+      <Position>30</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="604" parent="62" name="BUSIMANAGER">
+      <Position>31</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="605" parent="62" name="CREATEDATE">
+      <Position>32</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="606" parent="62" name="SIGN">
+      <Position>33</Position>
+      <Comment>T是F否</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="607" parent="62" name="EXPORTREASON">
+      <Position>34</Position>
+      <DataType>VARCHAR2(200)|0</DataType>
+    </column>
+    <column id="608" parent="62" name="DEPTCODE">
+      <Position>35</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="609" parent="62" name="INSTCODE">
+      <Position>36</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="610" parent="62" name="INSTCITYCODE">
+      <Position>37</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="611" parent="62" name="OPERATOR">
+      <Position>38</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="612" parent="62" name="OPERDATETIME">
+      <Position>39</Position>
+      <DataType>TIMESTAMP(6)|0</DataType>
+    </column>
+    <index id="613" parent="62" name="P_KEY_GUARANTY">
+      <ObjectId>73547</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>KEYCODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="614" parent="62" name="IDX_GCGUAMA_UP">
+      <ObjectId>73548</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:33</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>UPKEYCODE</ColNames>
+    </index>
+    <key id="615" parent="62" name="P_KEY_GUARANTY">
+      <ModifiedTimestamp>2018-08-20.09:49:33</ModifiedTimestamp>
+      <ColNames>KEYCODE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_GUARANTY</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="616" parent="63" name="KEYCODE">
+      <Position>1</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="617" parent="63" name="KEYTYPE">
+      <Position>2</Position>
+      <DataType>CHAR(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="618" parent="63" name="UPKEYCODE">
+      <Position>3</Position>
+      <DataType>CHAR(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="619" parent="63" name="CUSTID">
+      <Position>4</Position>
+      <DataType>VARCHAR2(14)|0</DataType>
+    </column>
+    <column id="620" parent="63" name="MONEY">
+      <Position>5</Position>
+      <Comment>对于承兑是票面金额；
+贴现是汇票金额</Comment>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="621" parent="63" name="CURRENCY">
+      <Position>6</Position>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="622" parent="63" name="LOANDATE">
+      <Position>7</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="623" parent="63" name="STARTDATE">
+      <Position>8</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="624" parent="63" name="ENDDATE">
+      <Position>9</Position>
+      <Comment>贴现业务是贴现到期日</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="625" parent="63" name="LASTDATE">
+      <Position>10</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="626" parent="63" name="LIMIT">
+      <Position>11</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="627" parent="63" name="LIMITUNIT">
+      <Position>12</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="628" parent="63" name="KEYEFFECTEDSTATE">
+      <Position>13</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="629" parent="63" name="KEYDATESTATE">
+      <Position>14</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="630" parent="63" name="SQUARESTATE">
+      <Position>15</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="631" parent="63" name="SQUAREDATE">
+      <Position>16</Position>
+      <Comment>从核心获取的数据</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="632" parent="63" name="SUBBUSICODETYPE">
+      <Position>17</Position>
+      <Comment>见产品字典</Comment>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="633" parent="63" name="BUSITYPE">
+      <Position>18</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="634" parent="63" name="REPAYACCOUNT">
+      <Position>19</Position>
+      <Comment>还贷专户账号</Comment>
+      <DataType>VARCHAR2(23)|0</DataType>
+    </column>
+    <column id="635" parent="63" name="PAYINTMODE">
+      <Position>20</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="636" parent="63" name="REPAYTIMES">
+      <Position>21</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="637" parent="63" name="INTEREST">
+      <Position>22</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="638" parent="63" name="INTERESTUNIT">
+      <Position>23</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="639" parent="63" name="RATETYPE">
+      <Position>24</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="640" parent="63" name="FLOATTYPE">
+      <Position>25</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="641" parent="63" name="BASERATE">
+      <Position>26</Position>
+      <DataType>NUMBER(8,5)|0</DataType>
+    </column>
+    <column id="642" parent="63" name="BASERATETYPE">
+      <Position>27</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="643" parent="63" name="FLOATRATE">
+      <Position>28</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="644" parent="63" name="INTRSTRATEFDOT">
+      <Position>29</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="645" parent="63" name="LOANPURPOSE">
+      <Position>30</Position>
+      <Comment>参见 贷款用途字典</Comment>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="646" parent="63" name="COMMENTS">
+      <Position>31</Position>
+      <DataType>VARCHAR2(400)|0</DataType>
+    </column>
+    <column id="647" parent="63" name="USETYPE">
+      <Position>32</Position>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="648" parent="63" name="BAILACC">
+      <Position>33</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="649" parent="63" name="BAILCURTYPE">
+      <Position>34</Position>
+      <DataType>CHAR(3)|0</DataType>
+    </column>
+    <column id="650" parent="63" name="ASSURERATE">
+      <Position>35</Position>
+      <DataType>NUMBER(11,7)|0</DataType>
+    </column>
+    <column id="651" parent="63" name="BAILAMT">
+      <Position>36</Position>
+      <DataType>NUMBER(16,2)|0</DataType>
+    </column>
+    <column id="652" parent="63" name="LOANMANAGER">
+      <Position>37</Position>
+      <Comment>记录贷款发放当时的客户经理，如果发生业务交接，此字段不更新</Comment>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="653" parent="63" name="BUSIMANAGER">
+      <Position>38</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="654" parent="63" name="CREATEDATE">
+      <Position>39</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="655" parent="63" name="PASSEDDATE">
+      <Position>40</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="656" parent="63" name="CREDITSTATE">
+      <Position>41</Position>
+      <Comment>0001未建立0002未知0003已经建立0004会计已确认0005建立失败0006确认失败0007部分还款0008全部还款0009会计确认取消0010结清0011会计冲销0013核销0014作废0015核销冲回0016置换0017置换冲回0018未用注销</Comment>
+      <DataType>CHAR(4)|0</DataType>
+    </column>
+    <column id="657" parent="63" name="PAYMETHOD">
+      <Position>42</Position>
+      <Comment>见合同主表</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="658" parent="63" name="PAYMODE">
+      <Position>43</Position>
+      <Comment>0受托支付；1自主支付</Comment>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="659" parent="63" name="PURPOSEREMARK">
+      <Position>44</Position>
+      <Comment>01无02抗旱03抗涝04抗震05抭雪灾06抗冰雹07抗蝗灾08其他</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <column id="660" parent="63" name="INSTCODE">
+      <Position>45</Position>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="661" parent="63" name="OPERATOR">
+      <Position>46</Position>
+      <DataType>CHAR(11)|0</DataType>
+    </column>
+    <column id="662" parent="63" name="OPERDATETIME">
+      <Position>47</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <index id="663" parent="63" name="P_GCLNCRED_PK">
+      <ObjectId>73537</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>KEYCODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="664" parent="63" name="IDX_GCLCREDIT_UP">
+      <ObjectId>73539</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>UPKEYCODE</ColNames>
+    </index>
+    <index id="665" parent="63" name="IDX_GCLCREDIT_CUST">
+      <ObjectId>73538</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:32</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>CUSTID</ColNames>
+    </index>
+    <key id="666" parent="63" name="P_GCLNCRED_PK">
+      <ModifiedTimestamp>2018-08-20.09:49:32</ModifiedTimestamp>
+      <ColNames>KEYCODE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_GCLNCRED_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="667" parent="64" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="668" parent="64" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <column id="669" parent="64" name="DISPLAY">
+      <Position>3</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <column id="670" parent="64" name="TYPE">
+      <Position>4</Position>
+      <DataType>VARCHAR2(40)|0</DataType>
+    </column>
+    <column id="671" parent="64" name="TREE">
+      <Position>5</Position>
+      <DataType>CHAR(1)|0</DataType>
+    </column>
+    <column id="672" parent="64" name="DESCRIPTION">
+      <Position>6</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <index id="673" parent="64" name="P_KEY_CLASS">
+      <ObjectId>73493</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="674" parent="64" name="P_KEY_CLASS">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_CLASS</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="675" parent="65" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="676" parent="65" name="PARENTID">
+      <Position>2</Position>
+      <Comment>父组标识，</Comment>
+      <DataType>CHAR(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="677" parent="65" name="CODE">
+      <Position>3</Position>
+      <Comment>组的代码</Comment>
+      <DataType>CHAR(6)|0</DataType>
+    </column>
+    <column id="678" parent="65" name="NAME">
+      <Position>4</Position>
+      <Comment>组的名称</Comment>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="679" parent="65" name="BRIEFNAME">
+      <Position>5</Position>
+      <Comment>组简称</Comment>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="680" parent="65" name="DESCRIPTION">
+      <Position>6</Position>
+      <Comment>说明</Comment>
+      <DataType>VARCHAR2(200)|0</DataType>
+    </column>
+    <column id="681" parent="65" name="VALID">
+      <Position>7</Position>
+      <Comment>0_表示无效1_表示有效</Comment>
+      <DataType>CHAR(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="682" parent="65" name="MODIFIEDUSERID">
+      <Position>8</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="683" parent="65" name="CREATEDUSERID">
+      <Position>9</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="684" parent="65" name="CREATEDTIME">
+      <Position>10</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="685" parent="65" name="MODIFIEDTIME">
+      <Position>11</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <index id="686" parent="65" name="P_KEY_GROUP">
+      <ObjectId>73489</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:45:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:45:06</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="687" parent="65" name="P_KEY_GROUP">
+      <ModifiedTimestamp>2018-08-20.09:45:06</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_GROUP</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="688" parent="66" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="689" parent="66" name="PARENTID">
+      <Position>2</Position>
+      <DataType>CHAR(12)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="690" parent="66" name="CLASSID">
+      <Position>3</Position>
+      <DataType>CHAR(5)|0</DataType>
+    </column>
+    <column id="691" parent="66" name="CODE">
+      <Position>4</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <column id="692" parent="66" name="NAME">
+      <Position>5</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="693" parent="66" name="VALID">
+      <Position>6</Position>
+      <DataType>CHAR(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="694" parent="66" name="DESCRIPTION">
+      <Position>7</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <column id="695" parent="66" name="UPDATEDATE">
+      <Position>8</Position>
+      <DataType>DATE|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="696" parent="66" name="USERID">
+      <Position>9</Position>
+      <DataType>VARCHAR2(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="697" parent="66" name="P_KEY_PARAM">
+      <ObjectId>73495</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:49:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="698" parent="66" name="P_KEY_PARAM">
+      <ModifiedTimestamp>2018-08-20.09:49:31</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_PARAM</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="699" parent="67" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="700" parent="67" name="LOGINNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="701" parent="67" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>VARCHAR2(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="702" parent="67" name="NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="703" parent="67" name="GROUPID">
+      <Position>5</Position>
+      <Comment>用户的创建组</Comment>
+      <DataType>CHAR(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="704" parent="67" name="DESCRIPTION">
+      <Position>6</Position>
+      <DataType>VARCHAR2(200)|0</DataType>
+    </column>
+    <column id="705" parent="67" name="VALID">
+      <Position>7</Position>
+      <Comment>1_有效用户0_无效用户</Comment>
+      <DataType>CHAR(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="706" parent="67" name="LOCKED">
+      <Position>8</Position>
+      <Comment>0_未被锁定 1_锁定</Comment>
+      <DataType>CHAR(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="707" parent="67" name="MODIFIEDTIME">
+      <Position>9</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="708" parent="67" name="CREATEDTIME">
+      <Position>10</Position>
+      <DataType>CHAR(10)|0</DataType>
+    </column>
+    <column id="709" parent="67" name="CREATEDUSERID">
+      <Position>11</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="710" parent="67" name="MODIFIEDUSERID">
+      <Position>12</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="711" parent="67" name="ROLEID">
+      <Position>13</Position>
+      <Comment>01 系统管理员 02 客户经理 03 主任 04 行长 05 董事长  06委员会主任</Comment>
+      <DataType>CHAR(2)|0</DataType>
+    </column>
+    <index id="712" parent="67" name="P_KEY_USER">
+      <ObjectId>73491</ObjectId>
+      <CreatedTimestamp>2018-08-20.09:45:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-20.09:45:06</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="713" parent="67" name="P_KEY_USER">
+      <ModifiedTimestamp>2018-08-20.09:45:06</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>P_KEY_USER</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
