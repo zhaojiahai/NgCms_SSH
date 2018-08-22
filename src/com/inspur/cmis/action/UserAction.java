@@ -7,9 +7,8 @@ import com.inspur.common.entity.PaginationBean;
 import com.inspur.common.util.DateUtil;
 import com.inspur.common.util.HQLHelper;
 import com.inspur.common.util.IsNullUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
 
 /**
  * 登录 注销操作
@@ -59,15 +58,34 @@ public class UserAction extends BaseAction {
 	 * @return
 	 */
 	public String userInfo(){
-		List<User> list = userService.findAll();
 		//分页查询
 		HQLHelper hqlHelper = new HQLHelper(User.class);
-		//todo 设置一些查询条件
-		PaginationBean pageBean = userService.getPageBean(hqlHelper, 1);
-		request.setAttribute("pageBean",pageBean);
+		int page = 1;
+		if (currentPage!=null && currentPage>0){
+			page = currentPage;
+		}
+		//条件查询
+		if (user!=null && user.getId()!=null){
+			hqlHelper.addWhere(" o.id = ?",user.getId());
+			request.setAttribute("userId",user.getId());
+		}
+		//名字以 xxx开头的
+		if (user!=null && StringUtils.isNotBlank(user.getName())){
+			hqlHelper.addWhere(" o.name like ?",user.getName()+"%");
+			request.setAttribute("username",user.getName());
+		}
 
-		request.setAttribute("users",list);
+		//设置页数
+		PaginationBean pageBean = userService.getPageBean(hqlHelper, page);
+		request.setAttribute("pageBean",pageBean);
 		return "userInfo";
+	}
+
+	//页数
+	private Integer currentPage;
+
+	public void setCurrentPage(Integer currentPage) {
+		this.currentPage = currentPage;
 	}
 
 	/**

@@ -63,7 +63,7 @@ public class IsNullUtils {
 
                 if (o instanceof String && StringUtils.isBlank((String) o)){
                     return false;
-                }else if (o==null){
+                }else if (null ==o){
                     return false;
                 }
 

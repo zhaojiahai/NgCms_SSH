@@ -62,7 +62,7 @@
                 layer.msg('页数过大或者过小');
                 return;
             }
-
+            gotoPageNum(number);
         }
         //跳转到指定的页面
         function skip() {
@@ -74,7 +74,12 @@
                 layer.msg('页数过大或者过小');
                 return;
             }
-
+            gotoPageNum(index);
+        }
+        //提交表单查询
+        function gotoPageNum(pageNum){
+            $("#currentPage").val(pageNum);
+            $("#user_form").submit();
         }
 
     </script>
@@ -92,14 +97,17 @@
     没有任何用户信息
 </s:if>
 <s:else>
-    <form action="" method="post">
+    <form id="user_form" action="/loginAction_userInfo.action" method="post">
         <div class="formbody">
-            <ul class="seachform">
+            <ul class="seachform" id="form_ul">
+                <%--页数--%>
+                <input type="hidden" name="currentPage" id="currentPage">
+
                 <li><label>用户编号</label>
-                    <input name="" type="text" class="scinput" />
+                    <input name="user.id" type="text" class="scinput" value="${userId}" />
                 </li>
                 <li>
-                    <label>姓名</label><input name="" type="text" class="scinput" />
+                    <label>姓名</label><input name="user.name" value="${username}" type="text" class="scinput" />
                 </li>
                 <li>
                     <label>&nbsp;</label><input name="" type="submit" class="scbtn" value="查询"/>
@@ -136,7 +144,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <s:iterator value="#request.users">
+                <s:iterator value="#request.pageBean.list">
                     <tr>
                         <td>
                             <input name="" type="checkbox" value="${id}" />

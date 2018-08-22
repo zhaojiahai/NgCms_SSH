@@ -26,7 +26,7 @@
 </head>
 
 <body style="background-color:#1c77ac; background-image:url(images/dl_back.jpg); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
-<form action="loginAction_doLogin.action" method="post" id="loginForm" name="loginForm">
+<form action="/loginAction_doLogin.action" method="post" id="loginForm" name="loginForm">
     <div class="loginbody">
         <div class="loginbox">
             <ul>

@@ -94,6 +94,10 @@ public class BaseDaoImpl<T>  implements BaseDao<T> {
         List list = query.list();
 
         Query q = session.createQuery(countHQL);
+        // 拼接查询参数
+        for (int i = 0; i < args.size(); i++) {
+            q.setParameter(i, args.get(i));
+        }
         //先转为Long 如果直接转为Int会报错
         long uniqueResult = (Long) q.uniqueResult();
         return new PaginationBean(currentPage, pagesize, (int)uniqueResult, list);
