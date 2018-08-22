@@ -35,48 +35,48 @@
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
-        <li><a href="userInfo.html">用户管理</a></li>
-        <li><a href="/loginAction_userAddHtml.action">添加</a></li>
+        <li><a href="/loginAction_userInfo.action">用户管理</a></li>
+        <li><a href="javascript:;">添加</a></li>
     </ul>
 </div>
 
-<form action="/loginAction_userAddHtml.action" method="post">
+<form action="/loginAction_userAdd.action" onsubmit="return checkForm();" method="post">
     <div class="formbody">
         <div class="formtitle"><span>用户基本信息</span></div>
 
         <ul class="forminfo">
             <li><label>账号</label>
-                <input name="" type="text" class="dfinput" value=""/>
+                <input name="user.loginName" id="loginName" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>姓名</label>
-                <input name="" type="text" class="dfinput" value=""/>
+                <input name="user.name" type="text" id="name" class="dfinput" value=""/>
             </li>
             <li>
                 <label>性别</label><cite>
-                <input name="sex" type="radio" value="" checked="checked" />
+                <input name="user.sex" type="radio" value="1" checked="checked" />
                 男&nbsp;&nbsp;&nbsp;&nbsp;
-                <input name="sex" type="radio" value="" />女</cite>
+                <input name="user.sex" type="radio" value="0" />女</cite>
             </li>
             <li>
                 <label>出生日期</label>
-                <input name="" type="text" class="dfinput" value=""/>
+                <input name="user.birth" id="birth" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>所属机构</label>
                 <cite>
-                    <select class="dfselect">
+                    <select class="dfselect" id="groupId" name="user.groupId">
                         <option value="0">请选择</option>
-                        <option value="000000" >山东农村信用社省联社</option>
-                        <option value="0100000">山东农村信用社济南分行</option>
-                        <option value="011000">山东农村信用社高新区支行</option>
+                        <option value="1" >山东农村信用社省联社</option>
+                        <option value="2">山东农村信用社济南分行</option>
+                        <option value="3">山东农村信用社高新区支行</option>
                     </select>
                 </cite>
             </li>
             <li>
                 <label>角色</label>
                 <cite>
-                    <select class="dfselect">
+                    <select class="dfselect" id="roleid" name="user.roleid">
                         <option value="0">请选择</option>
                         <option value="1" >管理员</option>
                         <option value="2">客户经理</option>
@@ -86,9 +86,10 @@
             </li>
             <li>
                 <label>&nbsp;</label>
-                <input name="" type="submit" class="btn" value="添加"/>
+
+                <input type="submit" class="btn" value="添加"/>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input name="" type="reset" class="btn" value="重置"/>
+                <input type="reset" class="btn" value="重置"/>
             </li>
         </ul>
 
@@ -96,3 +97,34 @@
 </form>
 </body>
 </html>
+<script>
+    //检查表单完整性
+    function checkForm() {
+        var loginName = $("#loginName").val();
+        if (objIsNull(loginName)){
+            alert('请输入账号');
+            return false;
+        }
+        var name = $("#name").val();
+        if (objIsNull(name)){
+            alert('请输入姓名');
+            return false;
+        }
+        var birth = $("#birth").val();
+        if (objIsNull(birth)){
+            alert('请选择生日');
+            return false;
+        }
+        var groupId = $("#groupId").val();
+        if (objIsNull(groupId) || groupId=='0'){
+            alert('请选择所属机构');
+            return false;
+        }
+        var roleid = $("#roleid").val();
+        if (objIsNull(roleid) || roleid=='0'){
+            alert('请选择角色');
+            return false;
+        }
+        return true;
+    }
+</script>

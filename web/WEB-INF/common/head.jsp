@@ -14,7 +14,10 @@
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
 
+<link href="/layui/css/layui.css" rel="stylesheet" type="text/css"/>
+
 <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 <script src="/js/jquery.js"></script>
 <script src="/js/util.js"></script>
+<script src="/layui/layui.all.js"></script>
 

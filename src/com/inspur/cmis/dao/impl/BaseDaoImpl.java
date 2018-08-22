@@ -1,8 +1,11 @@
 package com.inspur.cmis.dao.impl;
 
 import com.inspur.cmis.dao.BaseDao;
+import com.inspur.common.entity.PaginationBean;
+import com.inspur.common.util.HQLHelper;
 import com.inspur.common.util.IsNullUtils;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -68,5 +71,31 @@ public class BaseDaoImpl<T>  implements BaseDao<T> {
     @Override
     public T findById(Serializable id) {
         return (T) sessionFactory.getCurrentSession().get(getClz(),id);
+    }
+
+    @Override
+    public PaginationBean getPageBean(HQLHelper hh, int currentPage) {
+        // 获取到页面大小
+        int pagesize = PaginationBean.pageSize;
+        int startFist = (currentPage - 1) * pagesize;
+        // 获取拼接号的Hql语句
+        String listHQL = hh.getListHQL();
+        String countHQL = hh.getCountHQL();
+        List<Object> args = hh.getArgs();
+        Session session = sessionFactory.getCurrentSession();
+        // 获取list的HQL语句
+        Query query = session.createQuery(listHQL);
+        // 拼接查询参数
+        for (int i = 0; i < args.size(); i++) {
+            query.setParameter(i, args.get(i));
+        }
+        query.setFirstResult(startFist);
+        query.setMaxResults(pagesize);
+        List list = query.list();
+
+        Query q = session.createQuery(countHQL);
+        //先转为Long 如果直接转为Int会报错
+        long uniqueResult = (Long) q.uniqueResult();
+        return new PaginationBean(currentPage, pagesize, (int)uniqueResult, list);
     }
 }

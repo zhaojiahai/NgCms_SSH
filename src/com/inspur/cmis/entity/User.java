@@ -1,17 +1,16 @@
 package com.inspur.cmis.entity;
 
 
-import javax.persistence.Entity;
 import java.util.Date;
 
 
 /**
  * 用户实体类
  */
-@Entity
+//@Entity
 //@Table(name = "pop_user", schema = "popular_bank_dev")
 public class User {
-	private int id;// 用户编号
+	private Integer id;// 用户编号
 	private String loginName;// 用户登录名
 	private String passWord;// 用户密码
 	private String name;// 用户名称
@@ -24,6 +23,24 @@ public class User {
 	private Integer createduserid;// 建立者
 	private Integer modifieduserid;//修改者
 	private String roleid;//角色 1 管理员 2 客户经理
+	private Integer sex;
+	private Date birth;
+
+	public Date getBirth() {
+		return birth;
+	}
+
+	public void setBirth(Date birth) {
+		this.birth = birth;
+	}
+
+	public Integer getSex() {
+		return sex;
+	}
+
+	public void setSex(Integer sex) {
+		this.sex = sex;
+	}
 
 	public Date getModifiedTime() {
 		return modifiedTime;
@@ -50,7 +67,11 @@ public class User {
 		this.passWord = passWord;
 	}
 
-	public int getId() {
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getId() {
 		return id;
 	}
 

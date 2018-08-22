@@ -1,5 +1,8 @@
 package com.inspur.cmis.service;
 
+import com.inspur.common.entity.PaginationBean;
+import com.inspur.common.util.HQLHelper;
+
 import java.io.Serializable;
 
 /**
@@ -15,5 +18,7 @@ public interface BaseService<T> {
     void delete(int id);
 
     public T findObjectById(Serializable id);
+
+    public PaginationBean getPageBean(HQLHelper hh, int currentPage);
 
 }

@@ -14,7 +14,7 @@
 			<!--用户添加跳转-->
 			<result name="userInfoAddHtml">/WEB-INF/page/user/userInfoAdd.jsp</result>
 			<!--用户列表-->
-			<result name="userList" type="redirect">/loginAction_userList.action</result>
+			<result name="userList" type="redirect">/loginAction_userInfo.action</result>
 		</action>
 	</package>
 </struts>

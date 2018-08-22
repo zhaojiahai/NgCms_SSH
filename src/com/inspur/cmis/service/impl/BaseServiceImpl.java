@@ -2,6 +2,8 @@ package com.inspur.cmis.service.impl;
 
 import com.inspur.cmis.dao.BaseDao;
 import com.inspur.cmis.service.BaseService;
+import com.inspur.common.entity.PaginationBean;
+import com.inspur.common.util.HQLHelper;
 
 import java.io.Serializable;
 
@@ -36,6 +38,11 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     @Override
     public T findObjectById(Serializable id) {
         return baseDao.findById(id);
+    }
+
+    @Override
+    public PaginationBean getPageBean(HQLHelper hh, int currentPage) {
+        return baseDao.getPageBean(hh,currentPage);
     }
 
 }

@@ -52,6 +52,31 @@
             });
 
         });
+
+
+        function goPage(number) {
+            //页数校验一下 是否超出范围
+            var minPage = 1;
+            var maxPage = ${pageBean.totalPage};
+            if(number <minPage || number>maxPage){
+                layer.msg('页数过大或者过小');
+                return;
+            }
+
+        }
+        //跳转到指定的页面
+        function skip() {
+            var index = $("#pageNumber").val();
+            //页数校验一下 是否超出范围
+            var minPage = 1;
+            var maxPage = ${pageBean.totalPage};
+            if(index <minPage || index>maxPage){
+                layer.msg('页数过大或者过小');
+                return;
+            }
+
+        }
+
     </script>
 
 </head>
@@ -63,7 +88,7 @@
         <li><a href="javascript:;">用户管理</a></li>
     </ul>
 </div>
-<s:if test="#request.users == null || #request.users.size() == 0">
+<s:if test="#request.pageBean.list == null || #request.pageBean.list.size() == 0">
     没有任何用户信息
 </s:if>
 <s:else>
@@ -130,18 +155,32 @@
             <div class="pagin">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td class="STYLE4"><div class="message">共<i class="blue">260</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+                        <td class="STYLE4">
+                            <div class="message">共<i class="blue">${pageBean.totalCount}</i>
+                                条记录，当前显示第&nbsp;
+                                <i class="blue">${pageBean.currentPage}&nbsp;</i>页
+                            </div>
                         </td>
                         <td><table border="0" align="right" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td width="45"><img src="/images/first.gif" width="33" height="20" style="cursor:hand" onclick="firstPage()"/></td>
-                                <td width="50"><img src="/images/back.gif" width="43" height="20" style="cursor:hand" onclick="priviousPage()"/></td>
-                                <td width="50"><img src="/images/next.gif" width="43" height="20" style="cursor:hand" onclick="nextPage()"/></td>
-                                <td width="40"><img src="/images/last.gif" width="33" height="20" style="cursor:hand" onclick="lastPage()"/></td>
+                                <td width="45">
+                                    <img src="/images/first.gif" width="33" height="20" style="cursor:hand"
+                                         onclick="goPage(1)"/></td>
+                                <td width="50">
+                                    <img src="/images/back.gif" width="43" height="20" style="cursor:hand"
+                                         onclick="goPage(${pageBean.currentPage-1})"/></td>
+                                <td width="50">
+                                    <img src="/images/next.gif" width="43" height="20" style="cursor:hand"
+                                         onclick="goPage(${pageBean.currentPage+1})"/></td>
+                                <td width="40">
+                                    <img src="/images/last.gif" width="33" height="20" style="cursor:hand"
+                                         onclick="goPage(${pageBean.totalPage})"/></td>
                                 <td width="100"><div align="center"><span class="STYLE1">转到第
-	                    <input name="textfield" type="text" size="4" style="height:16px; width:35px; border:1px solid #999999;" />
+	                    <input name="textfield" id="pageNumber" type="number" step="1" min="1" max="${pageBean.totalPage}" size="4" style="height:16px; width:35px; border:1px solid #999999;" />
 	                    页 </span></div></td>
-                                <td width="40"><img src="/images/go.gif" width="33" height="17" style="cursor:hand" onclick="goPage()"/></td>
+                                <td width="40"><img src="/images/go.gif" width="33" height="17"
+                                                    style="cursor:hand"
+                                                    onclick="skip()"/></td>
                             </tr>
                         </table>
                         </td>
@@ -155,6 +194,7 @@
 
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
+
 </script>
 
 </body>

@@ -3,7 +3,9 @@ package com.inspur.cmis.action;
 import com.inspur.cmis.entity.User;
 import com.inspur.cmis.service.UserService;
 import com.inspur.common.action.BaseAction;
+import com.inspur.common.entity.PaginationBean;
 import com.inspur.common.util.DateUtil;
+import com.inspur.common.util.HQLHelper;
 import com.inspur.common.util.IsNullUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -58,6 +60,12 @@ public class UserAction extends BaseAction {
 	 */
 	public String userInfo(){
 		List<User> list = userService.findAll();
+		//分页查询
+		HQLHelper hqlHelper = new HQLHelper(User.class);
+		//todo 设置一些查询条件
+		PaginationBean pageBean = userService.getPageBean(hqlHelper, 1);
+		request.setAttribute("pageBean",pageBean);
+
 		request.setAttribute("users",list);
 		return "userInfo";
 	}
@@ -82,8 +90,8 @@ public class UserAction extends BaseAction {
 	 * @return
 	 */
 	public String userAdd(){
-
-		//用户列表
+		userService.add(user);
+		//重定向到用户列表
 		return "userList";
 	}
 

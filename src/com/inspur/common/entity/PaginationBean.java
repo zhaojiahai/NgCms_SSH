@@ -13,59 +13,64 @@ import java.util.Map;
 public class PaginationBean implements Constant {
 
 	/**
-	 * һҳ��ʾ�ļ���
+	 * 每页显示多少条数据
 	 */
-	private int pageSize = PAGE_SIZE_10;
+	public static int pageSize = PAGE_SIZE_10;
 	
 	private int showCount= PAGE_SIZE_10;
 
-	/**
-	 * �ܼ���
-	 */
-	private long totalCount;
-
-	/**
-	 * ��ʼ����
-	 */
+	private int totalCount;
 	private int start;
 
-	/**
-	 * ��ҳ��
-	 */
 	private int totalPage;
 
 	/**
-	 * ��ǰҳ��
+	 * 当前页码
 	 */
 	private int currentPage;
 
-	/**
-	 * ��ҳ�����һ����¼��
-	 */
 	private int lastRecordNo;
 	
-	/**
-	 * ��ʾ��ʼҳ��
-	 */
 	private int startPage;
 
-	/**
-	 * ��ʾ����ҳ��
-	 */
 	private int endPage;
-
 	/**
-	 * ��������洢
+	 * 检索结果存储
 	 */
 	private List<?> list;
 
-
 	/**
-	 * �洢��������
+	 * 存储检索条件
 	 */
 	private Map propertyMap = null;
-	
-	
+
+
+	public PaginationBean(int currentPage, int pageSize, int recordCount,List recordList) {
+		this.currentPage = currentPage;
+		this.pageSize = pageSize;
+		this.totalCount = recordCount;
+		this.list = recordList;
+
+		totalPage = (this.totalCount + this.pageSize - 1) / this.pageSize;//计算页数
+
+		if(totalPage <= 10){
+			this.startPage = 1;
+			this.endPage = this.totalPage;
+		}else{
+			this.startPage = this.currentPage - 4;
+			this.endPage = this.currentPage + 5;
+
+			if(this.startPage < 1){
+				this.startPage = 1;
+				this.endPage = 10;
+			}
+			if(this.endPage > this.totalPage){
+				this.endPage = this.totalPage;
+				this.startPage = this.endPage - 9;
+			}
+		}
+	}
+
 
 	public int getLastRecordNo() {
 		return lastRecordNo;
@@ -95,7 +100,7 @@ public class PaginationBean implements Constant {
 		return totalCount;
 	}
 
-	public void setTotalCount(long totalCount) {
+	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
 	}
 
