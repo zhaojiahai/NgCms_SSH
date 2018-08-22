@@ -7,8 +7,6 @@ import java.util.Date;
 /**
  * 用户实体类
  */
-//@Entity
-//@Table(name = "pop_user", schema = "popular_bank_dev")
 public class User {
 	private Integer id;// 用户编号
 	private String loginName;// 用户登录名

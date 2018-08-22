@@ -60,7 +60,7 @@
             </li>
             <li>
                 <label>出生日期</label>
-                <input name="user.birth" id="birth" type="text" class="dfinput" value=""/>
+                <input name="user.birth" readonly="readonly" id="birth" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>所属机构</label>
@@ -98,31 +98,43 @@
 </body>
 </html>
 <script>
+    $(function () {
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#birth' //指定元素
+            });
+        });
+
+    })
+
     //检查表单完整性
     function checkForm() {
         var loginName = $("#loginName").val();
         if (objIsNull(loginName)){
-            alert('请输入账号');
+            layer.msg('请输入账号');
             return false;
         }
         var name = $("#name").val();
         if (objIsNull(name)){
-            alert('请输入姓名');
+            layer.msg('请输入姓名');
             return false;
         }
         var birth = $("#birth").val();
         if (objIsNull(birth)){
-            alert('请选择生日');
+            layer.msg('请选择生日');
             return false;
         }
         var groupId = $("#groupId").val();
         if (objIsNull(groupId) || groupId=='0'){
-            alert('请选择所属机构');
+            layer.msg('请选择所属机构');
             return false;
         }
         var roleid = $("#roleid").val();
         if (objIsNull(roleid) || roleid=='0'){
-            alert('请选择角色');
+            layer.msg('请选择角色');
             return false;
         }
         return true;

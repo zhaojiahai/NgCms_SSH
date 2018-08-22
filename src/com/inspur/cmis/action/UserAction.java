@@ -3,6 +3,7 @@ package com.inspur.cmis.action;
 import com.inspur.cmis.entity.User;
 import com.inspur.cmis.service.UserService;
 import com.inspur.common.action.BaseAction;
+import com.inspur.common.entity.JsonResult;
 import com.inspur.common.entity.PaginationBean;
 import com.inspur.common.util.DateUtil;
 import com.inspur.common.util.HQLHelper;
@@ -103,6 +104,7 @@ public class UserAction extends BaseAction {
 		return "userInfoAddHtml";
 	}
 
+
 	/**
 	 * 用户添加
 	 * @return
@@ -112,6 +114,30 @@ public class UserAction extends BaseAction {
 		//重定向到用户列表
 		return "userList";
 	}
+
+	/**
+	 * 用户修改跳转
+	 * @return
+	 */
+	public String userUpdateHtml(){
+		User user = userService.findObjectById(userId);
+		request.setAttribute("updateUser",user);
+		return "userInfoUpdateHtml";
+	}
+
+	/**
+	 * 用户修改
+	 * @return
+	 */
+	public String userUpdate(){
+		userService.update(user);
+		//返回结果
+		jsonResult.setCode(1);
+		jsonResult.setMsg("修改成功");
+		return "userInfoUpdate";
+	}
+
+
 
 	/**
 	 * 密码修改
@@ -138,6 +164,20 @@ public class UserAction extends BaseAction {
 
 
 	private User user;
+	private JsonResult jsonResult = new JsonResult();
+	private Integer userId;
+
+	public JsonResult getJsonResult() {
+		return jsonResult;
+	}
+
+	public void setJsonResult(JsonResult jsonResult) {
+		this.jsonResult = jsonResult;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
 	public User getUser() {
 		return user;

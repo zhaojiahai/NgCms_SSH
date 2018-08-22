@@ -82,6 +82,7 @@
             $("#user_form").submit();
         }
 
+
     </script>
 
 </head>
@@ -119,7 +120,10 @@
             <div class="tools">
                 <ul class="toolbar1">
                     <li><a href="/loginAction_userAddHtml.action"><span><img src="/images/t01.png" /></span>添加</a></li>
-                    <li><a href="/loginAction_userAddHtml.action"><span><img src="/images/t02.png" /></span>修改</a></li>
+                    <li>
+                        <a id="userUpdate" href="javascript:;">
+                            <span><img src="/images/t02.png" /></span>修改</a>
+                    </li>
                     <li><a href="javascript:confirmMsgDel()" ><span><img src="/images/t03.png"/></span>删除</a></li>
                     <li><a href="javascript:userOpen()" ><span><img src="/images/t08.png" height="24" width="24"/></span>启用</a></li>
                     <li><a href="javascript:userClose()" ><span><img src="/images/t09.png" height="24" width="24"/></span>禁用</a></li>
@@ -133,7 +137,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <input name="" type="checkbox" value=""/>
+                        <input id="toggle" type="checkbox" value=""/>
                     </th>
                     <th>用户编号</th>
                     <th>用户账号</th>
@@ -147,7 +151,7 @@
                 <s:iterator value="#request.pageBean.list">
                     <tr>
                         <td>
-                            <input name="" type="checkbox" value="${id}" />
+                            <input name="ids" type="checkbox" value="${id}" />
                         </td>
                         <td>${id}</td>
                         <td>${loginName}</td>
@@ -201,7 +205,29 @@
 
 
 <script type="text/javascript">
+    var checkFlag = true;
+
     $('.tablelist tbody tr:odd').addClass('odd');
+
+    //全选 点击事件
+    $("#toggle").click(function () {
+        $("input[name='ids']").attr('checked',checkFlag);
+        checkFlag = !checkFlag;
+    })
+    //修改
+    $("#userUpdate").click(function () {
+        var len = $("input[name='ids']:checked").length;
+        if (len<=0){
+            layer.msg('请选择要修改的用户!');
+            return;
+        }
+        if (len!=1){
+            layer.msg('一次只能修改一个用户!');
+            return;
+        }
+        var updateId = $("input[name='ids']:checked").val();
+        window.location.href = "/loginAction_userUpdateHtml.action?userId="+updateId;
+    })
 
 </script>
 

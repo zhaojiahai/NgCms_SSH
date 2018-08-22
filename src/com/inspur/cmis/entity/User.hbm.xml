@@ -51,7 +51,7 @@
             <column name="sex" sql-type="int" length="1"/>
         </property>
         <property name="birth">
-            <column name="birth" sql-type="datetime"/>
+            <column name="birth" sql-type="date"/>
         </property>
 
 

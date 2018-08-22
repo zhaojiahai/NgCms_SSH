@@ -36,7 +36,7 @@
     <constant name="struts.convention.default.parent.package"
               value="convention-default" />
 
-    <package name="abstract_struts" abstract="true" namespace="/" extends="struts-default">
+    <package name="abstract_struts" abstract="true" namespace="/" extends="json-default">
         <!-- 定义新的拦截器栈, 配置 prepare 拦截器栈的 alwaysInvokePrepare 参数值为 false -->
         <!--<interceptors>-->
             <!--<interceptor-stack name="sshStack">-->

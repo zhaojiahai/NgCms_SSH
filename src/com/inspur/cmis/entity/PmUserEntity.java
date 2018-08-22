@@ -2,7 +2,7 @@ package com.inspur.cmis.entity;
 
 /**
  * Created by LiuLiHao on 2018/8/20 13:10.
- * 描述：
+ * 描述： 用户对象
  * 作者： LiuLiHao
  */
 public class PmUserEntity {

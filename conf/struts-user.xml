@@ -13,8 +13,15 @@
 			<result name="resetPwd">/WEB-INF/page/user/resetPwd.jsp</result>
 			<!--用户添加跳转-->
 			<result name="userInfoAddHtml">/WEB-INF/page/user/userInfoAdd.jsp</result>
+			<!--用户修改跳转-->
+			<result name="userInfoUpdateHtml">/WEB-INF/page/user/userInfoUpdate.jsp</result>
 			<!--用户列表-->
 			<result name="userList" type="redirect">/loginAction_userInfo.action</result>
+			<!--ajax修改用户-->
+			<result name="userInfoUpdate" type="json">
+				<param name="root">data</param>
+			</result>
+
 		</action>
 	</package>
 </struts>
