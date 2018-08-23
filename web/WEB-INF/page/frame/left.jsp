@@ -106,7 +106,7 @@
             </div>
             <ul class="menuson">
                 <li><cite></cite><a href="/loginAction_userInfo.action" target="rightFrame">用户管理</a><i></i></li>
-                <li><cite></cite><a href="pm/groupInfo.html" target="rightFrame">机构管理</a><i></i></li>
+                <li><cite></cite><a href="/groupAction_groupInfo.action" target="rightFrame">机构管理</a><i></i></li>
                 <li><cite></cite><a href="pm/paramClassInfo.html" target="rightFrame">参数管理</a><i></i></li>
             </ul>
         </dd>

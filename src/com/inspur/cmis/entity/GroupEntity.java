@@ -7,7 +7,7 @@ import java.util.Date;
  * 描述：
  * 作者： LiuLiHao
  */
-public class Group {
+public class GroupEntity {
 
     private Integer id;
     private String name;

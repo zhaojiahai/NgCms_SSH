@@ -55,5 +55,6 @@
     <include file="struts-user.xml"></include>
     <!--frame映射-->
     <include file="struts-frame.xml"></include>
-
+    <!--机构操作-->
+    <include file="struts-group.xml"></include>
 </struts>

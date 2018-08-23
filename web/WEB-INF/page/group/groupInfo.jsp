@@ -58,7 +58,7 @@
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
-        <li><a href="#">机构维护</a></li>
+        <li><a href="javascript:;">机构维护</a></li>
     </ul>
 </div>
 <form action="" method="post">
@@ -73,7 +73,7 @@
     <div class="rightinfo">
         <div class="tools">
             <ul class="toolbar1">
-                <li><a href="groupInfoAdd.html"><span><img src="../images/t01.png" /></span>添加</a></li>
+                <li><a href="/groupAction_groupAddHtml.action"><span><img src="../images/t01.png" /></span>添加</a></li>
                 <li><a href="groupInfoUpdate.html"><span><img src="../images/t02.png" /></span>修改</a></li>
                 <li><a href="javascript:groupOpen()" ><span><img src="../images/t08.png" height="24" width="24"/></span>启用</a></li>
                 <li><a href="javascript:groupClose()" ><span><img src="../images/t09.png" height="24" width="24"/></span>禁用</a></li>

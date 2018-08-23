@@ -121,6 +121,7 @@ public class UserAction extends BaseAction {
 		user.setLocked("0");
 		user.setIsdelete(0);
 		user.setCreatedTime(new Date());
+
 		userService.add(user);
 		//重定向到用户列表
 		return "userList";

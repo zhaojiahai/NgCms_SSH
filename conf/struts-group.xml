@@ -7,7 +7,12 @@
 	<!--机构-->
 	<package name="groupAction" namespace="/" extends="abstract_struts">
 		<action name="groupAction_*" class="com.inspur.cmis.action.GroupAction" method="{1}">
+			<!--列表-->
 			<result name="groupInfo">/WEB-INF/page/group/groupInfo.jsp</result>
+			<!--添加-->
+			<result name="groupAddHtml">/WEB-INF/page/group/groupInfoAdd.jsp</result>
+			<!--groupAdd-->
+			<result name="groupList" type="redirect">/groupAction_groupInfo.action</result>
 		</action>
 	</package>
 </struts>

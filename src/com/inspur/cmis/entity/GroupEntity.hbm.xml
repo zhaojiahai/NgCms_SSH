@@ -5,7 +5,7 @@
 <hibernate-mapping>
 
     <!--实体类和表映射-->
-    <class name="com.inspur.cmis.entity.Group" table="pop_group">
+    <class name="com.inspur.cmis.entity.GroupEntity" table="pop_group">
         <id name="id" >
             <column name="id"  sql-type="int(11)"/>
             <generator class="native">
