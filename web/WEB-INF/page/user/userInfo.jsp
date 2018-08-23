@@ -11,26 +11,16 @@
     <title>用户管理</title>
     <%@include file="../../common/head.jsp" %>
     <script type="text/javascript">
-        function confirmMsgDel()
-        {
-            if(confirm("删除用户信息,您确定要删除吗?"))
-                window.close();
-        }
-        function userOpen()
-        {
-            if(confirm("您确定要启用该用户吗?"))
-                window.close();
-        }
-        function userClose()
-        {
-            if(confirm("您确定要禁用该用户吗?"))
-                window.close();
-        }
+
         function resetPass()
         {
-            if(confirm("重置密码,您确定要恢复初始密码吗?")){
-                window.location.href = "/loginAction_resetPwd.action";
-            }
+            layer.confirm('重置密码,您确定要恢复初始密码吗?', function(index){
+                if(index==1){
+                    layer.close(index);
+
+                    window.location.href = "/loginAction_resetPwd.action";
+                }
+            });
         }
     </script>
     <script type="text/javascript">
@@ -125,8 +115,8 @@
                             <span><img src="/images/t02.png" /></span>修改</a>
                     </li>
                     <li><a id="userDeletes" ><span><img src="/images/t03.png"/></span>删除</a></li>
-                    <li><a href="javascript:userOpen()" ><span><img src="/images/t08.png" height="24" width="24"/></span>启用</a></li>
-                    <li><a href="javascript:userClose()" ><span><img src="/images/t09.png" height="24" width="24"/></span>禁用</a></li>
+                    <li><a id="userOpen" ><span><img src="/images/t08.png" height="24" width="24"/></span>启用</a></li>
+                    <li><a id="userClose" ><span><img src="/images/t09.png" height="24" width="24"/></span>禁用</a></li>
                     <li><a href="javascript:resetPass()" ><span><img src="/images/t07.png" height="20" width="20"/></span>重置密码</a></li>
                 </ul>
             </div>
@@ -240,25 +230,17 @@
         layer.confirm('确定要删除吗?', function(index){
             if (index==1){
                 //读取id
-                var arr = $("input[name='ids']:checked");
-                var param = "";
-                //拼接id  结果类似  1,2,3,4,5
-                for(var i=0;i<arr.length;i++){
-                    if(i==arr.length-1){
-                        param+=arr[i].value;
-                    }else {
-                        param+=arr[i].value+",";
-                    }
-                }
+                var param = buildUserSelect();
+
                 layer.close(index);
                 //调用删除
                 postRequest('/loginAction_userDelete.action',{'deletes':param},function (json) {
                     if (json.code==1){
-                        layer.msg("删除成功");
-                        //从新加载页面
-                        window.location.href = userInfoUrl;
+                        layer.alert('删除成功', function(){
+                            window.location.href = userInfoUrl;
+                        });
                     } else {
-                        layer.msg("删除失败");
+                        layer.alert("删除失败");
                     }
                 });
 
@@ -266,6 +248,77 @@
         });
 
     })
+    //启用
+    $("#userOpen").click(function () {
+        if(!checkSelectUser()){
+            layer.msg('请选择要启用的用户!');
+            return;
+        }
+        //弹框
+        layer.confirm('确定要启用这些用户吗?', function(index){
+            //读取id
+            var param = buildUserSelect();
+            layer.close(index);
+            postRequest(userEnableUrl,{'deletes':param},function (json) {
+                if (json.code==1){
+                    layer.alert('启用成功', function(){
+                        window.location.href = userInfoUrl;
+                    });
+
+                } else {
+                    layer.alert("启用失败");
+                }
+            });
+        });
+    });
+
+    //关闭
+    $("#userClose").click(function () {
+        if(!checkSelectUser()){
+            layer.msg('请选择要禁用的用户!');
+            return;
+        }
+        //弹框
+        layer.confirm('确定要禁用这些用户吗?', function(index){
+            //读取id
+            var param = buildUserSelect();
+            layer.close(index);
+            postRequest(userDisableUrl,{'deletes':param},function (json) {
+                if (json.code==1){
+                    layer.alert('禁用成功', function(){
+                        window.location.href = userInfoUrl;
+                    });
+                } else {
+                    layer.alert("禁用失败");
+                }
+            });
+        });
+    });
+
+    //是否选中了用户
+    function checkSelectUser() {
+        var len = $("input[name='ids']:checked").length;
+        if (len<=0){
+            return false;
+        }
+        return true;
+    }
+
+    function buildUserSelect() {
+        //读取id
+        var arr = $("input[name='ids']:checked");
+        var param = "";
+        //拼接id  结果类似  1,2,3,4,5
+        for(var i=0;i<arr.length;i++){
+            if(i==arr.length-1){
+                param+=arr[i].value;
+            }else {
+                param+=arr[i].value+",";
+            }
+        }
+        return param;
+    }
+
 
 </script>
 

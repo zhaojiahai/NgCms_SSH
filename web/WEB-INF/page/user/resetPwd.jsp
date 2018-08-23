@@ -37,11 +37,11 @@
 
             if (objIsNull(loginName) || objIsNull(oldPass) ||
                 objIsNull(newPass) || objIsNull(confirmPass)) {
-                alert("内容填写不完整!");
+                layer.msg("内容填写不完整!");
                 return false;
             }
             if (newPass!=confirmPass){
-                alert("两次密码输入不一致!");
+                layer.msg("两次密码输入不一致!");
                 return false;
             }
             return true;
@@ -59,7 +59,7 @@
     </ul>
 </div>
 
-<form action="loginAction_resetPassWord.action" method="post" onsubmit="return changePwd();">
+<form action="/loginAction_resetPassWord.action" method="post" onsubmit="return changePwd();">
     <div class="formbody">
         <div class="formtitle"><span>密码重置</span></div>
 

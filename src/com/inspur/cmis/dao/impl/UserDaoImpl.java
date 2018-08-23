@@ -20,7 +20,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao  {
 
     @Override
     public User login(String loginName, String password) {
-        String hql = "FROM User u WHERE u.loginName = ? and u.passWord=?";
+        String hql = "FROM User u WHERE u.loginName = ? and u.passWord=? and u.isdelete=0 ";
         Query query = sessionFactory.getCurrentSession().createQuery(hql).
                 setString(0, loginName).setString(1,password);
 
@@ -32,6 +32,20 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao  {
     public int deleteAll(String ids) {
         String hqlUpdate = "update User o set o.isdelete = 1 where o.id in ?";
         Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,ids);
+        return query.executeUpdate();
+    }
+
+    @Override
+    public int disableAll(String deletes) {
+        String hqlUpdate = "update User o set o.locked = 1 where o.id in ?";
+        Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,deletes);
+        return query.executeUpdate();
+    }
+
+    @Override
+    public int enableAll(String deletes) {
+        String hqlUpdate = "update User o set o.locked = 0 where o.id in ?";
+        Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,deletes);
         return query.executeUpdate();
     }
 

@@ -46,4 +46,16 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         if (i<=0) throw new RuntimeException("删除用户失败");
     }
 
+    @Override
+    public void disableAll(String deletes) {
+        int i = userDao.disableAll(deletes);
+        if (i<=0) throw new RuntimeException("禁用用户失败");
+    }
+
+    @Override
+    public void enableAll(String deletes) {
+        int i = userDao.enableAll(deletes);
+        if (i<=0) throw new RuntimeException("启用用户失败");
+    }
+
 }

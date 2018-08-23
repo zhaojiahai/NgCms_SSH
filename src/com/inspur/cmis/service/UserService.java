@@ -21,4 +21,17 @@ public interface UserService extends BaseService<User> {
     List<User> findAll();
 
     void deleteAll(String ids);
+
+    /**
+     * 禁用用户
+     * @param deletes
+     */
+    void disableAll(String deletes);
+
+    /**
+     * 启用用户
+     * @param deletes
+     */
+    void enableAll(String deletes);
+
 }

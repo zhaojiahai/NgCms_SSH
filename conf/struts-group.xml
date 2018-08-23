@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--机构-->
+	<package name="groupAction" namespace="/" extends="abstract_struts">
+		<action name="groupAction_*" class="com.inspur.cmis.action.GroupAction" method="{1}">
+			<result name="groupInfo">/WEB-INF/page/group/groupInfo.jsp</result>
+		</action>
+	</package>
+</struts>

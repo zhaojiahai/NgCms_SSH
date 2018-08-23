@@ -176,6 +176,35 @@ public class UserAction extends BaseAction {
 	}
 
 	/**
+	 * 禁用用户
+	 * @return
+	 */
+	public String userDisable(){
+		JsonResult jsonResult = new JsonResult(0,"禁用失败");
+
+		if (IsNullUtils.isNotNull(deletes)){
+			userService.disableAll(deletes);
+			jsonResult = new JsonResult(1,"禁用成功");
+		}
+		result = GsonUtils.toJson(jsonResult);
+		return "userDisable";
+	}
+
+	/**
+	 * 启用用户
+	 * @return
+	 */
+	public String userEnable(){
+		JsonResult jsonResult = new JsonResult(0,"启用失败");
+
+		if (IsNullUtils.isNotNull(deletes)){
+			userService.enableAll(deletes);
+			jsonResult = new JsonResult(1,"启用成功");
+		}
+		result = GsonUtils.toJson(jsonResult);
+		return "userEnable";
+	}
+	/**
 	 * 密码修改
 	 * @return
 	 */

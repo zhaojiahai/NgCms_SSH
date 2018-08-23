@@ -19,4 +19,7 @@ public interface UserDao extends BaseDao<User>{
 
     int deleteAll(String ids);
 
+    int disableAll(String deletes);
+
+    int enableAll(String deletes);
 }

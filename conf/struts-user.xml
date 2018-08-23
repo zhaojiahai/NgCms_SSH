@@ -4,12 +4,15 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<!--登录-->
+	<!--用户-->
 	<package name="loginAction" namespace="/" extends="abstract_struts">
 		<action name="loginAction_*" class="com.inspur.cmis.action.UserAction" method="{1}">
 			<result name="success">/WEB-INF/page/frame/main.jsp</result>
+			<!--登录-->
 			<result name="input">/login.jsp</result>
+			<!--用户列表-->
 			<result name="userInfo">/WEB-INF/page/user/userInfo.jsp</result>
+			<!--重置密码-->
 			<result name="resetPwd">/WEB-INF/page/user/resetPwd.jsp</result>
 			<!--用户添加跳转-->
 			<result name="userInfoAddHtml">/WEB-INF/page/user/userInfoAdd.jsp</result>
@@ -23,6 +26,14 @@
 			</result>
 			<!--ajax用户删除-->
 			<result name="userDelete" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax用户禁用-->
+			<result name="userDisable" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax用户启用-->
+			<result name="userEnable" type="json">
 				<param name="root">result</param>
 			</result>
 		</action>
