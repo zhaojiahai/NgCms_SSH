@@ -22,5 +22,8 @@
 <script src="/js/jquery.js"></script>
 <script src="/js/util.js"></script>
 <script src="/layui/layui.all.js"></script>
+<%--请求路径--%>
 <script src="/js/urls.js"></script>
+<%--校验--%>
+<script src="/js/validate.js"></script>
 

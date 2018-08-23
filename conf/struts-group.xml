@@ -11,8 +11,14 @@
 			<result name="groupInfo">/WEB-INF/page/group/groupInfo.jsp</result>
 			<!--添加-->
 			<result name="groupAddHtml">/WEB-INF/page/group/groupInfoAdd.jsp</result>
-			<!--groupAdd-->
+			<!--重定向到列表-->
 			<result name="groupList" type="redirect">/groupAction_groupInfo.action</result>
+			<!--更新页面-->
+			<result name="groupUpdateHtml">/WEB-INF/page/group/groupUpdate.jsp</result>
+			<!--ajax更新-->
+			<result name="groupUpdate" type="json">
+				<param name="root">result</param>
+			</result>
 		</action>
 	</package>
 </struts>

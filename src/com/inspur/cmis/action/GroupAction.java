@@ -4,12 +4,16 @@ import com.inspur.cmis.entity.GroupEntity;
 import com.inspur.cmis.entity.User;
 import com.inspur.cmis.service.GroupService;
 import com.inspur.common.action.BaseAction;
+import com.inspur.common.entity.JsonResult;
 import com.inspur.common.entity.PaginationBean;
 import com.inspur.common.util.Constants;
+import com.inspur.common.util.GsonUtils;
 import com.inspur.common.util.HQLHelper;
 import com.inspur.common.util.IsNullUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Date;
 
 /**
  * Created by LiuLiHao on 2018/8/23 16:38.
@@ -84,8 +88,113 @@ public class GroupAction extends BaseAction {
     }
 
 
+    /**
+     * 修改页面
+     * @return
+     */
+    public String groupUpdateHtml(){
+        if (groupId!=null && groupId>0){
+            GroupEntity entity = groupService.findObjectById(groupId);
+            request.setAttribute("updateGroup",entity);
+        }
+        return "groupUpdateHtml";
+    }
+
+    /**
+     * ajax修改
+     * @return
+     */
+    public String groupUpdate(){
+        //先ID查询一下再保存 否则其它字段都空
+        GroupEntity dbGroup = groupService.findObjectById(group.getId());
+        JsonResult jsonResult = new JsonResult(0,"修改失败");
+
+        if (IsNullUtils.isNotNull(upcode,upname,upbriefname,upcreatedtime)){
+            dbGroup.setCode(upcode);
+            dbGroup.setName(upname);
+            dbGroup.setBriefname(upbriefname);
+            dbGroup.setCreatedtime(upcreatedtime);
+            if (StringUtils.isNotBlank(upparentid)){
+                dbGroup.setParentid(upparentid);
+            }
+            //修改时间
+            dbGroup.setModifiedtime(new Date());
+            groupService.update(dbGroup);
+            jsonResult = new JsonResult(1,"修改成功");
+        }
+        result = GsonUtils.toJson(jsonResult);
+        return "groupUpdate";
+    }
+
     //页数
     private Integer currentPage;
+    //修改使用
+    private Integer groupId;
+    ///////////ajax返回数据使用/////////////
+    private String result;
+
+
+    private String upcode;
+    private String upname;
+    private String upparentid;
+    private String upbriefname;
+    private Date upcreatedtime;
+
+    public String getUpcode() {
+        return upcode;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public void setUpcode(String upcode) {
+        this.upcode = upcode;
+    }
+
+    public String getUpname() {
+        return upname;
+    }
+
+    public void setUpname(String upname) {
+        this.upname = upname;
+    }
+
+    public String getUpparentid() {
+        return upparentid;
+    }
+
+    public void setUpparentid(String upparentid) {
+        this.upparentid = upparentid;
+    }
+
+    public String getUpbriefname() {
+        return upbriefname;
+    }
+
+    public void setUpbriefname(String upbriefname) {
+        this.upbriefname = upbriefname;
+    }
+
+    public Date getUpcreatedtime() {
+        return upcreatedtime;
+    }
+
+    public void setUpcreatedtime(Date upcreatedtime) {
+        this.upcreatedtime = upcreatedtime;
+    }
+
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
+    }
 
     public void setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;

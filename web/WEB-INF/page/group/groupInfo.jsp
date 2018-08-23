@@ -114,7 +114,7 @@
             <div class="tools">
                 <ul class="toolbar1">
                     <li><a href="/groupAction_groupAddHtml.action"><span><img src="../images/t01.png" /></span>添加</a></li>
-                    <li><a href="groupInfoUpdate.html"><span><img src="../images/t02.png" /></span>修改</a></li>
+                    <li><a id="groupUpdate"><span><img src="../images/t02.png" /></span>修改</a></li>
                     <li><a href="javascript:groupOpen()" ><span><img src="../images/t08.png" height="24" width="24"/></span>启用</a></li>
                     <li><a href="javascript:groupClose()" ><span><img src="../images/t09.png" height="24" width="24"/></span>禁用</a></li>
                 </ul>
@@ -215,6 +215,21 @@
     $("#toggle").click(function () {
         $("input[name='ids']").attr('checked',checkFlag);
         checkFlag = !checkFlag;
+    })
+
+    //修改
+    $("#groupUpdate").click(function () {
+        var len = $("input[name='ids']:checked").length;
+        if (len<=0){
+            layer.msg('请选择要修改的机构!');
+            return;
+        }
+        if (len!=1){
+            layer.msg('一次只能修改一个机构!');
+            return;
+        }
+        var updateId = $("input[name='ids']:checked").val();
+        window.location.href = "/groupAction_groupUpdateHtml.action?groupId="+updateId;
     })
 </script>
 

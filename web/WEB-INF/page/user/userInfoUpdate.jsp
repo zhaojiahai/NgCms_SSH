@@ -54,26 +54,28 @@
             </li>
             <li>
                 <label>姓名</label>
-                <input name="upName" id="username"
-                       type="text" class="dfinput" value="${updateUser.name}"/>
+                <input name="upName" id="username" msg="姓名"
+                       type="text" class="dfinput" req="req" value="${updateUser.name}"/>
             </li>
             <li>
                 <label>性别</label>
                 <cite>
-                <input name="upSex" <c:if test="${updateUser.sex== 1}">checked="checked"</c:if> type="radio" value="1" />男
+                <input name="upSex"
+                       <c:if test="${updateUser.sex== 1}">checked="checked"</c:if> type="radio" value="1" />男
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input name="upSex"  <c:if test="${updateUser.sex== 0}">checked="checked"</c:if>  type="radio" value="0" />女</cite>
+                <input name="upSex"
+                       <c:if test="${updateUser.sex== 0}">checked="checked"</c:if>  type="radio" value="0" />女</cite>
                 </cite>
             </li>
             <li>
                 <label>出生日期</label>
-                <input name="upBirth" id="birth" readonly="readonly" type="text" class="dfinput"
+                <input name="upBirth" req="req"  msg="出生日期" id="birth" readonly="readonly" type="text" class="dfinput"
                        value="<fmt:formatDate value="${updateUser.birth }" pattern="yyyy-MM-dd" />"/>
 
             </li>
             <li>
                 <label>角色</label><cite>
-                <select class="dfselect" id="role" name="upRole">
+                <select class="dfselect" req="req"  msg="角色" id="role" name="upRole">
                     <option value="0" >请选择</option>
                     <option value="1" <c:if test="${updateUser.roleid== 1}">selected="selected"</c:if>>管理员</option>
                     <option value="2" <c:if test="${updateUser.roleid== 2}">selected="selected"</c:if>>客户经理</option>
@@ -108,30 +110,20 @@
 
     //检查更新信息完整性
     function checkUpdate() {
-        var username = $("#username").val();
-        if (objIsNull(username)){
-            layer.msg('请输入用户名');
-            return false;
+        //检查表单
+        var flag = formValueCheck('updateForm');
+        if (flag){
+            var fromData = $("#updateForm").serialize();
+            //请求数据
+            postRequest('/loginAction_userUpdate.action',fromData,function (json) {
+                if (json.code==1){
+                    layer.msg("修改成功");
+                }else {
+                    layer.msg("修改失败");
+                }
+            });
         }
-        var birth = $("#birth").val();
-        if (objIsNull(birth)){
-            layer.msg('请选择生日');
-            return false;
-        }
-        var role = $("#role").val();
-        if (objIsNull(role) || role=='0'){
-            layer.msg('请选择角色');
-            return false;
-        }
-        var fromData = $("#updateForm").serialize();
-        //请求数据
-        postRequest('/loginAction_userUpdate.action',fromData,function (json) {
-            if (json.code==1){
-                layer.msg("修改成功");
-            }else {
-                layer.msg("修改失败");
-            }
-        });
+
         return false;
     }
 </script>
