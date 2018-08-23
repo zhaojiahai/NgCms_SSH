@@ -18,8 +18,8 @@
 			<!--用户列表-->
 			<result name="userList" type="redirect">/loginAction_userInfo.action</result>
 			<!--ajax修改用户-->
-			<result name="userInfoUpdate" type="json">
-				<param name="root">data</param>
+			<result name="userUpdate" type="json">
+				<param name="root">result</param>
 			</result>
 
 		</action>

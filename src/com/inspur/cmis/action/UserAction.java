@@ -5,11 +5,11 @@ import com.inspur.cmis.service.UserService;
 import com.inspur.common.action.BaseAction;
 import com.inspur.common.entity.JsonResult;
 import com.inspur.common.entity.PaginationBean;
-import com.inspur.common.util.DateUtil;
-import com.inspur.common.util.HQLHelper;
-import com.inspur.common.util.IsNullUtils;
+import com.inspur.common.util.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Date;
 
 /**
  * 登录 注销操作
@@ -40,7 +40,7 @@ public class UserAction extends BaseAction {
 		}
 		//判断时间
 		session.setAttribute("am", DateUtil.getAmOrPm());
-		session.setAttribute("user", user);
+		session.setAttribute(Constants.USER, user);
 		return SUCCESS;
 	}
 
@@ -110,6 +110,11 @@ public class UserAction extends BaseAction {
 	 * @return
 	 */
 	public String userAdd(){
+		//默认设置
+		User currentUser = (User) session.getAttribute(Constants.USER);
+		user.setCreateduserid(currentUser.getId());
+		user.setLocked("0");
+		user.setCreatedTime(new Date());
 		userService.add(user);
 		//重定向到用户列表
 		return "userList";
@@ -126,15 +131,26 @@ public class UserAction extends BaseAction {
 	}
 
 	/**
-	 * 用户修改
+	 * ajax用户修改
 	 * @return
 	 */
 	public String userUpdate(){
-		userService.update(user);
-		//返回结果
-		jsonResult.setCode(1);
-		jsonResult.setMsg("修改成功");
-		return "userInfoUpdate";
+		//先ID查询一下再保存 否则其它字段都空
+		User dbUser = userService.findObjectById(user.getId());
+		JsonResult jsonResult = new JsonResult(0,"修改失败");
+
+		if (IsNullUtils.isNotNull(upBirth,upRole,upSex,upName)){
+			dbUser.setBirth(upBirth);
+			dbUser.setRoleid(upRole);
+			dbUser.setSex(upSex);
+			dbUser.setName(upName);
+			//修改时间
+			dbUser.setModifiedTime(new Date());
+			userService.update(dbUser);
+			jsonResult = new JsonResult(1,"修改成功");
+		}
+		result = GsonUtils.toJson(jsonResult);
+		return "userUpdate";
 	}
 
 
@@ -164,15 +180,53 @@ public class UserAction extends BaseAction {
 
 
 	private User user;
-	private JsonResult jsonResult = new JsonResult();
-	private Integer userId;
+	private String result;
 
-	public JsonResult getJsonResult() {
-		return jsonResult;
+	public String getResult() {
+		return result;
 	}
 
-	public void setJsonResult(JsonResult jsonResult) {
-		this.jsonResult = jsonResult;
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+	private Integer userId;
+
+	private String upRole;
+	private Date upBirth;
+	private Integer upSex;
+	private String upName;
+
+	public String getUpName() {
+		return upName;
+	}
+
+	public void setUpName(String upName) {
+		this.upName = upName;
+	}
+
+	public String getUpRole() {
+		return upRole;
+	}
+
+	public void setUpRole(String upRole) {
+		this.upRole = upRole;
+	}
+
+	public Date getUpBirth() {
+		return upBirth;
+	}
+
+	public void setUpBirth(Date upBirth) {
+		this.upBirth = upBirth;
+	}
+
+	public Integer getUpSex() {
+		return upSex;
+	}
+
+	public void setUpSex(Integer upSex) {
+		this.upSex = upSex;
 	}
 
 	public void setUserId(Integer userId) {

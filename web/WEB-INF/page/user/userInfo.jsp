@@ -124,7 +124,7 @@
                         <a id="userUpdate" href="javascript:;">
                             <span><img src="/images/t02.png" /></span>修改</a>
                     </li>
-                    <li><a href="javascript:confirmMsgDel()" ><span><img src="/images/t03.png"/></span>删除</a></li>
+                    <li><a id="userDeletes" ><span><img src="/images/t03.png"/></span>删除</a></li>
                     <li><a href="javascript:userOpen()" ><span><img src="/images/t08.png" height="24" width="24"/></span>启用</a></li>
                     <li><a href="javascript:userClose()" ><span><img src="/images/t09.png" height="24" width="24"/></span>禁用</a></li>
                     <li><a href="javascript:resetPass()" ><span><img src="/images/t07.png" height="20" width="20"/></span>重置密码</a></li>
@@ -227,6 +227,25 @@
         }
         var updateId = $("input[name='ids']:checked").val();
         window.location.href = "/loginAction_userUpdateHtml.action?userId="+updateId;
+    })
+
+    //删除
+    $("#userDeletes").click(function () {
+        var len = $("input[name='ids']:checked").length;
+        if (len<=0){
+            layer.msg('请选择要删除的用户!');
+            return;
+        }
+        //弹框
+        layer.confirm('确定要删除吗?', function(index){
+            if (index==1){
+                //读取id
+
+                layer.close(index);
+
+            }
+        });
+
     })
 
 </script>

@@ -23,6 +23,15 @@ public class User {
 	private String roleid;//角色 1 管理员 2 客户经理
 	private Integer sex;
 	private Date birth;
+	private Integer delete;//是否删除
+
+	public Integer getDelete() {
+		return delete;
+	}
+
+	public void setDelete(Integer delete) {
+		this.delete = delete;
+	}
 
 	public Date getBirth() {
 		return birth;

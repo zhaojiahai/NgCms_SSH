@@ -54,26 +54,26 @@
             </li>
             <li>
                 <label>姓名</label>
-                <input name="user.name" id="username"
+                <input name="upName" id="username"
                        type="text" class="dfinput" value="${updateUser.name}"/>
             </li>
             <li>
                 <label>性别</label>
                 <cite>
-                <input name="user.sex" <c:if test="${updateUser.sex== 1}">checked="checked"</c:if> type="radio" value="1" />男
+                <input name="upSex" <c:if test="${updateUser.sex== 1}">checked="checked"</c:if> type="radio" value="1" />男
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input name="user.sex"  <c:if test="${updateUser.sex== 0}">checked="checked"</c:if>  type="radio" value="0" />女</cite>
+                <input name="upSex"  <c:if test="${updateUser.sex== 0}">checked="checked"</c:if>  type="radio" value="0" />女</cite>
                 </cite>
             </li>
             <li>
                 <label>出生日期</label>
-                <input name="user.birth" id="birth" readonly="readonly" type="text" class="dfinput"
+                <input name="upBirth" id="birth" readonly="readonly" type="text" class="dfinput"
                        value="<fmt:formatDate value="${updateUser.birth }" pattern="yyyy-MM-dd" />"/>
 
             </li>
             <li>
                 <label>角色</label><cite>
-                <select class="dfselect" id="role">
+                <select class="dfselect" id="role" name="upRole">
                     <option value="0" >请选择</option>
                     <option value="1" <c:if test="${updateUser.roleid== 1}">selected="selected"</c:if>>管理员</option>
                     <option value="2" <c:if test="${updateUser.roleid== 2}">selected="selected"</c:if>>客户经理</option>
@@ -123,27 +123,15 @@
             layer.msg('请选择角色');
             return false;
         }
-        //userUpdate
         var fromData = $("#updateForm").serialize();
-        $.ajax({
-            type: 'post',
-            url: '/loginAction_userUpdate.action',
-            data: fromData,
-            dataType: 'json',
-            async:false,
-            success: function (r) {
-                console.log(r);
-//                if (r.result == "false") {
-//                    alert("该账号已被锁定！");
-//                    event.preventDefault();
-//                    window.event.returnValue = false;
-//                }
-            },
-            error: function (err) {
-                alert("登陆失败，请检查账号密码");
+        //请求数据
+        postRequest('/loginAction_userUpdate.action',fromData,function (json) {
+            if (json.code==1){
+                layer.msg("修改成功");
+            }else {
+                layer.msg("修改失败");
             }
         });
-
         return false;
     }
 </script>
