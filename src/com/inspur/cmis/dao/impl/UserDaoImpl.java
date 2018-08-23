@@ -28,4 +28,11 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao  {
         return user;
     }
 
+    @Override
+    public int deleteAll(String ids) {
+        String hqlUpdate = "update User o set o.isdelete = 1 where o.id in ?";
+        Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,ids);
+        return query.executeUpdate();
+    }
+
 }

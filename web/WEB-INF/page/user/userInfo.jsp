@@ -240,8 +240,27 @@
         layer.confirm('确定要删除吗?', function(index){
             if (index==1){
                 //读取id
-
+                var arr = $("input[name='ids']:checked");
+                var param = "";
+                //拼接id  结果类似  1,2,3,4,5
+                for(var i=0;i<arr.length;i++){
+                    if(i==arr.length-1){
+                        param+=arr[i].value;
+                    }else {
+                        param+=arr[i].value+",";
+                    }
+                }
                 layer.close(index);
+                //调用删除
+                postRequest('/loginAction_userDelete.action',{'deletes':param},function (json) {
+                    if (json.code==1){
+                        layer.msg("删除成功");
+                        //从新加载页面
+                        window.location.href = userInfoUrl;
+                    } else {
+                        layer.msg("删除失败");
+                    }
+                });
 
             }
         });

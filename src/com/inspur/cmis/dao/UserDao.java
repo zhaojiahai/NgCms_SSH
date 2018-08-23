@@ -15,7 +15,8 @@ public interface UserDao extends BaseDao<User>{
      * @param password
      * @return
      */
-    public User login(String loginName, String password);
+    User login(String loginName, String password);
 
-    //int saveUser(User user);
+    int deleteAll(String ids);
+
 }

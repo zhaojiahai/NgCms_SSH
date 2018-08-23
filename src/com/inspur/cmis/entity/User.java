@@ -23,48 +23,7 @@ public class User {
 	private String roleid;//角色 1 管理员 2 客户经理
 	private Integer sex;
 	private Date birth;
-	private Integer delete;//是否删除
-
-	public Integer getDelete() {
-		return delete;
-	}
-
-	public void setDelete(Integer delete) {
-		this.delete = delete;
-	}
-
-	public Date getBirth() {
-		return birth;
-	}
-
-	public void setBirth(Date birth) {
-		this.birth = birth;
-	}
-
-	public Integer getSex() {
-		return sex;
-	}
-
-	public void setSex(Integer sex) {
-		this.sex = sex;
-	}
-
-	public Date getModifiedTime() {
-		return modifiedTime;
-	}
-
-	public void setModifiedTime(Date modifiedTime) {
-		this.modifiedTime = modifiedTime;
-	}
-
-	public Date getCreatedTime() {
-		return createdTime;
-	}
-
-	public void setCreatedTime(Date createdTime) {
-		this.createdTime = createdTime;
-	}
-
+	private Integer isdelete;//是否删除
 	public User() {
 	}
 
@@ -74,15 +33,11 @@ public class User {
 		this.passWord = passWord;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
 	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -142,6 +97,21 @@ public class User {
 		this.locked = locked;
 	}
 
+	public Date getModifiedTime() {
+		return modifiedTime;
+	}
+
+	public void setModifiedTime(Date modifiedTime) {
+		this.modifiedTime = modifiedTime;
+	}
+
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
 
 	public Integer getCreateduserid() {
 		return createduserid;
@@ -165,5 +135,29 @@ public class User {
 
 	public void setRoleid(String roleid) {
 		this.roleid = roleid;
+	}
+
+	public Integer getSex() {
+		return sex;
+	}
+
+	public void setSex(Integer sex) {
+		this.sex = sex;
+	}
+
+	public Date getBirth() {
+		return birth;
+	}
+
+	public void setBirth(Date birth) {
+		this.birth = birth;
+	}
+
+	public Integer getIsdelete() {
+		return isdelete;
+	}
+
+	public void setIsdelete(Integer isdelete) {
+		this.isdelete = isdelete;
 	}
 }

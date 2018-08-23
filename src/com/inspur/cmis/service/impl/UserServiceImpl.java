@@ -40,4 +40,10 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         return list;
     }
 
+    @Override
+    public void deleteAll(String ids) {
+        int i = userDao.deleteAll(ids);
+        if (i<=0) throw new RuntimeException("删除用户失败");
+    }
+
 }

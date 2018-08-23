@@ -38,6 +38,10 @@ public class UserAction extends BaseAction {
 			request.setAttribute("msg","账号或密码错误");
 			return INPUT;
 		}
+		if (dbUser.getIsdelete()!=null && dbUser.getIsdelete()==1){
+			request.setAttribute("msg","账号被禁用");
+			return INPUT;
+		}
 		//判断时间
 		session.setAttribute("am", DateUtil.getAmOrPm());
 		session.setAttribute(Constants.USER, user);
@@ -61,6 +65,7 @@ public class UserAction extends BaseAction {
 	public String userInfo(){
 		//分页查询
 		HQLHelper hqlHelper = new HQLHelper(User.class);
+		hqlHelper.addWhere(" o.isdelete != 1 ");
 		int page = 1;
 		if (currentPage!=null && currentPage>0){
 			page = currentPage;
@@ -114,6 +119,7 @@ public class UserAction extends BaseAction {
 		User currentUser = (User) session.getAttribute(Constants.USER);
 		user.setCreateduserid(currentUser.getId());
 		user.setLocked("0");
+		user.setIsdelete(0);
 		user.setCreatedTime(new Date());
 		userService.add(user);
 		//重定向到用户列表
@@ -154,6 +160,20 @@ public class UserAction extends BaseAction {
 	}
 
 
+	/**
+	 * ajax用户删除
+	 * @return
+	 */
+	public String userDelete(){
+		JsonResult jsonResult = new JsonResult(0,"删除失败");
+
+		if (IsNullUtils.isNotNull(deletes)){
+			userService.deleteAll(deletes);
+			jsonResult = new JsonResult(1,"删除成功");
+		}
+		result = GsonUtils.toJson(jsonResult);
+		return "userDelete";
+	}
 
 	/**
 	 * 密码修改
@@ -178,24 +198,26 @@ public class UserAction extends BaseAction {
 		return "resetPwd";
 	}
 
-
 	private User user;
+	///////////ajax返回数据使用/////////////
 	private String result;
-
-	public String getResult() {
-		return result;
-	}
-
-	public void setResult(String result) {
-		this.result = result;
-	}
-
 	private Integer userId;
 
+	///////////更新用户使用/////////////
 	private String upRole;
 	private Date upBirth;
 	private Integer upSex;
 	private String upName;
+	///////////删除用户使用/////////////
+	private String deletes;
+
+	public String getDeletes() {
+		return deletes;
+	}
+
+	public void setDeletes(String deletes) {
+		this.deletes = deletes;
+	}
 
 	public String getUpName() {
 		return upName;
@@ -228,7 +250,13 @@ public class UserAction extends BaseAction {
 	public void setUpSex(Integer upSex) {
 		this.upSex = upSex;
 	}
+	public String getResult() {
+		return result;
+	}
 
+	public void setResult(String result) {
+		this.result = result;
+	}
 	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}

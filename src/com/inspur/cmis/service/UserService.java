@@ -19,4 +19,6 @@ public interface UserService extends BaseService<User> {
     public User login(String loginName, String password);
 
     List<User> findAll();
+
+    void deleteAll(String ids);
 }

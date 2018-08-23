@@ -49,8 +49,8 @@
         <property name="sex">
             <column name="sex" sql-type="int" length="1"/>
         </property>
-        <property name="delete">
-            <column name="delete" sql-type="int" length="1"/>
+        <property name="isdelete">
+            <column name="isdelete" sql-type="int" length="1"/>
         </property>
         <property name="birth">
             <column name="birth" sql-type="date"/>

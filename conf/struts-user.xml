@@ -21,7 +21,10 @@
 			<result name="userUpdate" type="json">
 				<param name="root">result</param>
 			</result>
-
+			<!--ajax用户删除-->
+			<result name="userDelete" type="json">
+				<param name="root">result</param>
+			</result>
 		</action>
 	</package>
 </struts>
