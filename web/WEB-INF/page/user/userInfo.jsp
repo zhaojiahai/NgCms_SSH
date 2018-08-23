@@ -12,8 +12,7 @@
     <%@include file="../../common/head.jsp" %>
     <script type="text/javascript">
 
-        function resetPass()
-        {
+        function resetPass() {
             layer.confirm('重置密码,您确定要恢复初始密码吗?', function(index){
                 if(index==1){
                     layer.close(index);

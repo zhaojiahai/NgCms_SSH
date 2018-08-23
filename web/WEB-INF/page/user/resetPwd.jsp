@@ -74,7 +74,14 @@
                 <input name="user.loginName" readonly="readonly"
                         id="loginName" type="text"
                        class="dfinput"
-                       value="${user.loginName}"/>
+                       value="${saveUser.loginName}"/>
+            </li>
+            <li>
+                <label>密码提示问题</label>
+                <input name="user.remark" readonly="readonly"
+                        type="text"
+                       class="dfinput"
+                       value="${saveUser.remark}"/>
             </li>
             <li>
                 <label>原始密码</label><input id="passWord" name="user.passWord" type="password" class="dfinput" value=""/>

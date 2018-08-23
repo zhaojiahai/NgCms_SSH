@@ -39,7 +39,7 @@
             <column name="createduserid" sql-type="int(11)"/>
         </property>
         <property name="createdtime">
-            <column name="createdtime" sql-type="datetime" />
+            <column name="createdtime" sql-type="date" />
         </property>
         <property name="modifiedtime">
             <column name="modifiedtime" sql-type="datetime" />

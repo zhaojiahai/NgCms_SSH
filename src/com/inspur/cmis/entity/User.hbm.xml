@@ -55,6 +55,12 @@
         <property name="birth">
             <column name="birth" sql-type="date"/>
         </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(40)" length="20"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(40)" length="20"/>
+        </property>
     </class>
 
 

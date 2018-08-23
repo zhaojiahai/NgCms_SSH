@@ -24,6 +24,9 @@ public class User {
 	private Integer sex;
 	private Date birth;
 	private Integer isdelete;//是否删除
+	private String email;
+	private String remark;
+
 	public User() {
 	}
 
@@ -31,6 +34,22 @@ public class User {
 		this.loginName = loginName;
 		this.name = name;
 		this.passWord = passWord;
+	}
+
+	public String getRemark() {
+		return remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public Integer getId() {

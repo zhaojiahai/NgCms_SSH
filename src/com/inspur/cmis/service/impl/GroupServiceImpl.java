@@ -20,8 +20,9 @@ public class GroupServiceImpl extends BaseServiceImpl<GroupEntity> implements Gr
 
     private GroupDao groupDao;
 
+
     @Resource
-    public void setUserDao(GroupDao groupDao) {
+    public void setGroupDao(GroupDao groupDao) {
         super.setBaseDao(groupDao);
         this.groupDao = groupDao;
     }
@@ -29,7 +30,15 @@ public class GroupServiceImpl extends BaseServiceImpl<GroupEntity> implements Gr
     @Override
     @Transactional(readOnly = true)
     public List<GroupEntity> findAll() {
-        return null;
+        List<GroupEntity> list = groupDao.list("FROM GroupEntity u ", null);
+        return list;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<GroupEntity> findAllUseable() {
+        List<GroupEntity> list = groupDao.list("FROM GroupEntity u where u.valid != 1 ", null);
+        return list;
     }
 
     @Override

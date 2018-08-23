@@ -1,6 +1,8 @@
 package com.inspur.cmis.action;
 
+import com.inspur.cmis.entity.GroupEntity;
 import com.inspur.cmis.entity.User;
+import com.inspur.cmis.service.GroupService;
 import com.inspur.cmis.service.UserService;
 import com.inspur.common.action.BaseAction;
 import com.inspur.common.entity.JsonResult;
@@ -10,6 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 登录 注销操作
@@ -18,6 +21,9 @@ public class UserAction extends BaseAction {
 	private static final long serialVersionUID = -7113623080043456241L;
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private GroupService groupService;
 
 	/**
 	 * 登录
@@ -44,7 +50,7 @@ public class UserAction extends BaseAction {
 		}
 		//判断时间
 		session.setAttribute("am", DateUtil.getAmOrPm());
-		session.setAttribute(Constants.USER, user);
+		session.setAttribute(Constants.USER, dbUser);
 		return SUCCESS;
 	}
 
@@ -99,6 +105,8 @@ public class UserAction extends BaseAction {
 	 * @return
 	 */
 	public String resetPwd(){
+		User saveUser = (User) session.getAttribute(Constants.USER);
+		request.setAttribute("saveUser",saveUser);
 		return "resetPwd";
 	}
 	/**
@@ -106,6 +114,9 @@ public class UserAction extends BaseAction {
 	 * @return
 	 */
 	public String userAddHtml(){
+		//查询所有的机构
+		List<GroupEntity> list = groupService.findAllUseable();
+		request.setAttribute("groups",list);
 		return "userInfoAddHtml";
 	}
 

@@ -59,18 +59,33 @@
                 <input name="user.sex" type="radio" value="0" />女</cite>
             </li>
             <li>
+                <label>邮箱</label>
+                <input name="user.email" type="text" id="email" class="dfinput" value=""/>
+            </li>
+
+            <li>
+                <label>密码提示问题</label>
+                <input name="user.remark" type="text" id="remark" class="dfinput" value=""/>
+            </li>
+
+            <li>
                 <label>出生日期</label>
                 <input name="user.birth" readonly="readonly" id="birth" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>所属机构</label>
                 <cite>
-                    <select class="dfselect" id="groupId" name="user.groupId">
-                        <option value="0">请选择</option>
-                        <option value="1" >山东农村信用社省联社</option>
-                        <option value="2">山东农村信用社济南分行</option>
-                        <option value="3">山东农村信用社高新区支行</option>
-                    </select>
+                    <s:if test="#request.groups == null || #request.groups.size() == 0">
+                        没有机构 请先增加机构
+                    </s:if>
+                    <s:else>
+                        <select class="dfselect" id="groupId" name="user.groupId">
+                            <option value="0">请选择</option>
+                            <c:forEach items="${groups}" var="group">
+                                <option value="${group.id}" >${group.name}</option>
+                            </c:forEach>
+                        </select>
+                    </s:else>
                 </cite>
             </li>
             <li>
@@ -127,6 +142,17 @@
             layer.msg('请选择生日');
             return false;
         }
+        var email = $("#email").val();
+        if (objIsNull(birth)){
+            layer.msg('请输入邮箱');
+            return false;
+        }
+        var remark = $("#remark").val();
+        if (objIsNull(birth)){
+            layer.msg('请输入密码提示问题');
+            return false;
+        }
+
         var groupId = $("#groupId").val();
         if (objIsNull(groupId) || groupId=='0'){
             layer.msg('请选择所属机构');

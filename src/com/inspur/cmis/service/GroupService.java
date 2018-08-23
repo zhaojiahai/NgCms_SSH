@@ -14,6 +14,12 @@ public interface GroupService extends BaseService<GroupEntity> {
     List<GroupEntity> findAll();
 
     /**
+     * 查询所有可用的列表
+     * @return
+     */
+    List<GroupEntity> findAllUseable();
+
+    /**
      * 禁用用户
      * @param deletes
      */

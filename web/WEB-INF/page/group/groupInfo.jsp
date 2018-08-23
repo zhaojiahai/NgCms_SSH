@@ -48,9 +48,37 @@
             });
 
         });
+
+
+        function goPage(number) {
+            //页数校验一下 是否超出范围
+            var minPage = 1;
+            var maxPage = ${pageBean.totalPage};
+            if(number <minPage || number>maxPage){
+                layer.msg('页数过大或者过小');
+                return;
+            }
+            gotoPageNum(number);
+        }
+        //跳转到指定的页面
+        function skip() {
+            var index = $("#pageNumber").val();
+            //页数校验一下 是否超出范围
+            var minPage = 1;
+            var maxPage = ${pageBean.totalPage};
+            if(index <minPage || index>maxPage){
+                layer.msg('页数过大或者过小');
+                return;
+            }
+            gotoPageNum(index);
+        }
+        //提交表单查询
+        function gotoPageNum(pageNum){
+            $("#currentPage").val(pageNum);
+            $("#groupForm").submit();
+        }
+
     </script>
-
-
 
 </head>
 <body>
@@ -61,104 +89,133 @@
         <li><a href="javascript:;">机构维护</a></li>
     </ul>
 </div>
-<form action="" method="post">
-    <div class="formbody">
-        <ul class="seachform">
-            <li><label>机构编号</label><input name="" type="text" class="scinput" /></li>
-            <li><label>机构名称</label><input name="" type="text" class="scinput" /></li>
-            <li><label>&nbsp;</label><input name="" type="submit" class="scbtn" value="查询"/></li>
-        </ul>
-    </div>
 
-    <div class="rightinfo">
-        <div class="tools">
-            <ul class="toolbar1">
-                <li><a href="/groupAction_groupAddHtml.action"><span><img src="../images/t01.png" /></span>添加</a></li>
-                <li><a href="groupInfoUpdate.html"><span><img src="../images/t02.png" /></span>修改</a></li>
-                <li><a href="javascript:groupOpen()" ><span><img src="../images/t08.png" height="24" width="24"/></span>启用</a></li>
-                <li><a href="javascript:groupClose()" ><span><img src="../images/t09.png" height="24" width="24"/></span>禁用</a></li>
+    <form id="groupForm" action="/groupAction_groupInfo.action" method="post">
+        <div class="formbody">
+            <ul class="seachform">
+                    <%--页数--%>
+                <input type="hidden" name="currentPage" id="currentPage">
+
+                <li>
+                    <label>机构编号</label>
+                    <input name="group.code" type="text" class="scinput" value="${groupCode}"/>
+                </li>
+                <li>
+                    <label>机构名称</label>
+                    <input name="group.name" type="text" class="scinput" value="${groupName}" />
+                </li>
+                <li>
+                    <label>&nbsp;</label>
+                    <input name="" type="submit" class="scbtn" value="查询"/>
+                </li>
             </ul>
         </div>
-        <table class="tablelist">
-            <thead>
-            <tr class="tablehead"><td colspan="11">机构列表</td></tr>
-            </thead>
-            <thead>
-            <tr>
-                <th><input name="" type="checkbox" value=""/></th>
-                <th>机构编号</th>
-                <th>机构名称</th>
-                <th>上级机构</th>
-                <th>状态</th>
-                <th>注册时间</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><input name="" type="checkbox" value="" /></td>
-                <td>000000</td>
-                <td>山东农村信用社省联社</td>
-                <td>山东农村信用社省联社</td>
-                <td>启用</td>
-                <td>2016-12-30</td>
-            </tr>
-            <tr>
-                <td><input name="" type="checkbox" value="" /></td>
-                <td>010000</td>
-                <td>济南槐荫区分行</td>
-                <td>山东农村信用社省联社</td>
-                <td>禁用</td>
-                <td>2016-10-21</td>
-            </tr>
-            <tr>
-                <td><input name="" type="checkbox" value="" /></td>
-                <td>011000</td>
-                <td>济南槐荫区段店支行</td>
-                <td>济南槐荫区分行</td>
-                <td>启用</td>
-                <td>2016-12-21</td>
-            </tr>
-            <tr>
-                <td><input name="" type="checkbox" value="" /></td>
-                <td>012000</td>
-                <td>济南市中区公司业务部</td>
-                <td>济南槐荫区分行</td>
-                <td>启用</td>
-                <td>2016-12-21</td>
-            </tr>
-            </tbody>
-        </table>
-        <div class="pagin">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <div class="rightinfo">
+            <div class="tools">
+                <ul class="toolbar1">
+                    <li><a href="/groupAction_groupAddHtml.action"><span><img src="../images/t01.png" /></span>添加</a></li>
+                    <li><a href="groupInfoUpdate.html"><span><img src="../images/t02.png" /></span>修改</a></li>
+                    <li><a href="javascript:groupOpen()" ><span><img src="../images/t08.png" height="24" width="24"/></span>启用</a></li>
+                    <li><a href="javascript:groupClose()" ><span><img src="../images/t09.png" height="24" width="24"/></span>禁用</a></li>
+                </ul>
+            </div>
+            <s:if test="#request.pageBean.list == null || #request.pageBean.list.size() == 0">
+                没有任何机构信息
+            </s:if>
+
+            <s:else>
+            <table class="tablelist">
+                <thead>
+                <tr class="tablehead"><td colspan="11">机构列表</td></tr>
+                </thead>
+                <thead>
                 <tr>
-                    <td class="STYLE4"><div class="message">共<i class="blue">260</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
-                    </td>
-                    <td><table border="0" align="right" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td width="45"><img src="../images/first.gif" width="33" height="20" style="cursor:hand" onclick="firstPage()"/></td>
-                            <td width="50"><img src="../images/back.gif" width="43" height="20" style="cursor:hand" onclick="priviousPage()"/></td>
-                            <td width="50"><img src="../images/next.gif" width="43" height="20" style="cursor:hand" onclick="nextPage()"/></td>
-                            <td width="40"><img src="../images/last.gif" width="33" height="20" style="cursor:hand" onclick="lastPage()"/></td>
-                            <td width="100"><div align="center"><span class="STYLE1">转到第
-	                    <input name="textfield" type="text" size="4" style="height:16px; width:35px; border:1px solid #999999;" />
-	                    页 </span></div></td>
-                            <td width="40"><img src="../images/go.gif" width="33" height="17" style="cursor:hand" onclick="goPage()"/></td>
-                        </tr>
-                    </table>
-                    </td>
+                    <th>
+                        <input id="toggle" type="checkbox" value=""/>
+                    </th>
+                    <th>机构id</th>
+                    <th>机构编号</th>
+                    <th>机构名称</th>
+                    <th>上级机构</th>
+                    <th>状态</th>
+                    <th>注册时间</th>
                 </tr>
+                </thead>
+                <tbody>
+                <s:iterator value="#request.pageBean.list">
+                    <tr>
+                        <td>
+                            <input name="ids" type="checkbox" value="${id}" />
+                        </td>
+                        <td>${id}</td>
+                        <td>${code}</td>
+                        <td>${name}</td>
+                        <td>${parentName}</td>
+                        <td>
+                                ${valid==0?'启用':'禁用'}
+                        </td>
+                        <td>
+                                <fmt:formatDate value="${createdtime}"/>
+                        </td>
+                    </tr>
+                </s:iterator>
+
+                </tbody>
             </table>
+            <div class="pagin">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="STYLE4">
+                            <div class="message">共<i class="blue">${pageBean.totalCount}</i>
+                                条记录，当前显示第&nbsp;
+                                <i class="blue">${pageBean.currentPage}&nbsp;</i>页
+                            </div>
+                        </td>
+                        <td><table border="0" align="right" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="45">
+                                    <img src="/images/first.gif" width="33" height="20" style="cursor:hand"
+                                         onclick="goPage(1)"/></td>
+                                <td width="50">
+                                    <img src="/images/back.gif" width="43" height="20" style="cursor:hand"
+                                         onclick="goPage(${pageBean.currentPage-1})"/></td>
+                                <td width="50">
+                                    <img src="/images/next.gif" width="43" height="20" style="cursor:hand"
+                                         onclick="goPage(${pageBean.currentPage+1})"/></td>
+                                <td width="40">
+                                    <img src="/images/last.gif" width="33" height="20" style="cursor:hand"
+                                         onclick="goPage(${pageBean.totalPage})"/></td>
+                                <td width="100"><div align="center"><span class="STYLE1">转到第
+	                    <input name="textfield" id="pageNumber" type="number" step="1" min="1" max="${pageBean.totalPage}" size="4" style="height:16px; width:35px; border:1px solid #999999;" />
+	                    页 </span></div></td>
+                                <td width="40"><img src="/images/go.gif" width="33" height="17"
+                                                    style="cursor:hand"
+                                                    onclick="skip()"/></td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
-    </div>
-</form>
+    </form>
+
+</s:else>
+
 
 
 </body>
 
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
+    var checkFlag = true;
 
-
+    //开关选择
+    $("#toggle").click(function () {
+        $("input[name='ids']").attr('checked',checkFlag);
+        checkFlag = !checkFlag;
+    })
 </script>
 
 </html>
