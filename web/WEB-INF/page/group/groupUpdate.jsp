@@ -46,15 +46,19 @@
 </div>
     <form id="groupForm" onsubmit="return checkUpdate();" action="/groupAction_groupInfo.action" method="post">
         <div class="formbody">
-            <ul class="seachform">
+            <div class="formtitle"><span>机构基本信息</span></div>
+
+            <ul class="forminfo">
                 <li>
                     <label>机构id</label>
-                    <input name="group.id" type="text"  class="scinput" value="${updateGroup.id}"/>
+                    <input name="group.id" type="text"
+                           readonly="readonly" class="scinput" value="${updateGroup.id}"/><i>id不允许修改</i>
                 </li>
 
                 <li>
                     <label>机构编号</label>
-                    <input name="upcode" type="text" readonly="readonly" class="scinput" value="${updateGroup.code}"/>
+                    <input name="upcode" type="text" readonly="readonly"
+                           class="scinput" value="${updateGroup.code}"/><i>编号不允许修改</i>
                 </li>
                 <li>
                     <label>机构名称</label>

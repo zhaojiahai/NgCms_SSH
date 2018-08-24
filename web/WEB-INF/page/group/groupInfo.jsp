@@ -58,6 +58,10 @@
                 layer.msg('页数过大或者过小');
                 return;
             }
+            //判断是否是本页 如果是就不用跳转
+            if(number== ${pageBean.currentPage}){
+                return;
+            }
             gotoPageNum(number);
         }
         //跳转到指定的页面
@@ -70,6 +74,7 @@
                 layer.msg('页数过大或者过小');
                 return;
             }
+
             gotoPageNum(index);
         }
         //提交表单查询
