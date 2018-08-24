@@ -48,7 +48,7 @@
         <ul class="forminfo">
             <li>
                 <label>id</label>
-                <input name="" type="text" readonly="readonly" class="dfinput" value="${updateEntity.id}"/>
+                <input name="pmClassId" type="text" readonly="readonly" class="dfinput" value="${updateEntity.id}"/>
                 <i>id不允许修改</i>
             </li>
             <li>

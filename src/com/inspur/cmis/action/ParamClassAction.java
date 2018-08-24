@@ -95,7 +95,7 @@ public class ParamClassAction extends BaseAction {
      */
     public String pmClassUpdate(){
         //先ID查询一下再保存 否则其它字段都空
-        PmClassEntity dbEntity = pmClassService.findObjectById(pmClassEntity.getId());
+        PmClassEntity dbEntity = pmClassService.findObjectById(pmClassId);
         JsonResult jsonResult = new JsonResult(0,"修改失败");
 
         if (IsNullUtils.isNotNull(upPmKey,upPmName)){

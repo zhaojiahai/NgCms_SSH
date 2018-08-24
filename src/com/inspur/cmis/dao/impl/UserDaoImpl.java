@@ -4,8 +4,13 @@ import com.inspur.cmis.dao.UserDao;
 import com.inspur.cmis.entity.User;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.jdbc.Work;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Created by LiuLiHao on 2018/8/16 21:46.
@@ -30,23 +35,44 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao  {
 
     @Override
     public int deleteAll(String ids) {
-        String hqlUpdate = "update User o set o.isdelete = 1 where o.id in ?";
-        Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,ids);
-        return query.executeUpdate();
+        //使用jdbc
+        sessionFactory.getCurrentSession().doWork(new Work() {
+            @Override
+            public void execute(Connection connection) throws SQLException {
+                String sql = " update pop_user set isdelete=1 where id in ( "+ids+" )";
+                Statement st = connection.createStatement();
+                 st.executeUpdate(sql);
+            }
+        });
+        return 0;
     }
 
     @Override
     public int disableAll(String deletes) {
-        String hqlUpdate = "update User o set o.locked = 1 where o.id in ?";
-        Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,deletes);
-        return query.executeUpdate();
+        //使用jdbc
+        sessionFactory.getCurrentSession().doWork(new Work() {
+            @Override
+            public void execute(Connection connection) throws SQLException {
+                String sql = " update pop_user set locked='1' where id in ( "+deletes+" )";
+                Statement st = connection.createStatement();
+                st.executeUpdate(sql);
+            }
+        });
+        return 0;
     }
 
     @Override
     public int enableAll(String deletes) {
-        String hqlUpdate = "update User o set o.locked = 0 where o.id in ?";
-        Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,deletes);
-        return query.executeUpdate();
+        //使用jdbc
+        sessionFactory.getCurrentSession().doWork(new Work() {
+            @Override
+            public void execute(Connection connection) throws SQLException {
+                String sql = " update pop_user set locked='0' where id in ( "+deletes+" )";
+                Statement st = connection.createStatement();
+                 st.executeUpdate(sql);
+            }
+        });
+        return 0;
     }
 
 }

@@ -2,7 +2,6 @@ package com.inspur.cmis.service.impl;
 
 import com.inspur.cmis.dao.GroupDao;
 import com.inspur.cmis.entity.GroupEntity;
-import com.inspur.cmis.exception.SysException;
 import com.inspur.cmis.service.GroupService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,14 +44,12 @@ public class GroupServiceImpl extends BaseServiceImpl<GroupEntity> implements Gr
     @Override
     public void disableAll(String deletes) {
         int i = groupDao.disableAll(deletes);
-        if (i<=0) throw new SysException("禁用失败");
 
     }
 
     @Override
     public void enableAll(String deletes) {
         int i = groupDao.enableAll(deletes);
-        if (i<=0) throw new SysException("启用失败");
     }
 
 }

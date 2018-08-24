@@ -19,6 +19,14 @@
 			<result name="groupUpdate" type="json">
 				<param name="root">result</param>
 			</result>
+			<!--ajax禁用-->
+			<result name="groupDisable" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax启用-->
+			<result name="groupEnable" type="json">
+				<param name="root">result</param>
+			</result>
 		</action>
 	</package>
 </struts>

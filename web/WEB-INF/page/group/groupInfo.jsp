@@ -10,25 +10,6 @@
 <head>
     <title>组织列表</title>
     <%@include file="../../common/head.jsp" %>
-
-    <script type="text/javascript">
-        function confirmMsgDel()
-        {
-            if(confirm("删除机构信息,您确定要删除吗?"))
-                window.close();
-        }
-        function groupOpen()
-        {
-            if(confirm("您确定要启用该机构吗?"))
-                window.close();
-        }
-        function groupClose()
-        {
-            if(confirm("您确定要禁用该机构吗?"))
-                window.close();
-        }
-
-    </script>
     <script type="text/javascript">
         $(document).ready(function(){
             $(".click").click(function(){
@@ -72,6 +53,7 @@
             var maxPage = ${pageBean.totalPage};
             if(index <minPage || index>maxPage){
                 layer.msg('页数过大或者过小');
+                $("#pageNumber").val('');
                 return;
             }
 
@@ -118,10 +100,10 @@
         <div class="rightinfo">
             <div class="tools">
                 <ul class="toolbar1">
-                    <li><a href="/groupAction_groupAddHtml.action"><span><img src="../images/t01.png" /></span>添加</a></li>
-                    <li><a id="groupUpdate"><span><img src="../images/t02.png" /></span>修改</a></li>
-                    <li><a href="javascript:groupOpen()" ><span><img src="../images/t08.png" height="24" width="24"/></span>启用</a></li>
-                    <li><a href="javascript:groupClose()" ><span><img src="../images/t09.png" height="24" width="24"/></span>禁用</a></li>
+                    <li><a href="/groupAction_groupAddHtml.action"><span><img src="/images/t01.png" /></span>添加</a></li>
+                    <li><a id="groupUpdate"><span><img src="/images/t02.png" /></span>修改</a></li>
+                    <li><a id="groupOpen" ><span><img src="/images/t08.png" height="24" width="24"/></span>启用</a></li>
+                    <li><a id="groupClose" ><span><img src=/images/t09.png" height="24" width="24"/></span>禁用</a></li>
                 </ul>
             </div>
             <s:if test="#request.pageBean.list == null || #request.pageBean.list.size() == 0">
@@ -236,6 +218,79 @@
         var updateId = $("input[name='ids']:checked").val();
         window.location.href = "/groupAction_groupUpdateHtml.action?groupId="+updateId;
     })
+
+    //启用
+    $("#groupOpen").click(function () {
+        if(!checkSelectUser()){
+            layer.msg('请选择要启用的机构!');
+            return;
+        }
+        //弹框
+        layer.confirm('确定要启用这些机构吗?', function(index){
+            //读取id
+            var param = buildUserSelect();
+            layer.close(index);
+            postRequest(groupOpenUrl,{'deletes':param},function (json) {
+                if (json.code==1){
+                    layer.alert('启用成功', function(){
+                        window.location.href = groupInfoUrl;
+                    });
+
+                } else {
+                    layer.alert("启用失败");
+                }
+            });
+        });
+
+    });
+    //禁用
+    $("#groupClose").click(function () {
+        if(!checkSelectUser()){
+            layer.msg('请选择要禁用的机构!');
+            return;
+        }
+        //弹框
+        layer.confirm('确定要禁用这些机构吗?', function(index){
+            //读取id
+            var param = buildUserSelect();
+            layer.close(index);
+            postRequest(groupCloseUrl,{'deletes':param},function (json) {
+                if (json.code==1){
+                    layer.alert('禁用成功', function(){
+                        window.location.href = groupInfoUrl;
+                    });
+
+                } else {
+                    layer.alert("禁用失败");
+                }
+            });
+        });
+    })
+
+    //是否选中了用户
+    function checkSelectUser() {
+        var len = $("input[name='ids']:checked").length;
+        if (len<=0){
+            return false;
+        }
+        return true;
+    }
+
+    function buildUserSelect() {
+        //读取id
+        var arr = $("input[name='ids']:checked");
+        var param = "";
+        //拼接id  结果类似  1,2,3,4,5
+        for(var i=0;i<arr.length;i++){
+            if(i==arr.length-1){
+                param+=arr[i].value;
+            }else {
+                param+=arr[i].value+",";
+            }
+        }
+        return param;
+    }
+
 </script>
 
 </html>

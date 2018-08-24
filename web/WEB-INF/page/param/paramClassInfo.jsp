@@ -74,6 +74,7 @@
             var maxPage = ${pageBean.totalPage};
             if(index <minPage || index>maxPage){
                 layer.msg('页数过大或者过小');
+                $("#pageNumber").val('');
                 return;
             }
 
@@ -146,7 +147,7 @@
                 <tbody>
                 <s:iterator value="#request.pageBean.list">
                     <tr>
-                        <td><input name="ids" type="checkbox" value="" /></td>
+                        <td><input name="ids" type="checkbox" value="${id}" /></td>
                         <td>${id}</td>
                         <td>${code}</td>
                         <td>${pmKey}</td>
@@ -198,6 +199,7 @@
 </form>
 
 <script type="text/javascript">
+    var checkFlag = true;
     $('.tablelist tbody tr:odd').addClass('odd');
 
     //开关选择
@@ -232,13 +234,14 @@
             if (index==1){
                 //读取id
                 var param = buildUserSelect();
+                console.log(param);
 
                 layer.close(index);
                 //调用删除
                 postRequest(pmClassDeleteInfoUrl,{'deletes':param},function (json) {
                     if (json.code==1){
                         layer.alert('删除成功', function(){
-                            window.location.href = userInfoUrl;
+                            window.location.href = pmClassInfoUrl;
                         });
                     } else {
                         layer.alert("删除失败");

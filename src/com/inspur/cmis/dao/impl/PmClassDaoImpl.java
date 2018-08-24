@@ -2,10 +2,15 @@ package com.inspur.cmis.dao.impl;
 
 import com.inspur.cmis.dao.PmClassDao;
 import com.inspur.cmis.entity.PmClassEntity;
-import org.hibernate.Query;
+import com.inspur.cmis.exception.SysException;
 import org.hibernate.SessionFactory;
+import org.hibernate.jdbc.Work;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Created by LiuLiHao on 2018/8/24 10:59.
@@ -20,9 +25,17 @@ public class PmClassDaoImpl extends BaseDaoImpl<PmClassEntity> implements PmClas
 
     @Override
     public int deleteAll(String deletes) {
-        String hqlUpdate = "update PmClassEntity o set o.isDelete = 1 where o.id in ?";
-        Query query = sessionFactory.getCurrentSession().createQuery(hqlUpdate).setString(0,deletes);
-        return query.executeUpdate();
+        //使用jdbc
+        sessionFactory.getCurrentSession().doWork(new Work() {
+            @Override
+            public void execute(Connection connection) throws SQLException {
+                String sql = "UPDATE PM_CLASS SET isDelete=1 WHERE id IN ( "+deletes+" )";
+                Statement st = connection.createStatement();
+                int i = st.executeUpdate(sql);
+                if (i<=0) throw new SysException("更新失败");
+            }
+        });
+        return 0;
     }
 
 }

@@ -65,6 +65,7 @@
             var maxPage = ${pageBean.totalPage};
             if(index <minPage || index>maxPage){
                 layer.msg('页数过大或者过小');
+                $("#pageNumber").val('');
                 return;
             }
             gotoPageNum(index);

@@ -126,13 +126,53 @@ public class GroupAction extends BaseAction {
         return "groupUpdate";
     }
 
+    /**
+     * 禁用
+     * @return
+     */
+    public String groupDisable(){
+        JsonResult jsonResult = new JsonResult(0,"禁用失败");
+
+        if (IsNullUtils.isNotNull(deletes)){
+            groupService.disableAll(deletes);
+            jsonResult = new JsonResult(1,"禁用成功");
+        }
+        result = GsonUtils.toJson(jsonResult);
+        return "groupDisable";
+    }
+
+    /**
+     * 启用
+     * @return
+     */
+    public String groupEnable(){
+        JsonResult jsonResult = new JsonResult(0,"启用失败");
+
+        if (IsNullUtils.isNotNull(deletes)){
+            groupService.enableAll(deletes);
+            jsonResult = new JsonResult(1,"启用成功");
+        }
+        result = GsonUtils.toJson(jsonResult);
+        return "groupEnable";
+    }
+
+
     //页数
     private Integer currentPage;
     //修改使用
     private Integer groupId;
     ///////////ajax返回数据使用/////////////
     private String result;
+    ///////////批量操作使用/////////////
+    private String deletes;
 
+    public String getDeletes() {
+        return deletes;
+    }
+
+    public void setDeletes(String deletes) {
+        this.deletes = deletes;
+    }
 
     private String upcode;
     private String upname;

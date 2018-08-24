@@ -33,7 +33,10 @@ public class PmClassServiceImpl extends BaseServiceImpl<PmClassEntity> implement
 
     @Override
     public void deleteAll(String deletes) {
-        int i = pmClassDao.deleteAll(deletes);
-        if (i<=0) throw new SysException("删除失败");
+        try {
+            pmClassDao.deleteAll(deletes);
+        } catch (Exception e) {
+            throw new SysException("更新失败");
+        }
     }
 }
