@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--机构-->
+	<package name="paramClassAction" namespace="/" extends="abstract_struts">
+		<action name="paramClassAction_*" class="com.inspur.cmis.action.ParamClassAction" method="{1}">
+			<!--列表-->
+			<result name="pmClassInfo">/WEB-INF/page/param/paramClassInfo.jsp</result>
+			<!--添加-->
+			<result name="pmClassAddHtml">/WEB-INF/page/param/paramClassInfoAdd.jsp</result>
+			<!--ajax添加-->
+			<result name="pmClassAdd" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--更新页面-->
+			<result name="pmClassUpdateHtml">/WEB-INF/page/param/paramClassInfoUpdate.jsp</result>
+			<!--ajax更新-->
+			<result name="pmClassUpdate" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax删除-->
+			<result name="pmClassDelete" type="json">
+				<param name="root">result</param>
+			</result>
+
+
+		</action>
+	</package>
+</struts>

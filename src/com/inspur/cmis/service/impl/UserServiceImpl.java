@@ -2,6 +2,7 @@ package com.inspur.cmis.service.impl;
 
 import com.inspur.cmis.dao.UserDao;
 import com.inspur.cmis.entity.User;
+import com.inspur.cmis.exception.SysException;
 import com.inspur.cmis.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,19 +44,19 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     @Override
     public void deleteAll(String ids) {
         int i = userDao.deleteAll(ids);
-        if (i<=0) throw new RuntimeException("删除用户失败");
+        if (i<=0) throw new SysException("删除用户失败");
     }
 
     @Override
     public void disableAll(String deletes) {
         int i = userDao.disableAll(deletes);
-        if (i<=0) throw new RuntimeException("禁用用户失败");
+        if (i<=0) throw new SysException("禁用用户失败");
     }
 
     @Override
     public void enableAll(String deletes) {
         int i = userDao.enableAll(deletes);
-        if (i<=0) throw new RuntimeException("启用用户失败");
+        if (i<=0) throw new SysException("启用用户失败");
     }
 
 }

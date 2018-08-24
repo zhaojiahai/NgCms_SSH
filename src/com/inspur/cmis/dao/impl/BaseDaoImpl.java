@@ -40,7 +40,6 @@ public class BaseDaoImpl<T>  implements BaseDao<T> {
 
     @Override
     public void add(T t) {
-        //hibernateTemplate.save(t);
         sessionFactory.getCurrentSession().save(t);
     }
 

@@ -6,18 +6,45 @@ package com.inspur.cmis.entity;
  * 作者： LiuLiHao
  */
 public class PmClassEntity {
-    private long id;
+    private Integer id;
+    private String code;
     private String name;
+    private String pmKey;
     private String display;
     private String type;
     private String tree;
     private String description;
+    private Integer isDelete;
 
-    public long getId() {
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
+    }
+
+    public String getPmKey() {
+        return pmKey;
+    }
+
+    public void setPmKey(String pmKey) {
+        this.pmKey = pmKey;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -80,7 +107,7 @@ public class PmClassEntity {
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        int result = (id ^ (id >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (display != null ? display.hashCode() : 0);
         result = 31 * result + (type != null ? type.hashCode() : 0);

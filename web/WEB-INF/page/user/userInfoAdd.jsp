@@ -40,17 +40,17 @@
     </ul>
 </div>
 
-<form action="/loginAction_userAdd.action" onsubmit="return checkForm();" method="post">
+<form id="userForm" action="/loginAction_userAdd.action" onsubmit="return checkForm();" method="post">
     <div class="formbody">
         <div class="formtitle"><span>用户基本信息</span></div>
 
         <ul class="forminfo">
             <li><label>账号</label>
-                <input name="user.loginName" id="loginName" type="text" class="dfinput" value=""/>
+                <input name="user.loginName" req="req" msg="账号" id="loginName" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>姓名</label>
-                <input name="user.name" type="text" id="name" class="dfinput" value=""/>
+                <input name="user.name" req="req" msg="姓名" type="text" id="name" class="dfinput" value=""/>
             </li>
             <li>
                 <label>性别</label><cite>
@@ -60,17 +60,17 @@
             </li>
             <li>
                 <label>邮箱</label>
-                <input name="user.email" type="text" id="email" class="dfinput" value=""/>
+                <input name="user.email" req="req" msg="邮箱" type="text" id="email" class="dfinput" value=""/>
             </li>
 
             <li>
                 <label>密码提示问题</label>
-                <input name="user.remark" type="text" id="remark" class="dfinput" value=""/>
+                <input name="user.remark" req="req" msg="密码提示问题" type="text" id="remark" class="dfinput" value=""/>
             </li>
 
             <li>
                 <label>出生日期</label>
-                <input name="user.birth" readonly="readonly" id="birth" type="text" class="dfinput" value=""/>
+                <input name="user.birth" req="req" msg="出生日期" readonly="readonly" id="birth" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>所属机构</label>
@@ -79,7 +79,7 @@
                         没有机构 请先增加机构
                     </s:if>
                     <s:else>
-                        <select class="dfselect" id="groupId" name="user.groupId">
+                        <select req="req" msg="所属机构" class="dfselect" id="groupId" name="user.groupId">
                             <option value="0">请选择</option>
                             <c:forEach items="${groups}" var="group">
                                 <option value="${group.id}" >${group.name}</option>
@@ -91,7 +91,7 @@
             <li>
                 <label>角色</label>
                 <cite>
-                    <select class="dfselect" id="roleid" name="user.roleid">
+                    <select req="req" msg="角色" class="dfselect" id="roleid" name="user.roleid">
                         <option value="0">请选择</option>
                         <option value="1" >管理员</option>
                         <option value="2">客户经理</option>
@@ -125,44 +125,8 @@
 
     })
 
-    //检查表单完整性
     function checkForm() {
-        var loginName = $("#loginName").val();
-        if (objIsNull(loginName)){
-            layer.msg('请输入账号');
-            return false;
-        }
-        var name = $("#name").val();
-        if (objIsNull(name)){
-            layer.msg('请输入姓名');
-            return false;
-        }
-        var birth = $("#birth").val();
-        if (objIsNull(birth)){
-            layer.msg('请选择生日');
-            return false;
-        }
-        var email = $("#email").val();
-        if (objIsNull(birth)){
-            layer.msg('请输入邮箱');
-            return false;
-        }
-        var remark = $("#remark").val();
-        if (objIsNull(birth)){
-            layer.msg('请输入密码提示问题');
-            return false;
-        }
-
-        var groupId = $("#groupId").val();
-        if (objIsNull(groupId) || groupId=='0'){
-            layer.msg('请选择所属机构');
-            return false;
-        }
-        var roleid = $("#roleid").val();
-        if (objIsNull(roleid) || roleid=='0'){
-            layer.msg('请选择角色');
-            return false;
-        }
-        return true;
+        //检查表单
+        return formValueCheck('userForm');
     }
 </script>

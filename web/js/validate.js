@@ -12,7 +12,7 @@ function formValueCheck(domId) {
             //获取提示信息
             var msg = $(arr[i]).attr('msg');
             if( !objIsNull(msg)){
-                layer.msg('请填写'+ msg);
+                layer.msg(msg+'不能为空');
                 return false;
             }else {
                 layer.msg('请检查是否填写完整!')

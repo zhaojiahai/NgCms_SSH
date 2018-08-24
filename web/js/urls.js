@@ -11,5 +11,8 @@ var userEnableUrl = "/loginAction_userEnable.action";
 //用户修改密码
 var userResetPwdUrl = "/loginAction_resetPassWord.action";
 
-//用户启用
-var userEnableUrl = "/loginAction_userEnable.action";
+//pmInfo
+var pmClassInfoUrl = "/paramClassAction_pmClassInfo.action";
+
+//pmDelete
+var pmClassDeleteInfoUrl = "/paramClassAction_pmClassDelete.action";

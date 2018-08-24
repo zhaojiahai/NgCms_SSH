@@ -29,36 +29,7 @@
             });
 
         });
-        //检查完整性
-        function checkGroup() {
-            var code = $("#code").val();
-            if (objIsNull(code)){
-                layer.msg("请输入编号");
-                return false;
-            }
-            var name = $("#name").val();
-            if (objIsNull(code)){
-                layer.msg("请输入名称");
-                return false;
-            }
-            var parentid = $("#parentid").val();
-            if (objIsNull(code)){
-                layer.msg("请输入上级代码");
-                return false;
-            }
-            var briefname = $("#briefname").val();
-            if (objIsNull(code)){
-                layer.msg("请输入简称");
-                return false;
-            }
-            var buidDate = $("#buidDate").val();
-            if (objIsNull(code)){
-                layer.msg("请选择成立日期");
-                return false;
-            }
 
-            return true;
-        }
     </script>
 
 </head>
@@ -71,7 +42,7 @@
     </ul>
 </div>
 
-<form action="/groupAction_groupAdd.action" method="post" onsubmit="return checkGroup();">
+<form id="groupForm" action="/groupAction_groupAdd.action" method="post" onsubmit="return checkGroup();">
     <div class="formbody">
         <div class="formtitle"><span>机构基本信息</span></div>
 
@@ -121,5 +92,9 @@
 
     });
 
+    function checkGroup() {
+        //检查表单
+        return formValueCheck('groupForm');
+    }
 
 </script>

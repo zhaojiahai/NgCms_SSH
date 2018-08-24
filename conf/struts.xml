@@ -57,4 +57,6 @@
     <include file="struts-frame.xml"></include>
     <!--机构操作-->
     <include file="struts-group.xml"></include>
+    <!--paramClass操作-->
+    <include file="struts-param-class.xml"></include>
 </struts>
