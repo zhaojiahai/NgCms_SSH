@@ -1,12 +1,11 @@
 package com.inspur.cmis.action;
 
-import com.inspur.cmis.entity.GroupEntity;
-import com.inspur.cmis.entity.User;
-import com.inspur.cmis.service.GroupService;
+import com.inspur.cmis.entity.GccontractmainEntity;
+import com.inspur.cmis.service.GcContractService;
 import com.inspur.common.action.BaseAction;
-import com.inspur.common.util.Constants;
+import com.inspur.common.entity.JsonResult;
+import com.inspur.common.util.GsonUtils;
 import com.inspur.common.util.IsNullUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -18,7 +17,7 @@ public class GcContractAction extends BaseAction {
     private static final long serialVersionUID = 711362308004342341L;
 
     @Autowired
-    private GroupService groupService;
+    private GcContractService gcContractService;
 
     /**
      * 列表
@@ -62,23 +61,15 @@ public class GcContractAction extends BaseAction {
      * @return
      */
     public String contractAdd(){
-        if (IsNullUtils.isNotNull(group.getName(),group.getBriefname(),
-                group.getCode(),group.getCreatedtime())){
-            //设置默认
-            group.setValid("0");
-            User user = (User) session.getAttribute(Constants.USER);
-            group.setCreateduserid(user.getId());
-            //查询上级名称
-            if (StringUtils.isNotBlank(group.getParentid())){
-                GroupEntity entity = groupService.findObjectById(Integer.parseInt(group.getParentid()));
-                if (entity!=null){
-                    group.setParentName(entity.getName());
-                }
-            }
+        JsonResult jsonResult = new JsonResult(0,"添加失败");
 
-            groupService.add(group);
+        if (IsNullUtils.isNotNull(entity.getAppcode(),entity.getMoney() )){
+            gcContractService.add(entity);
         }
-        return "contractList";
+        jsonResult = new JsonResult(1,"添加成功");
+        result = GsonUtils.toJson(jsonResult);
+
+        return "contractAdd";
     }
 
 
@@ -97,13 +88,13 @@ public class GcContractAction extends BaseAction {
         return currentPage;
     }
 
-    private GroupEntity group;
+    private GccontractmainEntity entity;
 
-    public GroupEntity getGroup() {
-        return group;
+    public GccontractmainEntity getEntity() {
+        return entity;
     }
 
-    public void setGroup(GroupEntity group) {
-        this.group = group;
+    public void setEntity(GccontractmainEntity entity) {
+        this.entity = entity;
     }
 }

@@ -1,5 +1,9 @@
 package com.inspur.cmis.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -7,7 +11,11 @@ import java.util.Date;
  * 描述： 合同信息
  * 作者： LiuLiHao
  */
+@Entity
+@Table(name="Gc_Contractmain")
 public class GccontractmainEntity {
+    @Id
+    @GeneratedValue
     private Integer id;
     private String keycode;
     private String keytype;

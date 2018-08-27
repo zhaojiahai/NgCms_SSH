@@ -20,9 +20,11 @@ var groupCloseUrl = "/groupAction_groupDisable.action";
 //机构列表
 var groupInfoUrl = "/groupAction_groupInfo.action";
 
-
 //pmInfo
 var pmClassInfoUrl = "/paramClassAction_pmClassInfo.action";
 
 //pmDelete
 var pmClassDeleteInfoUrl = "/paramClassAction_pmClassDelete.action";
+
+//合同列表
+var contractInfoUrl = "/contractAction_contractInfo.action";

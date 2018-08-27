@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.inspur.cmis.entity.GcassuremainEntity" table="GCASSUREMAIN" schema="C##SUNJIE">
+    <class name="com.inspur.cmis.entity.GcassuremainEntity" table="GCASSUREMAIN" >
         <id name="keycode" column="KEYCODE"/>
         <property name="keytype" column="KEYTYPE"/>
         <property name="extendkeycode" column="EXTENDKEYCODE"/>

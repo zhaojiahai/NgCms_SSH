@@ -9,8 +9,12 @@
 		<action name="contractAction_*" class="com.inspur.cmis.action.GcContractAction" method="{1}">
 			<!--列表-->
 			<result name="contractInfo">/WEB-INF/page/gc/gcContractList.jsp</result>
-			<!--添加-->
+			<!--添加页面-->
 			<result name="contractAddHtml">/WEB-INF/page/gc/gcContractAdd.jsp</result>
+			<!--ajax 添加-->
+			<result name="contractAdd" type="json">
+				<param name="root">result</param>
+			</result>
 
 		</action>
 	</package>
