@@ -75,11 +75,11 @@ public class GccontractmainEntity {
      * 0002循环；0001非循环
      */
     private String usetype;
-    private String terminaldate;
+    private Date terminaldate;
     private String aribtrateorganization;
     private String busimanager;
-    private String createdate;
-    private String passeddate;
+    private Date createdate;
+    private Date passeddate;
     private String assistbusimanager;
     /**
      * 1新增;2收回再贷;3借新还旧;4资产重组;5转入
@@ -389,11 +389,11 @@ public class GccontractmainEntity {
         this.usetype = usetype;
     }
 
-    public String getTerminaldate() {
+    public Date getTerminaldate() {
         return terminaldate;
     }
 
-    public void setTerminaldate(String terminaldate) {
+    public void setTerminaldate(Date terminaldate) {
         this.terminaldate = terminaldate;
     }
 
@@ -413,19 +413,19 @@ public class GccontractmainEntity {
         this.busimanager = busimanager;
     }
 
-    public String getCreatedate() {
+    public Date getCreatedate() {
         return createdate;
     }
 
-    public void setCreatedate(String createdate) {
+    public void setCreatedate(Date createdate) {
         this.createdate = createdate;
     }
 
-    public String getPasseddate() {
+    public Date getPasseddate() {
         return passeddate;
     }
 
-    public void setPasseddate(String passeddate) {
+    public void setPasseddate(Date passeddate) {
         this.passeddate = passeddate;
     }
 

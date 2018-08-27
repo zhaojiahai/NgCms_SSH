@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.inspur.cmis.entity.GcguarantymainEntity" table="GCGUARANTYMAIN" schema="C##SUNJIE">
+    <class name="com.inspur.cmis.entity.GcguarantymainEntity" table="GCGUARANTYMAIN">
         <id name="keycode" column="KEYCODE"/>
         <property name="keytype" column="KEYTYPE"/>
         <property name="upkeycode" column="UPKEYCODE"/>

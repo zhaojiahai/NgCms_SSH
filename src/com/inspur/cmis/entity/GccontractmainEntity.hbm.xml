@@ -1,242 +1,241 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.inspur.cmis.entity.GccontractmainEntity" table="GC_CONTRACTMAIN" >
-        <id name="id" >
-            <column name="id"  sql-type="int(11)"/>
+    <class name="com.inspur.cmis.entity.GccontractmainEntity" table="GC_CONTRACTMAIN">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
             <generator class="native">
             </generator>
         </id>
 
         <property name="keycode">
-            <column name="KEYCODE"  sql-type="varchar(40)" length="40"/>
+            <column name="KEYCODE" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="keytype">
-            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+            <column name="KEYTYPE" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="extendkeycode">
-            <column name="EXTENDKEYCODE"  sql-type="varchar(40)" length="40"/>
+            <column name="EXTENDKEYCODE" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="appcode">
-            <column name="APPCODE"  sql-type="varchar(40)" length="40"/>
+            <column name="APPCODE" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="money">
-            <column name="MONEY"  sql-type="double"/>
+            <column name="MONEY" sql-type="double"/>
         </property>
 
         <property name="currency">
-            <column name="CURRENCY"  sql-type="varchar(40)" length="40"/>
+            <column name="CURRENCY" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="startdate">
-            <column name="STARTDATE"  sql-type="date"/>
+            <column name="STARTDATE" sql-type="date"/>
         </property>
 
         <property name="enddate">
-            <column name="ENDDATE"  sql-type="date"/>
+            <column name="ENDDATE" sql-type="date"/>
         </property>
 
         <property name="lastdate">
-            <column name="LASTDATE"  sql-type="date"/>
+            <column name="LASTDATE" sql-type="date"/>
         </property>
 
         <property name="climit">
-            <column name="CLIMIT"  sql-type="int"/>
+            <column name="CLIMIT" sql-type="int"/>
         </property>
 
-        <property name="limitunit" >
-            <column name="LIMITUNIT"  sql-type="int"/>
+        <property name="limitunit">
+            <column name="LIMITUNIT" sql-type="int"/>
         </property>
 
         <property name="keyeffectedstate">
-            <column name="KEYEFFECTEDSTATE"  sql-type="int"/>
+            <column name="KEYEFFECTEDSTATE" sql-type="int"/>
         </property>
 
         <property name="keydatestate">
-            <column name="KEYDATESTATE"  sql-type="varchar(40)" length="40"/>
+            <column name="KEYDATESTATE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
         <property name="squarestate">
-            <column name="SQUARESTATE"  sql-type="varchar(40)" length="40"/>
+            <column name="SQUARESTATE" sql-type="varchar(40)" length="40"/>
 
         </property>
         <property name="bailacc">
-            <column name="BAILACC"  sql-type="varchar(40)" length="40"/>
+            <column name="BAILACC" sql-type="varchar(40)" length="40"/>
         </property>
 
-        <property name="assuremoney" >
-            <column name="ASSUREMONEY"  sql-type="double"/>
+        <property name="assuremoney">
+            <column name="ASSUREMONEY" sql-type="double"/>
         </property>
 
-        <property name="assurecur" column="ASSURECUR">
-            <column name="CURRENCY"  sql-type="varchar(40)" length="40"/>
-
+        <property name="assurecur">
+            <column name="assurecur" sql-type="varchar(40)" length="40"/>
         </property>
 
-        <property name="assurerate" >
-            <column name="ASSURERATE"  sql-type="int"/>
+        <property name="assurerate">
+            <column name="ASSURERATE" sql-type="int"/>
         </property>
 
-
-        <property name="interest" column="INTEREST">
-            <column name="INTEREST"  sql-type="int" />
+        <property name="interest">
+            <column name="INTEREST" sql-type="int"/>
         </property>
 
 
         <property name="interestunit">
-            <column name="INTERESTUNIT"  sql-type="varchar(40)" length="40"/>
+            <column name="INTERESTUNIT" sql-type="varchar(40)" length="40"/>
         </property>
 
-        <property name="squareinterestmode" >
-            <column name="SQUAREINTERESTMODE"  sql-type="int"/>
+        <property name="squareinterestmode">
+            <column name="SQUAREINTERESTMODE" sql-type="int"/>
         </property>
 
         <property name="ratetype">
-            <column name="RATETYPE"  sql-type="int" />
+            <column name="RATETYPE" sql-type="int"/>
         </property>
 
 
         <property name="floattype">
-            <column name="FLOATTYPE"  sql-type="int" />
+            <column name="FLOATTYPE" sql-type="int"/>
         </property>
 
         <property name="baserate">
-            <column name="BASERATE"  sql-type="int" />
+            <column name="BASERATE" sql-type="int"/>
         </property>
 
 
         <property name="baseratetype">
-            <column name="BASERATETYPE"  sql-type="varchar(40)" length="40"/>
+            <column name="BASERATETYPE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
-        <property name="floatrate" >
-            <column name="FLOATRATE"  sql-type="int" />
+        <property name="floatrate">
+            <column name="FLOATRATE" sql-type="int"/>
         </property>
 
 
-        <property name="intrstratefdot" >
-            <column name="INTRSTRATEFDOT"  sql-type="int" />
+        <property name="intrstratefdot">
+            <column name="INTRSTRATEFDOT" sql-type="int"/>
         </property>
 
 
         <property name="loanpurpose">
-            <column name="LOANPURPOSE"  sql-type="varchar(40)" length="40"/>
+            <column name="LOANPURPOSE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
         <property name="contractcount">
-            <column name="CONTRACTCOUNT"  sql-type="int" />
+            <column name="CONTRACTCOUNT" sql-type="int"/>
         </property>
 
-        <property name="solutionmode" >
-            <column name="SOLUTIONMODE"  sql-type="int" />
+        <property name="solutionmode">
+            <column name="SOLUTIONMODE" sql-type="int"/>
         </property>
 
         <property name="usetype">
-            <column name="USETYPE"  sql-type="varchar(40)" length="40"/>
+            <column name="USETYPE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
-        <property name="terminaldate" >
-            <column name="TERMINALDATE"  sql-type="varchar(40)" length="40"/>
-
+        <property name="terminaldate">
+            <column name="TERMINALDATE" sql-type="date"/>
         </property>
+
+
         <property name="aribtrateorganization">
-            <column name="ARIBTRATEORGANIZATION"  sql-type="varchar(40)" length="40"/>
+            <column name="ARIBTRATEORGANIZATION" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="busimanager">
-            <column name="BUSIMANAGER"  sql-type="varchar(40)" length="40"/>
+            <column name="BUSIMANAGER" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="createdate">
-            <column name="CREATEDATE"  sql-type="date"/>
+            <column name="CREATEDATE" sql-type="date"/>
         </property>
 
 
         <property name="passeddate">
-            <column name="PASSEDDATE"  sql-type="date" />
+            <column name="PASSEDDATE" sql-type="date"/>
         </property>
 
 
-        <property name="assistbusimanager" >
-            <column name="ASSISTBUSIMANAGER"  sql-type="varchar(40)" length="40"/>
+        <property name="assistbusimanager">
+            <column name="ASSISTBUSIMANAGER" sql-type="varchar(40)" length="40"/>
         </property>
 
-        <property name="loantype" >
-            <column name="LOANTYPE"  sql-type="int" />
+        <property name="loantype">
+            <column name="LOANTYPE" sql-type="int"/>
         </property>
 
 
-        <property name="busistate" >
-            <column name="BUSISTATE"  sql-type="int" />
+        <property name="busistate">
+            <column name="BUSISTATE" sql-type="int"/>
         </property>
 
 
         <property name="lowriskflag">
-            <column name="LOWRISKFLAG" default="F"  sql-type="varchar(40)" length="40"/>
+            <column name="LOWRISKFLAG" default="F" sql-type="varchar(40)" length="40"/>
         </property>
 
 
         <property name="mainassure">
-            <column name="MAINASSURE"  sql-type="varchar(40)" length="40"/>
+            <column name="MAINASSURE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
         <property name="subassure">
-            <column name="SUBASSURE"  sql-type="varchar(40)" length="40"/>
+            <column name="SUBASSURE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
         <property name="accounttype">
-            <column name="ACCOUNTTYPE"  sql-type="varchar(40)" length="40"/>
+            <column name="ACCOUNTTYPE" sql-type="varchar(40)" length="40"/>
         </property>
 
         <property name="repaytype">
-            <column name="REPAYTYPE"  sql-type="varchar(40)" length="40"/>
+            <column name="REPAYTYPE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
         <property name="repaymethod">
-            <column name="REPAYMETHOD"  sql-type="varchar(40)" length="40"/>
+            <column name="REPAYMETHOD" sql-type="varchar(40)" length="40"/>
         </property>
 
 
-        <property name="repaycycle" >
-            <column name="REPAYCYCLE"  sql-type="int"/>
+        <property name="repaycycle">
+            <column name="REPAYCYCLE" sql-type="int"/>
         </property>
 
 
         <property name="repaymoney">
-            <column name="REPAYMONEY"  sql-type="double" />
+            <column name="REPAYMONEY" sql-type="double"/>
         </property>
 
 
         <property name="loanpurposeremark">
-            <column name="LOANPURPOSEREMARK"  sql-type="varchar(40)" length="40"/>
+            <column name="LOANPURPOSEREMARK" sql-type="varchar(40)" length="40"/>
         </property>
 
 
         <property name="instcode">
-            <column name="INSTCODE"  sql-type="varchar(40)" length="40"/>
+            <column name="INSTCODE" sql-type="varchar(40)" length="40"/>
         </property>
 
 
-        <property name="operdatetime" >
-            <column name="OPERDATETIME"  sql-type="datetime" />
+        <property name="operdatetime">
+            <column name="OPERDATETIME" sql-type="datetime"/>
         </property>
 
         <property name="operator">
-            <column name="OPERATOR"  sql-type="varchar(40)" length="40"/>
+            <column name="OPERATOR" sql-type="varchar(40)" length="40"/>
         </property>
 
     </class>
