@@ -1,6 +1,6 @@
 package com.inspur.cmis.entity;
 
-import java.sql.Time;
+import java.util.Date;
 
 /**
  * Created by LiuLiHao on 2018/8/20 13:13.
@@ -8,29 +8,29 @@ import java.sql.Time;
  * 作者： LiuLiHao
  */
 public class PmParamEntity {
-    private long id;
-    private String parentid;
+    private Integer id;
+    private Integer parentid;
     private String classid;
     private String code;
     private String name;
     private String valid;
     private String description;
-    private Time updatedate;
-    private String userid;
+    private Date updatedate;
+    private Integer userid;
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getParentid() {
+    public Integer getParentid() {
         return parentid;
     }
 
-    public void setParentid(String parentid) {
+    public void setParentid(Integer parentid) {
         this.parentid = parentid;
     }
 
@@ -74,19 +74,19 @@ public class PmParamEntity {
         this.description = description;
     }
 
-    public Time getUpdatedate() {
+    public Date getUpdatedate() {
         return updatedate;
     }
 
-    public void setUpdatedate(Time updatedate) {
+    public void setUpdatedate(Date updatedate) {
         this.updatedate = updatedate;
     }
 
-    public String getUserid() {
+    public Integer getUserid() {
         return userid;
     }
 
-    public void setUserid(String userid) {
+    public void setUserid(Integer userid) {
         this.userid = userid;
     }
 

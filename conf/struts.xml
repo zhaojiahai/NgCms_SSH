@@ -59,4 +59,7 @@
     <include file="struts-group.xml"></include>
     <!--paramClass操作-->
     <include file="struts-param-class.xml"></include>
+    <!--合同信息-->
+    <include file="struts-gc-contract.xml"></include>
+
 </struts>

@@ -2566,7 +2566,7 @@ SEQUENCENO</ColNames>
     </column>
     <column id="490" parent="60" name="GUARBUSITYPE">
       <Position>23</Position>
-      <Comment>01人民币贷款02银行／商业承兑汇票贴现03银行承兑汇票承兑04银行保函05其他 </Comment>
+      <Comment>01人民币贷款02银行／商业承兑汇票贴现03银行承兑汇票承兑04银行保函05其他</Comment>
       <DataType>CHAR(2)|0</DataType>
     </column>
     <column id="491" parent="60" name="OTHERGUARBUSITYPE">

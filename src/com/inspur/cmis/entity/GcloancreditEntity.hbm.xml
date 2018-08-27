@@ -4,53 +4,199 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.inspur.cmis.entity.GcloancreditEntity" table="GCLOANCREDIT" schema="C##SUNJIE">
-        <id name="keycode" column="KEYCODE"/>
-        <property name="keytype" column="KEYTYPE"/>
-        <property name="upkeycode" column="UPKEYCODE"/>
-        <property name="custid" column="CUSTID"/>
-        <property name="money" column="MONEY"/>
-        <property name="currency" column="CURRENCY"/>
-        <property name="loandate" column="LOANDATE"/>
-        <property name="startdate" column="STARTDATE"/>
-        <property name="enddate" column="ENDDATE"/>
-        <property name="lastdate" column="LASTDATE"/>
-        <property name="limit" column="LIMIT"/>
-        <property name="limitunit" column="LIMITUNIT"/>
-        <property name="keyeffectedstate" column="KEYEFFECTEDSTATE"/>
-        <property name="keydatestate" column="KEYDATESTATE"/>
-        <property name="squarestate" column="SQUARESTATE"/>
-        <property name="squaredate" column="SQUAREDATE"/>
-        <property name="subbusicodetype" column="SUBBUSICODETYPE"/>
-        <property name="busitype" column="BUSITYPE"/>
-        <property name="repayaccount" column="REPAYACCOUNT"/>
-        <property name="payintmode" column="PAYINTMODE"/>
-        <property name="repaytimes" column="REPAYTIMES"/>
-        <property name="interest" column="INTEREST"/>
-        <property name="interestunit" column="INTERESTUNIT"/>
-        <property name="ratetype" column="RATETYPE"/>
-        <property name="floattype" column="FLOATTYPE"/>
-        <property name="baserate" column="BASERATE"/>
-        <property name="baseratetype" column="BASERATETYPE"/>
-        <property name="floatrate" column="FLOATRATE"/>
-        <property name="intrstratefdot" column="INTRSTRATEFDOT"/>
-        <property name="loanpurpose" column="LOANPURPOSE"/>
-        <property name="comments" column="COMMENTS"/>
-        <property name="usetype" column="USETYPE"/>
-        <property name="bailacc" column="BAILACC"/>
-        <property name="bailcurtype" column="BAILCURTYPE"/>
-        <property name="assurerate" column="ASSURERATE"/>
-        <property name="bailamt" column="BAILAMT"/>
-        <property name="loanmanager" column="LOANMANAGER"/>
-        <property name="busimanager" column="BUSIMANAGER"/>
-        <property name="createdate" column="CREATEDATE"/>
-        <property name="passeddate" column="PASSEDDATE"/>
-        <property name="creditstate" column="CREDITSTATE"/>
-        <property name="paymethod" column="PAYMETHOD"/>
-        <property name="paymode" column="PAYMODE"/>
-        <property name="purposeremark" column="PURPOSEREMARK"/>
-        <property name="instcode" column="INSTCODE"/>
-        <property name="operator" column="OPERATOR"/>
-        <property name="operdatetime" column="OPERDATETIME"/>
+    <class name="com.inspur.cmis.entity.GcloancreditEntity" table="GC_LOANCREDIT">
+        <id name="id" >
+            <column name="id"  sql-type="int(11)"/>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property name="keycode">
+            <column name="KEYCODE"  sql-type="varchar(40)" length="40"/>
+        </property>
+
+        <property name="keytype">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="upkeycode">
+            <column name="UPKEYCODE"  sql-type="varchar(40)" length="40"/>
+        </property>
+
+        <property name="custid">
+            <column name="CUSTID"  sql-type="varchar(40)" length="40"/>
+        </property>
+
+        <property name="money" column="MONEY">
+            <column name="MONEY"  sql-type="double"/>
+        </property>
+
+        <property name="currency" column="CURRENCY">
+            <column name="CURRENCY"  sql-type="varchar(40)" length="40"/>
+        </property>
+
+        <property name="loandate" column="LOANDATE">
+            <column name="LOANDATE"  sql-type="date"/>
+        </property>
+
+        <property name="startdate" column="STARTDATE">
+            <column name="STARTDATE"  sql-type="date"/>
+        </property>
+
+        <property name="enddate" column="ENDDATE">
+            <column name="ENDDATE"  sql-type="date"/>
+        </property>
+
+        <property name="lastdate" column="LASTDATE">
+            <column name="LASTDATE"  sql-type="date"/>
+        </property>
+
+        <!--<property name="climit" column="LIMIT">-->
+            <!--<column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>-->
+
+        <!--</property>-->
+        <property name="limitunit" column="LIMITUNIT">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="keyeffectedstate" column="KEYEFFECTEDSTATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="keydatestate" column="KEYDATESTATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="squarestate" column="SQUARESTATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="squaredate" column="SQUAREDATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="subbusicodetype" column="SUBBUSICODETYPE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="busitype" column="BUSITYPE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="repayaccount" column="REPAYACCOUNT">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="payintmode" column="PAYINTMODE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="repaytimes" column="REPAYTIMES">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="interest" column="INTEREST">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="interestunit" column="INTERESTUNIT">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="ratetype" column="RATETYPE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="floattype" column="FLOATTYPE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="baserate" column="BASERATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="baseratetype" column="BASERATETYPE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="floatrate" column="FLOATRATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="intrstratefdot" column="INTRSTRATEFDOT">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="loanpurpose" column="LOANPURPOSE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="comments" column="COMMENTS">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="usetype" column="USETYPE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="bailacc" column="BAILACC">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="bailcurtype" column="BAILCURTYPE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="assurerate" column="ASSURERATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="bailamt" column="BAILAMT">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="loanmanager" column="LOANMANAGER">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="busimanager" column="BUSIMANAGER">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="createdate" column="CREATEDATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="passeddate" column="PASSEDDATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="creditstate" column="CREDITSTATE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="paymethod" column="PAYMETHOD">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="paymode" column="PAYMODE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="purposeremark" column="PURPOSEREMARK">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="instcode" column="INSTCODE">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="operator" column="OPERATOR">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
+        <property name="operdatetime" column="OPERDATETIME">
+            <column name="KEYTYPE"  sql-type="varchar(40)" length="40"/>
+
+        </property>
     </class>
 </hibernate-mapping>

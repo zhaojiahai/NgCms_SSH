@@ -1,41 +1,79 @@
 package com.inspur.cmis.entity;
 
+import java.util.Date;
+
 /**
  * Created by LiuLiHao on 2018/8/20 13:12.
- * 描述：
+ * 描述： 合同信息
  * 作者： LiuLiHao
  */
 public class GccontractmainEntity {
+    private Integer id;
     private String keycode;
     private String keytype;
     private String extendkeycode;
     private String appcode;
-    private Long money;
+    private Double money;
     private String currency;
-    private String startdate;
-    private String enddate;
-    private String lastdate;
-    private Long limit;
-    private String limitunit;
-    private String keyeffectedstate;
+    /**
+     * 承兑汇票买断合同时保存转贴现日
+     */
+    private Date startdate;
+    private Date enddate;
+    private Date lastdate;
+
+    private Integer climit;
+    /**
+     * 1年2月3日默认为月
+     */
+    private Integer limitunit;
+    /**
+     * 0-初始值 1-生效 2-正常到期  3强制到期 4-发生终止 5-生效后删除
+     */
+    private Integer keyeffectedstate;
     private String keydatestate;
     private String squarestate;
     private String bailacc;
-    private Long assuremoney;
+    private Double assuremoney;
+
     private String assurecur;
-    private Long assurerate;
-    private Long interest;
+    private Integer assurerate;
+    /**
+     * 外币时存储固定利率，人民币时执行利率
+     */
+    private Integer interest;
+    /**
+     * 1年利率(百分位)2月利率(千分位)3日利率(万分位)
+     */
     private String interestunit;
-    private String squareinterestmode;
-    private String ratetype;
-    private String floattype;
-    private Long baserate;
+    /**
+     * 对公:1月2季3半年;个人:1月2季
+     */
+    private Integer squareinterestmode;
+    /**
+     * 1固定2浮动3其他
+     */
+    private Integer ratetype;
+    /**
+     * 1上浮2下浮3不浮动
+     */
+    private Integer floattype;
+    private Integer baserate;
+    /**
+     * 01六个月以内（含）02六个月至一年（含）03一年至三年（含）04三年至五年（含）05五年以上
+     */
     private String baseratetype;
-    private Long floatrate;
-    private Long intrstratefdot;
+    private Integer floatrate;
+    private Integer intrstratefdot;
     private String loanpurpose;
-    private Long contractcount;
-    private String solutionmode;
+    private Integer contractcount;
+    /**
+     * 1诉讼2仲裁
+     */
+    private Integer solutionmode;
+    /**
+     * 0002循环；0001非循环
+     */
     private String usetype;
     private String terminaldate;
     private String aribtrateorganization;
@@ -43,20 +81,65 @@ public class GccontractmainEntity {
     private String createdate;
     private String passeddate;
     private String assistbusimanager;
-    private String loantype;
-    private String busistate;
+    /**
+     * 1新增;2收回再贷;3借新还旧;4资产重组;5转入
+     */
+    private Integer loantype;
+    /**
+     * 1新增,2展期,3重组4借新还旧
+     */
+    private Integer busistate;
+    /**
+     * T是；F否；默认为否
+     */
     private String lowriskflag;
+    /**
+     * C000信用C101保证C102抵押C103质押
+     */
     private String mainassure;
+    /**
+     * 默认为0000，从左向右分别表示信用，
+     * 保证；抵押；质押；即1000代表信用，
+     * 0100表示保证，
+     * 0010表示抵押，
+     * 0001标识质押，
+     * 0110标识保证和抵押等等
+     */
     private String subassure;
+    /**
+     * 0基本存款帐户；1一般存款帐户
+     */
     private String accounttype;
+    /**
+     * 0委托扣款1自主还款
+     */
     private String repaytype;
+    /**
+     * 对公:01一次性还本02分期还本;
+     * 个人:01定期结息，到期日利随本清02定期结息，
+     * 按合同约定分期还本03等额本息04等额本金05利随本清06其他还款方法
+     */
     private String repaymethod;
-    private String repaycycle;
-    private Long repaymoney;
+    /**
+     * 1月，2季，3其他
+     */
+    private Integer repaycycle;
+    private Double repaymoney;
+    /**
+     * 个人购房借款合同时，若借款种类选择“其他”时，该字段存储“其他”字段的内容
+     */
     private String loanpurposeremark;
     private String instcode;
-    private String operdatetime;
+    private Date operdatetime;
     private String operator;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getKeycode() {
         return keycode;
@@ -90,11 +173,11 @@ public class GccontractmainEntity {
         this.appcode = appcode;
     }
 
-    public Long getMoney() {
+    public Double getMoney() {
         return money;
     }
 
-    public void setMoney(Long money) {
+    public void setMoney(Double money) {
         this.money = money;
     }
 
@@ -106,51 +189,51 @@ public class GccontractmainEntity {
         this.currency = currency;
     }
 
-    public String getStartdate() {
+    public Date getStartdate() {
         return startdate;
     }
 
-    public void setStartdate(String startdate) {
+    public void setStartdate(Date startdate) {
         this.startdate = startdate;
     }
 
-    public String getEnddate() {
+    public Date getEnddate() {
         return enddate;
     }
 
-    public void setEnddate(String enddate) {
+    public void setEnddate(Date enddate) {
         this.enddate = enddate;
     }
 
-    public String getLastdate() {
+    public Date getLastdate() {
         return lastdate;
     }
 
-    public void setLastdate(String lastdate) {
+    public void setLastdate(Date lastdate) {
         this.lastdate = lastdate;
     }
 
-    public Long getLimit() {
-        return limit;
+    public Integer getClimit() {
+        return climit;
     }
 
-    public void setLimit(Long limit) {
-        this.limit = limit;
+    public void setClimit(Integer climit) {
+        this.climit = climit;
     }
 
-    public String getLimitunit() {
+    public Integer getLimitunit() {
         return limitunit;
     }
 
-    public void setLimitunit(String limitunit) {
+    public void setLimitunit(Integer limitunit) {
         this.limitunit = limitunit;
     }
 
-    public String getKeyeffectedstate() {
+    public Integer getKeyeffectedstate() {
         return keyeffectedstate;
     }
 
-    public void setKeyeffectedstate(String keyeffectedstate) {
+    public void setKeyeffectedstate(Integer keyeffectedstate) {
         this.keyeffectedstate = keyeffectedstate;
     }
 
@@ -178,11 +261,11 @@ public class GccontractmainEntity {
         this.bailacc = bailacc;
     }
 
-    public Long getAssuremoney() {
+    public Double getAssuremoney() {
         return assuremoney;
     }
 
-    public void setAssuremoney(Long assuremoney) {
+    public void setAssuremoney(Double assuremoney) {
         this.assuremoney = assuremoney;
     }
 
@@ -194,19 +277,19 @@ public class GccontractmainEntity {
         this.assurecur = assurecur;
     }
 
-    public Long getAssurerate() {
+    public Integer getAssurerate() {
         return assurerate;
     }
 
-    public void setAssurerate(Long assurerate) {
+    public void setAssurerate(Integer assurerate) {
         this.assurerate = assurerate;
     }
 
-    public Long getInterest() {
+    public Integer getInterest() {
         return interest;
     }
 
-    public void setInterest(Long interest) {
+    public void setInterest(Integer interest) {
         this.interest = interest;
     }
 
@@ -218,35 +301,35 @@ public class GccontractmainEntity {
         this.interestunit = interestunit;
     }
 
-    public String getSquareinterestmode() {
+    public Integer getSquareinterestmode() {
         return squareinterestmode;
     }
 
-    public void setSquareinterestmode(String squareinterestmode) {
+    public void setSquareinterestmode(Integer squareinterestmode) {
         this.squareinterestmode = squareinterestmode;
     }
 
-    public String getRatetype() {
+    public Integer getRatetype() {
         return ratetype;
     }
 
-    public void setRatetype(String ratetype) {
+    public void setRatetype(Integer ratetype) {
         this.ratetype = ratetype;
     }
 
-    public String getFloattype() {
+    public Integer getFloattype() {
         return floattype;
     }
 
-    public void setFloattype(String floattype) {
+    public void setFloattype(Integer floattype) {
         this.floattype = floattype;
     }
 
-    public Long getBaserate() {
+    public Integer getBaserate() {
         return baserate;
     }
 
-    public void setBaserate(Long baserate) {
+    public void setBaserate(Integer baserate) {
         this.baserate = baserate;
     }
 
@@ -258,19 +341,19 @@ public class GccontractmainEntity {
         this.baseratetype = baseratetype;
     }
 
-    public Long getFloatrate() {
+    public Integer getFloatrate() {
         return floatrate;
     }
 
-    public void setFloatrate(Long floatrate) {
+    public void setFloatrate(Integer floatrate) {
         this.floatrate = floatrate;
     }
 
-    public Long getIntrstratefdot() {
+    public Integer getIntrstratefdot() {
         return intrstratefdot;
     }
 
-    public void setIntrstratefdot(Long intrstratefdot) {
+    public void setIntrstratefdot(Integer intrstratefdot) {
         this.intrstratefdot = intrstratefdot;
     }
 
@@ -282,19 +365,19 @@ public class GccontractmainEntity {
         this.loanpurpose = loanpurpose;
     }
 
-    public Long getContractcount() {
+    public Integer getContractcount() {
         return contractcount;
     }
 
-    public void setContractcount(Long contractcount) {
+    public void setContractcount(Integer contractcount) {
         this.contractcount = contractcount;
     }
 
-    public String getSolutionmode() {
+    public Integer getSolutionmode() {
         return solutionmode;
     }
 
-    public void setSolutionmode(String solutionmode) {
+    public void setSolutionmode(Integer solutionmode) {
         this.solutionmode = solutionmode;
     }
 
@@ -354,19 +437,19 @@ public class GccontractmainEntity {
         this.assistbusimanager = assistbusimanager;
     }
 
-    public String getLoantype() {
+    public Integer getLoantype() {
         return loantype;
     }
 
-    public void setLoantype(String loantype) {
+    public void setLoantype(Integer loantype) {
         this.loantype = loantype;
     }
 
-    public String getBusistate() {
+    public Integer getBusistate() {
         return busistate;
     }
 
-    public void setBusistate(String busistate) {
+    public void setBusistate(Integer busistate) {
         this.busistate = busistate;
     }
 
@@ -418,19 +501,19 @@ public class GccontractmainEntity {
         this.repaymethod = repaymethod;
     }
 
-    public String getRepaycycle() {
+    public Integer getRepaycycle() {
         return repaycycle;
     }
 
-    public void setRepaycycle(String repaycycle) {
+    public void setRepaycycle(Integer repaycycle) {
         this.repaycycle = repaycycle;
     }
 
-    public Long getRepaymoney() {
+    public Double getRepaymoney() {
         return repaymoney;
     }
 
-    public void setRepaymoney(Long repaymoney) {
+    public void setRepaymoney(Double repaymoney) {
         this.repaymoney = repaymoney;
     }
 
@@ -450,11 +533,11 @@ public class GccontractmainEntity {
         this.instcode = instcode;
     }
 
-    public String getOperdatetime() {
+    public Date getOperdatetime() {
         return operdatetime;
     }
 
-    public void setOperdatetime(String operdatetime) {
+    public void setOperdatetime(Date operdatetime) {
         this.operdatetime = operdatetime;
     }
 
@@ -483,7 +566,6 @@ public class GccontractmainEntity {
         if (startdate != null ? !startdate.equals(that.startdate) : that.startdate != null) return false;
         if (enddate != null ? !enddate.equals(that.enddate) : that.enddate != null) return false;
         if (lastdate != null ? !lastdate.equals(that.lastdate) : that.lastdate != null) return false;
-        if (limit != null ? !limit.equals(that.limit) : that.limit != null) return false;
         if (limitunit != null ? !limitunit.equals(that.limitunit) : that.limitunit != null) return false;
         if (keyeffectedstate != null ? !keyeffectedstate.equals(that.keyeffectedstate) : that.keyeffectedstate != null)
             return false;
@@ -547,7 +629,6 @@ public class GccontractmainEntity {
         result = 31 * result + (startdate != null ? startdate.hashCode() : 0);
         result = 31 * result + (enddate != null ? enddate.hashCode() : 0);
         result = 31 * result + (lastdate != null ? lastdate.hashCode() : 0);
-        result = 31 * result + (limit != null ? limit.hashCode() : 0);
         result = 31 * result + (limitunit != null ? limitunit.hashCode() : 0);
         result = 31 * result + (keyeffectedstate != null ? keyeffectedstate.hashCode() : 0);
         result = 31 * result + (keydatestate != null ? keydatestate.hashCode() : 0);

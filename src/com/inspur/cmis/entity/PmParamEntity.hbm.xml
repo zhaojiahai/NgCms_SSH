@@ -4,15 +4,35 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.inspur.cmis.entity.PmParamEntity" table="PM_PARAM" schema="C##SUNJIE">
-        <id name="id" column="ID"/>
-        <property name="parentid" column="PARENTID"/>
-        <property name="classid" column="CLASSID"/>
-        <property name="code" column="CODE"/>
-        <property name="name" column="NAME"/>
-        <property name="valid" column="VALID"/>
-        <property name="description" column="DESCRIPTION"/>
-        <property name="updatedate" column="UPDATEDATE"/>
-        <property name="userid" column="USERID"/>
+    <class name="com.inspur.cmis.entity.PmParamEntity" table="PM_PARAM">
+        <id name="id">
+            <column name="id"  sql-type="int(11)"/>
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="parentid">
+
+        </property>
+        <property name="classid" column="CLASSID">
+
+        </property>
+        <property name="code" column="CODE">
+
+        </property>
+        <property name="name" column="NAME">
+
+        </property>
+        <property name="valid" column="VALID">
+
+        </property>
+        <property name="description" column="DESCRIPTION">
+
+        </property>
+        <property name="updatedate" column="UPDATEDATE">
+
+        </property>
+        <property name="userid" column="USERID">
+
+        </property>
     </class>
 </hibernate-mapping>

@@ -1,21 +1,25 @@
 package com.inspur.cmis.entity;
 
+import java.util.Date;
+
 /**
  * Created by LiuLiHao on 2018/8/20 13:12.
- * 描述：
+ * 描述： 凭证信息
  * 作者： LiuLiHao
  */
 public class GcloancreditEntity {
+    private Integer id;
     private String keycode;
     private String keytype;
     private String upkeycode;
     private String custid;
-    private Long money;
+    private Double money;
     private String currency;
     private String loandate;
-    private String startdate;
-    private String enddate;
-    private String lastdate;
+    private Date startdate;
+    private Date enddate;
+
+    private Date lastdate;
     private Long limit;
     private String limitunit;
     private String keyeffectedstate;
@@ -48,11 +52,23 @@ public class GcloancreditEntity {
     private String passeddate;
     private String creditstate;
     private String paymethod;
-    private String paymode;
+    /**
+     * '0受托支付；1自主支付';
+     */
+    private Integer paymode;
     private String purposeremark;
     private String instcode;
     private String operator;
-    private String operdatetime;
+    private Date operdatetime;
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getKeycode() {
         return keycode;
@@ -86,11 +102,11 @@ public class GcloancreditEntity {
         this.custid = custid;
     }
 
-    public Long getMoney() {
+    public Double getMoney() {
         return money;
     }
 
-    public void setMoney(Long money) {
+    public void setMoney(Double money) {
         this.money = money;
     }
 
@@ -110,27 +126,27 @@ public class GcloancreditEntity {
         this.loandate = loandate;
     }
 
-    public String getStartdate() {
+    public Date getStartdate() {
         return startdate;
     }
 
-    public void setStartdate(String startdate) {
+    public void setStartdate(Date startdate) {
         this.startdate = startdate;
     }
 
-    public String getEnddate() {
+    public Date getEnddate() {
         return enddate;
     }
 
-    public void setEnddate(String enddate) {
+    public void setEnddate(Date enddate) {
         this.enddate = enddate;
     }
 
-    public String getLastdate() {
+    public Date getLastdate() {
         return lastdate;
     }
 
-    public void setLastdate(String lastdate) {
+    public void setLastdate(Date lastdate) {
         this.lastdate = lastdate;
     }
 
@@ -390,11 +406,11 @@ public class GcloancreditEntity {
         this.paymethod = paymethod;
     }
 
-    public String getPaymode() {
+    public Integer getPaymode() {
         return paymode;
     }
 
-    public void setPaymode(String paymode) {
+    public void setPaymode(Integer paymode) {
         this.paymode = paymode;
     }
 
@@ -422,11 +438,11 @@ public class GcloancreditEntity {
         this.operator = operator;
     }
 
-    public String getOperdatetime() {
+    public Date getOperdatetime() {
         return operdatetime;
     }
 
-    public void setOperdatetime(String operdatetime) {
+    public void setOperdatetime(Date operdatetime) {
         this.operdatetime = operdatetime;
     }
 
