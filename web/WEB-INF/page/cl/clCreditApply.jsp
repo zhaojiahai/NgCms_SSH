@@ -61,9 +61,9 @@
     <div class="rightinfo">
         <div class="tools">
             <ul class="toolbar1">
-                <li><a href="clCreditApplyAdd.html"><span><img src="/images/t01.png" /></span>添加</a></li>
-                <li><a href="clCreditApplyUpdate.html"><span><img src="/images/t02.png" /></span>修改</a></li>
-                <li><a href="javascript:confirmMsgDel()" ><span><img src="/images/t03.png"/></span>删除</a></li>
+                <li><a href="/clCreditAction_creditAddHtml.action"><span><img src="/images/t01.png" /></span>添加</a></li>
+                <li><a id="creditUpdate"><span><img src="/images/t02.png" /></span>修改</a></li>
+                <li><a id="creditDelete" ><span><img src="/images/t03.png"/></span>删除</a></li>
             </ul>
         </div>
         <table class="tablelist">

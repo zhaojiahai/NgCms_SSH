@@ -4,8 +4,11 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.inspur.cmis.entity.CclmtapplyprjinfoEntity" table="CCLMTAPPLYPRJINFO" schema="C##SUNJIE">
-        <id name="appcode" column="APPCODE"/>
+    <class name="com.inspur.cmis.entity.CclmtapplyprjinfoprocEntity" table="CCLMTAPPLYPRJINFOPROC" schema="C##SUNJIE">
+        <composite-id mapped="true" class="com.inspur.cmis.entity.CclmtapplyprjinfoprocEntityPK">
+            <key-property name="processid" column="PROCESSID"/>
+            <key-property name="appcode" column="APPCODE"/>
+        </composite-id>
         <property name="lmttype" column="LMTTYPE"/>
         <property name="custid" column="CUSTID"/>
         <property name="busitype" column="BUSITYPE"/>

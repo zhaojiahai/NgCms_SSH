@@ -66,7 +66,7 @@
     <div class="rightinfo">
         <div class="tools">
             <ul class="toolbar1">
-                <li><a href="gcCreditAdd.html"><span><img src="/images/t01.png" /></span>新建凭证</a></li>
+                <li><a href="/creditAction_creditAddHtml.action"><span><img src="/images/t01.png" /></span>新建凭证</a></li>
             </ul>
         </div>
         <table class="tablelist">

@@ -28,3 +28,6 @@ var pmClassDeleteInfoUrl = "/paramClassAction_pmClassDelete.action";
 
 //合同列表
 var contractInfoUrl = "/contractAction_contractInfo.action";
+
+//cl授信列表
+var clCreditInfoUrl = "/clCreditAction_creditInfo.action";

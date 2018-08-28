@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.CilicensecertificateEntity" table="CILICENSECERTIFICATE" schema="C##SUNJIE">
+        <composite-id mapped="true" class="com.inspur.cmis.entity.CilicensecertificateEntityPK">
+            <key-property name="id" column="ID"/>
+            <key-property name="custid" column="CUSTID"/>
+        </composite-id>
+        <property name="certtype" column="CERTTYPE"/>
+        <property name="certname" column="CERTNAME"/>
+        <property name="certid" column="CERTID"/>
+        <property name="issuingagency" column="ISSUINGAGENCY"/>
+        <property name="certlevel" column="CERTLEVEL"/>
+        <property name="startdate" column="STARTDATE"/>
+        <property name="enddate" column="ENDDATE"/>
+        <property name="summary" column="SUMMARY"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="instcitycode" column="INSTCITYCODE"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+    </class>
+</hibernate-mapping>

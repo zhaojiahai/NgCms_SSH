@@ -61,5 +61,7 @@
     <include file="struts-param-class.xml"></include>
     <!--合同信息-->
     <include file="struts-gc-contract.xml"></include>
+    <!--cl授信信息-->
+    <include file="struts-cl-credit.xml"></include>
 
 </struts>

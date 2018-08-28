@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.inspur.cmis.entity.CimanagementinfoEntity" table="CIMANAGEMENTINFO" schema="C##SUNJIE">
+        <composite-id mapped="true" class="com.inspur.cmis.entity.CimanagementinfoEntityPK">
+            <key-property name="id" column="ID"/>
+            <key-property name="custid" column="CUSTID"/>
+        </composite-id>
+        <property name="mancustid" column="MANCUSTID"/>
+        <property name="mancustname" column="MANCUSTNAME"/>
+        <property name="gender" column="GENDER"/>
+        <property name="certtype" column="CERTTYPE"/>
+        <property name="certid" column="CERTID"/>
+        <property name="degree" column="DEGREE"/>
+        <property name="telephone" column="TELEPHONE"/>
+        <property name="expericence" column="EXPERICENCE"/>
+        <property name="mantype" column="MANTYPE"/>
+        <property name="isentershareholder" column="ISENTERSHAREHOLDER"/>
+        <property name="background" column="BACKGROUND"/>
+        <property name="resume" column="RESUME"/>
+        <property name="createuser" column="CREATEUSER"/>
+        <property name="createdate" column="CREATEDATE"/>
+        <property name="operator" column="OPERATOR"/>
+        <property name="instcitycode" column="INSTCITYCODE"/>
+        <property name="operdatetime" column="OPERDATETIME"/>
+    </class>
+</hibernate-mapping>

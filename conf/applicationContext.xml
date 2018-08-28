@@ -39,12 +39,14 @@
                 <prop key="current_session_context_class">thread</prop>
             </props>
         </property>
-
-        <property name="mappingLocations" value="classpath:com/inspur/cmis/entity/*.hbm.xml"></property>
+        <!-- hbm手动映射字段的对象-->
+        <property name="mappingLocations" value="classpath:com/inspur/cmis/entity/*.hbm.xml">
+        </property>
         <!--注解的对象 -->
         <property name="annotatedClasses">
             <list>
                 <value>com.inspur.cmis.entity.GccontractmainEntity</value>
+                <value>com.inspur.cmis.entity.GcloancreditEntity</value>
             </list>
         </property>
     </bean>

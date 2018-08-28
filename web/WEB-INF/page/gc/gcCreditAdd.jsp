@@ -57,7 +57,7 @@
                     <option value="03">助学贷款</option>
                     <option value="04">个人其他贷款</option>
                 </select></cite>
-                <cite></li>
+                </li>
             <li><label>合同编号</label><input name="" type="text" class="dfinput" value="2000003703"/> </li>
             <li><label>凭证流水号</label><input name="" type="text" class="dfinput" value=""/> </li>
 

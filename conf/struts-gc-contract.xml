@@ -4,7 +4,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<!--机构-->
+	<!--合同-->
 	<package name="contractAction" namespace="/" extends="abstract_struts">
 		<action name="contractAction_*" class="com.inspur.cmis.action.GcContractAction" method="{1}">
 			<!--列表-->

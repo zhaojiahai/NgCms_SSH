@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--授信-->
+	<package name="clCreditAction" namespace="/" extends="abstract_struts">
+		<action name="clCreditAction_*" class="com.inspur.cmis.action.ClCreditAction" method="{1}">
+			<!--列表-->
+			<result name="creditInfo">/WEB-INF/page/cl/clCreditApply.jsp</result>
+			<!--添加页面-->
+			<result name="creditAddHtml">/WEB-INF/page/cl/clCreditApplyAdd.jsp</result>
+			<!--ajax 添加-->
+			<result name="creditAdd" type="json">
+				<param name="root">result</param>
+			</result>
+
+		</action>
+	</package>
+</struts>

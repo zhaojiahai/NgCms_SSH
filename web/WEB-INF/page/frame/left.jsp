@@ -53,7 +53,9 @@
             <span><img src="/images/leftico01.png"/></span>授信管理
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="cl/clCreditApply.html" target="rightFrame">授信申请</a><i></i></li>
+            <li><cite></cite>
+                <a href="/clCreditAction_creditInfo.action" target="rightFrame">授信申请</a><i></i>
+            </li>
         </ul>
     </dd>
     <dd>

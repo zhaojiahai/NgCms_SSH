@@ -1,9 +1,6 @@
 package com.inspur.cmis.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -34,7 +31,9 @@ public class GccontractmainEntity {
     /**
      * 1年2月3日默认为月
      */
+    @Column(columnDefinition = "INT default 2")
     private Integer limitunit;
+
     /**
      * 0-初始值 1-生效 2-正常到期  3强制到期 4-发生终止 5-生效后删除
      */
@@ -100,7 +99,9 @@ public class GccontractmainEntity {
     /**
      * T是；F否；默认为否
      */
+    @Column(columnDefinition = "varchar(255) default 'F'")
     private String lowriskflag;
+
     /**
      * C000信用C101保证C102抵押C103质押
      */
