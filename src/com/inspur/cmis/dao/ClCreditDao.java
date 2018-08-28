@@ -9,4 +9,5 @@ import com.inspur.cmis.entity.GcloancreditEntity;
  */
 public interface ClCreditDao extends BaseDao<GcloancreditEntity>{
 
+    void deleteAll(String deletes);
 }

@@ -11,8 +11,18 @@
 			<result name="creditInfo">/WEB-INF/page/cl/clCreditApply.jsp</result>
 			<!--添加页面-->
 			<result name="creditAddHtml">/WEB-INF/page/cl/clCreditApplyAdd.jsp</result>
+			<!--修改页面-->
+			<result name="creditUpdateHtml">/WEB-INF/page/cl/clCreditApplyUpdate.jsp</result>
 			<!--ajax 添加-->
 			<result name="creditAdd" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax 修改-->
+			<result name="creditUpdate" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax 删除-->
+			<result name="delete" type="json">
 				<param name="root">result</param>
 			</result>
 

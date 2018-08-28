@@ -49,11 +49,11 @@
         <ul class="forminfo">
             <li><label>客户编号</label><input req="req" msg="客户编号" name="entity.custid" type="text" class="dfinput" value=""/>
             </li>
-            <li><label>客户名称</label><input name="" type="text" class="dfinput" value=""/></li>
+            <li><label>客户名称</label><input req="req" msg="客户名称" name="entity.custname" type="text" class="dfinput" value=""/></li>
             <li><label>业务类型</label>
                 <cite>
-                    <select class="dfselect1">
-                        <option value="00">个人经营类贷款</option>
+                    <select class="dfselect1" req="req" msg="业务类型" name="entity.busitype">
+                        <option value="00" selected>个人经营类贷款</option>
                         <option value="01">个人消费类贷款</option>
                         <option value="02">个人购房贷款</option>
                         <option value="03">助学贷款</option>
@@ -61,31 +61,36 @@
                     </select>
                 </cite>
             </li>
-            <li><label>金额</label><input name="entity.money" type="text" class="dfinput" value=""/></li>
+            <li>
+                <label>金额</label>
+                <input name="entity.money" req="req" msg="金额" type="text" class="dfinput" value=""/>
+            </li>
             <li>
                 <label>币种</label>
                 <cite>
-                    <select class="select1" name="entity.currency">
-                    <option value="CNY">人民币</option>
-                    <option value="USD" selected>美元</option>
-                    <option value="EUR">欧元</option>
-                    <option value="HKD">港元</option>
-                    <option value="DEM">德国马克</option>
-                    <option value="AUD">澳大利亚元</option>
-                    <option value="CAD">加拿大元</option>
-                    <option value="SEK">瑞典克朗</option>
-                    <option value="SGD">新加坡元</option>
-                    <option value="NZD">新西兰元</option>
-            </select></cite></li>
+                    <select class="select1" req="req" msg="币种" name="entity.currency">
+                        <option value="CNY" selected>人民币</option>
+                        <option value="USD">美元</option>
+                        <option value="EUR">欧元</option>
+                        <option value="HKD">港元</option>
+                        <option value="DEM">德国马克</option>
+                        <option value="AUD">澳大利亚元</option>
+                        <option value="CAD">加拿大元</option>
+                        <option value="SEK">瑞典克朗</option>
+                        <option value="SGD">新加坡元</option>
+                        <option value="NZD">新西兰元</option>
+                    </select>
+                </cite>
+            </li>
             <li>
                 <label>期限(月)</label>
-                <input name="" type="text" class="dfinput" value=""/>
+                <input name="entity.climit" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>使用方式</label>
                 <cite>
-                    <select class="dfselect1">
-                        <option value="00">一次性</option>
+                    <select class="dfselect1" name="entity.usetype">
+                        <option value="00" selected>一次性</option>
                         <option value="01">循环</option>
                     </select>
                  </cite>
@@ -129,12 +134,15 @@
                 <input name="" type="text" class="dfinput" value=""/>
             </li>
 
-            <li><label>主担保方式</label><cite><select class="dfselect1">
-                <option value="00">抵押</option>
-                <option value="01">质押</option>
-                <option value="01">担保</option>
-                <option value="01">信用</option>
-            </select></cite></li>
+            <li><label>主担保方式</label><cite>
+                <select class="dfselect1">
+                    <option value="00">抵押</option>
+                    <option value="01">质押</option>
+                    <option value="01">担保</option>
+                    <option value="01">信用</option>
+                </select>
+            </cite>
+            </li>
             <li>
                 <label>借款用途</label>
                 <input name="" type="text" class="dfinput" value=""/>
@@ -154,7 +162,7 @@
             </li>
             <li>
                 <label>主办客户经理 </label>
-                <input name="" type="text" class="dfinput" value=""/>
+                <input name="entity.busimanager"  req="req" msg="主办客户经理" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>所属机构</label>
@@ -162,9 +170,9 @@
             </li>
 
             <li>&nbsp;&nbsp;
-                <input name="" type="submit" class="btn" value="添加"/>
+                <input type="submit" class="btn" value="添加"/>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <input name="" type="reset" class="btn" value="重置"/>
+                <input type="reset" class="btn" value="重置"/>
             </li>
         </ul>
 

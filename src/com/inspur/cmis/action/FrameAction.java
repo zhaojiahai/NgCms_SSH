@@ -3,8 +3,8 @@ package com.inspur.cmis.action;
 import com.inspur.common.action.BaseAction;
 
 /**
- *Frame use
- * @author LiuLiHao
+ * In Frame use
+ * @author admin
  */
 public class FrameAction extends BaseAction {
 	

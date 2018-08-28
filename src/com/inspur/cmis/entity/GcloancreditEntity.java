@@ -1,10 +1,7 @@
 package com.inspur.cmis.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -18,11 +15,19 @@ public class GcloancreditEntity {
     @Id
     @GeneratedValue
     private Integer id;
-
+    //0未删除 1已删除
+    @Column(columnDefinition = "INT default 0")
+    private Integer isDelete;
     private String keycode;
     private String keytype;
     private String upkeycode;
+    //客户名称
     private String custid;
+    //客户姓名
+    private String custname;
+    //业务类型
+    private String busitype;
+
     private Double money;
     private String currency;
     private String loandate;
@@ -30,16 +35,16 @@ public class GcloancreditEntity {
     private Date enddate;
 
     private Date lastdate;
-    //关键字冲突
+    //期限  关键字冲突
     private Integer climit;
-
+    //默认为月
     private String limitunit;
     private String keyeffectedstate;
     private String keydatestate;
     private String squarestate;
     private String squaredate;
     private String subbusicodetype;
-    private String busitype;
+
     private String repayaccount;
     private String payintmode;
     private Integer repaytimes;
@@ -53,15 +58,18 @@ public class GcloancreditEntity {
     private Integer intrstratefdot;
     private String loanpurpose;
     private String comments;
+    //使用方式
     private String usetype;
     private String bailacc;
     private String bailcurtype;
     private Integer assurerate;
     private Integer bailamt;
     private String loanmanager;
+    //主办经理
     private String busimanager;
-    private String createdate;
-    private String passeddate;
+
+    private Date createdate;
+    private Date passeddate;
     private String creditstate;
     private String paymethod;
     /**
@@ -73,6 +81,29 @@ public class GcloancreditEntity {
     private String operator;
     private Date operdatetime;
 
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
+    }
+
+    public String getCustname() {
+        return custname;
+    }
+
+    public void setCustname(String custname) {
+        this.custname = custname;
+    }
+
+    public Integer getClimit() {
+        return climit;
+    }
+
+    public void setClimit(Integer climit) {
+        this.climit = climit;
+    }
 
     public Integer getId() {
         return id;
@@ -379,19 +410,19 @@ public class GcloancreditEntity {
         this.busimanager = busimanager;
     }
 
-    public String getCreatedate() {
+    public Date getCreatedate() {
         return createdate;
     }
 
-    public void setCreatedate(String createdate) {
+    public void setCreatedate(Date createdate) {
         this.createdate = createdate;
     }
 
-    public String getPasseddate() {
+    public Date getPasseddate() {
         return passeddate;
     }
 
-    public void setPasseddate(String passeddate) {
+    public void setPasseddate(Date passeddate) {
         this.passeddate = passeddate;
     }
 

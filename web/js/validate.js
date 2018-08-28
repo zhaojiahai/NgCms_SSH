@@ -22,7 +22,11 @@ function formValueCheck(domId) {
     }
     return true;
 }
-
+/**
+ * tips 提示信息
+ * @param domId
+ * @returns {boolean}
+ */
 function formValueCheckTips(domId) {
     var arr = $("#"+domId+" input[req='req']");
     //检索需要填写的input

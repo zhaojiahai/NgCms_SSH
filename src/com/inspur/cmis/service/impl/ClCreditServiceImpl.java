@@ -31,4 +31,9 @@ public class ClCreditServiceImpl extends BaseServiceImpl<GcloancreditEntity> imp
     public List<GcloancreditEntity> findAll() {
         return null;
     }
+
+    @Override
+    public void deleteAll(String deletes) {
+        clCreditDao.deleteAll(deletes);
+    }
 }

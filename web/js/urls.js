@@ -31,3 +31,5 @@ var contractInfoUrl = "/contractAction_contractInfo.action";
 
 //cl授信列表
 var clCreditInfoUrl = "/clCreditAction_creditInfo.action";
+//cl授信删除
+var clCreditDeleteUrl = "/clCreditAction_creditDelete.action";

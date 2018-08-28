@@ -13,4 +13,5 @@ public interface ClCreditService extends BaseService<GcloancreditEntity> {
 
     List<GcloancreditEntity> findAll();
 
+    void deleteAll(String deletes);
 }
