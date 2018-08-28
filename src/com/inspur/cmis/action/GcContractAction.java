@@ -4,7 +4,9 @@ import com.inspur.cmis.entity.GccontractmainEntity;
 import com.inspur.cmis.service.GcContractService;
 import com.inspur.common.action.BaseAction;
 import com.inspur.common.entity.JsonResult;
+import com.inspur.common.entity.PaginationBean;
 import com.inspur.common.util.GsonUtils;
+import com.inspur.common.util.HQLHelper;
 import com.inspur.common.util.IsNullUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,25 +27,19 @@ public class GcContractAction extends BaseAction {
      */
     public String contractInfo(){
         //分页查询
-//        HQLHelper hqlHelper = new HQLHelper(GccontractmainEntity.class);
-//        int page = 1;
-//        if (currentPage!=null && currentPage>0){
-//            page = currentPage;
-//        }
-//        //条件查询
-//        if (group!=null && StringUtils.isNotBlank(group.getCode())){
-//            hqlHelper.addWhere(" o.code = ?",group.getCode());
-//            request.setAttribute("groupCode",group.getCode());
-//        }
-//        //名字以 xxx开头的
-//        if (group!=null && StringUtils.isNotBlank(group.getName())){
-//            hqlHelper.addWhere(" o.name like ?",group.getName()+"%");
-//            request.setAttribute("groupName",group.getName());
-//        }
-//
-//        //设置页数
-//        PaginationBean pageBean = groupService.getPageBean(hqlHelper, page);
-//        request.setAttribute("pageBean",pageBean);
+        HQLHelper hqlHelper = new HQLHelper(GccontractmainEntity.class);
+        int page = 1;
+        if (currentPage!=null && currentPage>0){
+            page = currentPage;
+        }
+        //条件查询
+        if (entity!=null && IsNullUtils.isNotNull(entity.getAppcode())){
+            hqlHelper.addWhere(" o.appcode = ?",entity.getAppcode());
+            request.setAttribute("appcode",entity.getAppcode());
+        }
+        //设置页数
+        PaginationBean pageBean = gcContractService.getPageBean(hqlHelper, page);
+        request.setAttribute("pageBean",pageBean);
 
         return "contractInfo";
     }
@@ -63,9 +59,9 @@ public class GcContractAction extends BaseAction {
     public String contractAdd(){
         JsonResult jsonResult = new JsonResult(0,"添加失败");
 
-        if (IsNullUtils.isNotNull(entity.getAppcode(),entity.getMoney() )){
+        //if (IsNullUtils.isNotNull(entity.getAppcode(),entity.getMoney() )){
             gcContractService.add(entity);
-        }
+        //}
         jsonResult = new JsonResult(1,"添加成功");
         result = GsonUtils.toJson(jsonResult);
 
@@ -79,6 +75,13 @@ public class GcContractAction extends BaseAction {
     ///////////ajax返回数据使用/////////////
     private String result;
 
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
 
     public void setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;

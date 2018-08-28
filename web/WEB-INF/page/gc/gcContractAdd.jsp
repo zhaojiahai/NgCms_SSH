@@ -74,7 +74,7 @@
             </li>
             <li>
                 <label>金额</label>
-                <input name="entity.money" req="req" msg="金额" type="text" class="dfinput" value=""/>
+                <input name="entity.money" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>币种</label>
@@ -95,11 +95,11 @@
             </li>
             <li>
                 <label>合同起始日期</label>
-                <input name="entity.startdate" req="req" msg="合同起始日期"  id="startDate" readonly type="text" class="dfinput" value=""/>
+                <input name="entity.startdate"  id="startDate" readonly type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>合同到期日期</label>
-                <input name="entity.enddate" req="req" msg="合同到期日期"  id="endDate" readonly type="text" class="dfinput" value=""/>
+                <input name="entity.enddate"   id="endDate" readonly type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>期限(月)</label>
@@ -217,6 +217,7 @@
             var fromData = $("#form").serialize();
             //请求接口
             postRequest('/contractAction_contractAdd.action',fromData,function (json) {
+                console.log(json);
                 if (json.code==1){
                     layer.alert("添加成功",function () {
                         window.location.href = contractInfoUrl;

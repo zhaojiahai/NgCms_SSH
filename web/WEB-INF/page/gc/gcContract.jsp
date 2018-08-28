@@ -66,7 +66,10 @@
     <div class="rightinfo">
         <div class="tools">
             <ul class="toolbar1">
-                <li><a href="gcContractList.html"><span><img src="/images/t01.png" /></span>合同维护</a></li>
+                <li><a href="/contractAction_contractAddHtml.action">
+                    <span>
+                        <img src="/images/t01.png" />
+                    </span>新增合同</a></li>
             </ul>
         </div>
         <table class="tablelist">

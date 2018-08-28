@@ -41,7 +41,7 @@
         </property>
 
         <property name="mappingLocations" value="classpath:com/inspur/cmis/entity/*.hbm.xml"></property>
-        <!--注解的-->
+        <!--注解的对象 -->
         <property name="annotatedClasses">
             <list>
                 <value>com.inspur.cmis.entity.GccontractmainEntity</value>
