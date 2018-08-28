@@ -49,23 +49,23 @@
         <ul class="forminfo">
             <li>
                 <label>机构编号</label>
-                <input name="group.code" id="code" type="text" class="dfinput" value=""/>
+                <input name="group.code" req="req" msg="机构编号" id="code" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>机构名称</label>
-                <input name="group.name" id="name" type="text" class="dfinput" value=""/>
+                <input name="group.name" req="req" msg="机构名称" id="name" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>上级机构</label>
-                <input name="group.parentid" id="parentid" type="text" class="dfinput" value=""/>
+                <input name="group.parentid"  id="parentid" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>机构简称</label>
-                <input name="group.briefname" id="briefname" type="text" class="dfinput" value=""/>
+                <input name="group.briefname" req="req" msg="机构简称" id="briefname" type="text" class="dfinput" value=""/>
             </li>
             <li>
                 <label>成立日期</label>
-                <input id="buidDate" name="group.createdtime"
+                <input id="buidDate" req="req" msg="成立日期" name="group.createdtime"
                        type="text" class="dfinput" value=""/>
             </li>
             <li>

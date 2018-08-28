@@ -40,7 +40,7 @@
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
-        <li><a href="/loginAction_userInfo.action">机构维护</a></li>
+        <li><a href="/groupAction_groupInfo.action">机构维护</a></li>
         <li><a href="javascript:;">修改</a></li>
     </ul>
 </div>
@@ -66,7 +66,7 @@
                 </li>
                 <li>
                     <label>上级机构</label>
-                    <input name="upparentid" msg="上级机构" req="req" id="parentid" type="text" class="scinput" value="${updateGroup.parentid}" />
+                    <input name="upparentid" id="parentid" type="text" class="scinput" value="${updateGroup.parentid}" />
                 </li>
                 <li>
                     <label>机构简称</label>

@@ -48,6 +48,10 @@ public class UserAction extends BaseAction {
 			request.setAttribute("msg","账号被禁用");
 			return INPUT;
 		}
+		if (dbUser.getLocked()!=null && dbUser.getLocked().equals("1")){
+			request.setAttribute("msg","账号被锁");
+			return INPUT;
+		}
 		//判断时间
 		session.setAttribute("am", DateUtil.getAmOrPm());
 		session.setAttribute(Constants.USER, dbUser);
