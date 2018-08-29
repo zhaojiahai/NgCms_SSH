@@ -47,6 +47,8 @@
             <list>
                 <value>com.inspur.cmis.entity.GccontractmainEntity</value>
                 <value>com.inspur.cmis.entity.GcloancreditEntity</value>
+                <!--对公客户-->
+                <value>com.inspur.cmis.entity.CicustbasinfoEntity</value>
             </list>
         </property>
     </bean>

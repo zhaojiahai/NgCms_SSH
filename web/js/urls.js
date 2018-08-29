@@ -33,3 +33,8 @@ var contractInfoUrl = "/contractAction_contractInfo.action";
 var clCreditInfoUrl = "/clCreditAction_creditInfo.action";
 //cl授信删除
 var clCreditDeleteUrl = "/clCreditAction_creditDelete.action";
+
+//ci对公客户列表
+var ciCustBaseInfoUrl = "/ciCustBaseAction_ciCustBaseInfo.action";
+//ci对公客户添加
+var ciCustBaseAddUrl = "/ciCustBaseAction_ciCustBaseAdd.action";

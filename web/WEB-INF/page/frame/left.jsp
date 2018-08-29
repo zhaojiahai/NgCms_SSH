@@ -42,9 +42,13 @@
             <span><img src="/images/leftico01.png"/></span>客户信息管理
         </div>
         <ul class="menuson">
-            <li><cite></cite><a style="height: 30px;margin-left: -70px" href="ci/ciCustBaseInfo.html"
+            <li><cite></cite>
+                <a href="/ciCustBaseAction_ciCustBaseInfo.action"
                                 target="rightFrame">对公客户基本信息维护</a><i></i></li>
-            <li><cite></cite><a style="height: 30px;" href="ci/cipersonBaseInfo.html" target="rightFrame">对私客户基本信息维护</a><i></i>
+            <li>
+                <cite></cite>
+                <a  href="ci/cipersonBaseInfo.html" target="rightFrame">对私客户基本信息维护</a>
+                <i></i>
             </li>
         </ul>
     </dd>

@@ -47,9 +47,32 @@
         <div class="formtitle"><span>授信申请基本信息</span></div>
 
         <ul class="forminfo">
-            <li><label>客户编号</label><input req="req" msg="客户编号" name="entity.custid" type="text" class="dfinput" value=""/>
+            <%--<li>--%>
+                <%--<label>客户编号</label>--%>
+                <%--<input req="req" msg="客户编号" name="entity.custid" type="text" class="dfinput" value=""/>--%>
+            <%--</li>--%>
+            <li>
+                <label>客户列表</label>
+                <cite>
+                    <c:if test="${infos==null}">
+                        没有任何客户信息
+                    </c:if>
+                    <c:if test="${infos!=null}">
+                        <select class="dfselect" id="group" req="req" msg="客户" name="entity.custid">
+                            <option value="0" selected>请选择客户</option>
+                            <s:iterator value="#request.infos">
+                                <option value="${id}">${cname}</option>
+                            </s:iterator>
+                        </select>
+                    </c:if>
+                </cite>
             </li>
-            <li><label>客户名称</label><input req="req" msg="客户名称" name="entity.custname" type="text" class="dfinput" value=""/></li>
+
+            <%--<li>--%>
+                <%--<label>客户名称</label>--%>
+                <%--<input req="req" msg="客户名称" name="entity.custname" type="text" class="dfinput" value=""/>--%>
+            <%--</li>--%>
+
             <li><label>业务类型</label>
                 <cite>
                     <select class="dfselect1" req="req" msg="业务类型" name="entity.busitype">
@@ -185,6 +208,10 @@
     function checkForm() {
         //检查表单
         var flag =  formValueCheckTips('form');
+        if ($("#group").val()=='0'){
+            layer.msg('请选择客户');
+            return false;
+        }
         if (flag){
             var fromData = $("#form").serialize();
             //请求接口

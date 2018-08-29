@@ -196,19 +196,17 @@
 </html>
 
 <script>
-    $(function () {
-        //日期选择
-        layui.use('laydate', function(){
-            var laydate = layui.laydate;
-            laydate.render({
-                elem: '#startDate'
-            });
-            laydate.render({
-                elem: '#endDate'
-            })
+    //日期选择
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#startDate'
         });
-
+        laydate.render({
+            elem: '#endDate'
+        })
     });
+
 
     function checkForm() {
         //检查表单

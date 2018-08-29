@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--客户-->
+	<package name="ciCustBaseAction" namespace="/" extends="abstract_struts">
+		<action name="ciCustBaseAction_*" class="com.inspur.cmis.action.ci.CiCustBaseAction" method="{1}">
+			<!--列表-->
+			<result name="ciCustBaseInfo">/WEB-INF/page/ci/ciCustBaseInfo.jsp</result>
+			<!--添加页面-->
+			<result name="ciCustBaseAddHtml">/WEB-INF/page/ci/ciCustBaseInfoAdd.jsp</result>
+			<!--修改页面-->
+			<result name="ciCustBaseUpdateHtml">/WEB-INF/page/ci/ciCustBaseInfoUpdate.jsp</result>
+			<!--详情页面-->
+			<result name="ciCustBaseDetail">/WEB-INF/page/ci/ciCustBaseInfoDetail.jsp</result>
+			<!--ajax 添加-->
+			<result name="ciCustBaseAdd" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax 修改-->
+			<result name="ciCustBaseUpdate" type="json">
+				<param name="root">result</param>
+			</result>
+			<!--ajax 删除-->
+			<result name="delete" type="json">
+				<param name="root">result</param>
+			</result>
+
+		</action>
+	</package>
+</struts>

@@ -60,8 +60,10 @@
     <!--paramClass操作-->
     <include file="struts-param-class.xml"></include>
     <!--合同信息-->
-    <include file="struts-gc-contract.xml"></include>
+    <include file="gc/struts-gc-contract.xml"></include>
     <!--cl授信信息-->
-    <include file="struts-cl-credit.xml"></include>
+    <include file="cl/struts-cl-credit.xml"></include>
+    <!--ci对公客户-->
+    <include file="ci/struts-ci-custbase.xml"></include>
 
 </struts>

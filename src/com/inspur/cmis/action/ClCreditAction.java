@@ -1,6 +1,8 @@
 package com.inspur.cmis.action;
 
+import com.inspur.cmis.entity.CicustbasinfoEntity;
 import com.inspur.cmis.entity.GcloancreditEntity;
+import com.inspur.cmis.service.CiCustBaseService;
 import com.inspur.cmis.service.ClCreditService;
 import com.inspur.common.action.BaseAction;
 import com.inspur.common.entity.JsonResult;
@@ -12,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by LiuLiHao on 2018年8月28日11:03:57
@@ -23,6 +26,8 @@ public class ClCreditAction extends BaseAction {
 
     @Autowired
     private ClCreditService clCreditService;
+    @Autowired
+    private CiCustBaseService ciCustBaseService;
 
     /**
      * 列表
@@ -67,6 +72,10 @@ public class ClCreditAction extends BaseAction {
      * @return
      */
     public String creditAddHtml() {
+        List<CicustbasinfoEntity> list = ciCustBaseService.findAll();
+        //客户信息
+        request.setAttribute("infos",list);
+
         return "creditAddHtml";
     }
 
@@ -121,6 +130,12 @@ public class ClCreditAction extends BaseAction {
      */
     public String creditAdd() {
         JsonResult jsonResult = new JsonResult(0, "添加失败");
+        Integer custid = Integer.valueOf(entity.getCustid());
+        CicustbasinfoEntity ciCustBase = ciCustBaseService.findObjectById(custid);
+        if (ciCustBase!=null){
+            //设置客户姓名
+            entity.setCustname(ciCustBase.getCname());
+        }
         //设置创建日期
         entity.setCreatedate(new Date());
         entity.setIsDelete(0);
