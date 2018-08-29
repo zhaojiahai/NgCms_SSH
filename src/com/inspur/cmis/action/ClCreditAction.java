@@ -88,6 +88,9 @@ public class ClCreditAction extends BaseAction {
         if (entityId!=null && entityId>0){
             GcloancreditEntity entity = clCreditService.findObjectById(entityId);
             request.setAttribute("updateEntity", entity);
+            List<CicustbasinfoEntity> list = ciCustBaseService.findAll();
+            //客户信息
+            request.setAttribute("infos",list);
         }
         return "creditUpdateHtml";
     }
@@ -99,6 +102,13 @@ public class ClCreditAction extends BaseAction {
      */
     public String creditUpdate() {
         JsonResult jsonResult = new JsonResult(0,"修改失败");
+        Integer custid = Integer.valueOf(updateEntity.getCustid());
+        CicustbasinfoEntity ciCustBase = ciCustBaseService.findObjectById(custid);
+        if (ciCustBase!=null){
+            //设置客户姓名
+            updateEntity.setCustname(ciCustBase.getCname());
+        }
+
         clCreditService.update(updateEntity);
 
         jsonResult = new JsonResult(1,"修改成功");

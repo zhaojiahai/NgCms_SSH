@@ -47,14 +47,31 @@
 
         <ul class="forminfo">
             <input type="hidden" value="${updateEntity.id}" name="updateEntity.id">
-            <li>
-                <label>客户编号</label>
-                <input name="updateEntity.custid" id="upcustid"  req="req" msg="客户编号"  type="text" class="dfinput" value="${updateEntity.custid}"/>
-            </li>
+            <%--<li>--%>
+                <%--<label>客户编号</label>--%>
+                <%--<input name="updateEntity.custid" id="upcustid"  req="req" msg="客户编号"  type="text" class="dfinput" value="${updateEntity.custid}"/>--%>
+            <%--</li>--%>
+
+            <%--<li>--%>
+                <%--<label>客户名称</label>--%>
+                <%--<input name="updateEntity.custname" id="upcustname"   req="req" msg="客户名称"  type="text" class="dfinput" value="${updateEntity.custname}"/>--%>
+            <%--</li>--%>
 
             <li>
-                <label>客户名称</label>
-                <input name="updateEntity.custname" id="upcustname"   req="req" msg="客户名称"  type="text" class="dfinput" value="${updateEntity.custname}"/>
+                <label>客户列表</label>
+                <cite>
+                    <c:if test="${infos==null}">
+                        没有任何客户信息
+                    </c:if>
+                    <c:if test="${infos!=null}">
+                        <select class="dfselect" id="group" req="req" msg="客户" name="updateEntity.custid">
+                            <option value="0" selected>请选择客户</option>
+                            <s:iterator value="#request.infos">
+                                <option value="${id}"  <c:if test="${updateEntity.custid== id}">selected="selected"</c:if>>${cname}</option>
+                            </s:iterator>
+                        </select>
+                    </c:if>
+                </cite>
             </li>
 
             <li><label>业务类型</label>
